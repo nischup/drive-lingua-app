@@ -1,0 +1,141 @@
+h5{
+  font-size: 14px;
+  color: #8d8484;
+}
+h3{
+  font-size: 22px;
+  color: #0c0a0a;
+  font-weight: 700;
+}
+ion-title {
+  text-align: left; /* Aligns the title to the left */
+  font-size: 12px; /* Adjust the font size as needed */
+  font-weight: bold; /* Optional: Make it bold */
+  margin-left: -18px; /* Optional: Remove extra margin if necessary */
+}
+
+ion-title span {
+  font-size: 16px; /* Adjust the size of the date */
+  color: #555; /* Optional: Set a lighter color for the date */
+}
+
+.test-card {
+  --background: #f4f4f4; /* Light grey background for the card */
+  text-align: center;
+}
+
+.ion-card-title{
+  font-size: 10px;
+  text-align: center;
+}
+
+.bar-section {
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Even spacing between columns */
+  align-items: center; /* Center vertically */
+  margin-top: 20px;
+}
+
+.bar-item {
+  text-align: center; /* Center text and bar within each column */
+  flex: 1; /* Equal width for each column */
+  padding: 0 2px; /* Add some spacing between columns */
+}
+
+.bar-item p {
+  margin: 0 0 5px 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: #333; /* Dark grey text */
+}
+
+.bar {
+  width: 100%; /* Full width within the column */
+  height: 8px !important; /* Adjust the height of the bar */
+  border-radius: 5px; /* Make the bars rounded */
+}
+
+.bar.success {
+  background-color: #4da160; /* Green for Passed */
+}
+
+.bar.danger {
+  background-color: #F97066; /* Red for Failed */
+}
+
+.bar.primary {
+  background-color: #d9dadb; /* Blue for Incomplete */
+}
+
+  .share-button {
+    position: relative;
+    text-align: center;
+    ion-icon {
+      font-size: 20px; /* Adjust icon size if needed */
+    }
+    --background: #F9FAFB;
+    color: #000;
+    text-transform: none;
+  }
+
+  .share-button ion-icon[slot="end"] {
+    margin-left: auto; /* Push the icon to the far right */
+  }
+
+#single-range {
+  --knob-border-radius: 50%; 
+  --knob-background: #FFFFFF; /* Knob color */
+  --knob-box-shadow: none; /* Remove knob shadow */
+  --knob-size: 34px; /* Size of the knob */
+  --bar-height: 16px; /* Height of the range bar */
+  --bar-background: #b6b6b6; /* Inactive bar color */
+  --bar-background-active: rgb(251, 189, 199); /* Active bar color */
+  --bar-border-radius: 12px; /* Rounded corners for the bar */
+  --height: 53px; /* Overall height including the bar and knob */
+  --pin-background: #FFFFFF; /* Background color of the value pin (if used) */
+  --pin-color: var(--ion-color-primary-contrast, #fff); /* Text color in the value pin */
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjust based on your image dimensions */
+}
+
+img {
+  max-width: 100%; /* Ensures the image scales properly */
+  height: auto; /* Maintains aspect ratio */
+  display: block;
+}
+
+ion-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+
+  .bar {
+    height: 53px; /* Match the container height to the range */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the range within the container */
+  }
+  .bar-top-text{
+    font-size: 20px;
+    color: rgb(246, 172, 185);
+  }
+  .bar-btm-text{
+    font-size: 12px;
+  
+  }
+
+  .ionlang{
+    margin-right: 12px;
+  }
+  
+  
+  

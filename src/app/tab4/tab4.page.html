@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <!-- Left side image -->
+      <ion-col size="6" class="ion-text-start">
+        <img src="assets/img/lngimg.png" style="max-width: 100px;">
+      </ion-col>
+  
+      <ion-col size="1" ></ion-col>
+      <!-- Right side select -->
+      <ion-col size="5" class="ion-text-end">
+        <ion-select class="ionlang" [(ngModel)]="selectedLanguage" interface="popover" (ionChange)="switchLanguage($event.detail.value)">
+          <ion-select-option *ngFor="let language of filteredLanguages" [value]="language.name">
+            <img [src]="language.flag" alt="{{ language.name }} flag" class="flag-icon" />
+            {{ language.origin_name }} ({{ language.name }})
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+
+  <div class="profile-container">
+    <!-- Profile Image -->
+    <div class="profile-image">
+      <img src="assets/flags/profile.jpg" />
+    </div>
+    <h4>John Doe</h4>
+    <h5>jhon.doe&#64;example.scom</h5>
+    <ion-button fill="clear" class="edit-profile-button">
+      <ion-icon slot="start" name="create-outline"></ion-icon>
+      {{ 'Edit Profile' | translate }}
+    </ion-button>
+    
+  </div>
+
+      <!-- Buttons -->
+    <div class="button-container">
+      <ion-button expand="full" (click)="openNotification()">
+        <ion-icon slot="start" name="notifications-outline"></ion-icon>
+        {{ 'Notification' | translate }}
+        <ion-icon class="arrow" slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <ion-button expand="full" (click)="openHelpAndSupport()">
+        <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+        {{ 'Help & Support' | translate }}
+        <ion-icon class="arrow" slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+      <ion-button expand="full" (click)="signOut()">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        {{ 'Sign Out' | translate }}
+        <ion-icon class="arrow" slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+</ion-content>

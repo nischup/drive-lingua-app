@@ -1,0 +1,74 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    margin: 16px 0 8px; /* Reduce bottom margin for tighter spacing with name */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #3880ff; /* Optional: Add a border */
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  h4 {
+    margin-top: 8px; /* Spacing from the image */
+    color: #000; /* Visible text color */
+    font-size: 16px; /* Adjust font size */
+    text-align: center; /* Center the text */
+    font-weight: 600; /* Optional: Bold the text */
+  }
+  
+  h5 {
+    margin-top: 2px; /* Spacing from the image */
+    color: #000; /* Visible text color */
+    font-size: 12px; /* Adjust font size */
+    text-align: center; /* Center the text */
+    font-weight: 600; /* Optional: Bold the text */
+  }
+    .button-container {
+      margin-top: 24px;
+    }
+    
+  ion-button {
+    --border-radius: 5px; /* Optional: Add rounded corners */
+    text-transform: none;
+    --background: #FFFFFF;
+    color: #000;
+    display: flex;
+    justify-content: space-between; /* Ensure proper spacing between items */
+    align-items: center; /* Center content vertically */
+    padding-right: 16px; /* Add padding to the right if needed */
+  }
+  
+  ion-icon.arrow {
+    margin-left: auto; /* Push the chevron icon to the far right */
+  }
+
+  .edit-profile-button {
+    --background: #f7f3f3;
+    --color: #000; /* Adjust the text/icon color */
+    padding: 0;
+    margin-left: 0; /* Align button to the left */
+    text-transform: none; /* Keep text case as is */
+    font-weight: 500;
+    border: 1px solid#ebeaea;
+    border-radius: 5px;
+  }
+  
+  .edit-profile-button ion-icon {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  

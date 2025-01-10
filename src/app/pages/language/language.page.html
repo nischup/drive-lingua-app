@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-title> {{ 'Choose Language' | translate }} </ion-title>
+    <p> {{ 'Select the language for your app. You can change it later from your settings.' | translate }} </p>
+
+    <!-- Search Bar -->
+    <ion-searchbar
+      [(ngModel)]="searchTerm"
+      placeholder="{{'Search Language' | translate }}"
+      show-clear-button="focus"
+      debounce="500"
+      (ionInput)="filterLanguages()"
+    ></ion-searchbar>
+
+    <!-- Language List -->
+    <ion-list>
+      <ion-radio-group [(ngModel)]="selectedLanguage" (ionChange)="switchLanguage($event.detail.value)">
+        <ion-item
+        *ngFor="let language of filteredLanguages"
+        [ngClass]="{ 'highlighted': language.name === selectedLanguage }"
+        >
+          <ion-label>
+            <img [src]="language.flag" alt="{{ language.name }} flag" class="flag-icon" />
+            {{ language.origin_name }} ({{ language.name }})
+          </ion-label>
+          <ion-radio slot="end" [value]="language.name"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-button
+      expand="full"
+      shape="round"
+      class="btn-custom-color"
+      [disabled]="!selectedLanguage"
+      [routerLink]="['/login']"
+    >
+      {{ 'Continue' | translate }}
+    </ion-button>
+  </ion-card>
+</ion-content>

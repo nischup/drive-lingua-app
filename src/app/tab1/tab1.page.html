@@ -1,0 +1,100 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <!-- Left side image -->
+      <ion-col size="6" class="ion-text-start">
+        <img src="assets/img/lngimg.png" style="max-width: 100px;">
+      </ion-col>
+  
+      <ion-col size="1" ></ion-col>
+      <!-- Right side select -->
+      <ion-col size="5" class="ion-text-end">
+        <ion-select class="ionlang" [(ngModel)]="selectedLanguage" interface="popover" (ionChange)="switchLanguage($event.detail.value)">
+          <ion-select-option *ngFor="let language of filteredLanguages" [value]="language.name">
+            <img [src]="language.flag" alt="{{ language.name }} flag" class="flag-icon" />
+            {{ language.origin_name }} ({{ language.name }})
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <h5> {{ 'welcome' | translate }}</h5>
+  <h3> {{ 'You are' | translate}}<br> {{ 'doing well' | translate}}</h3>
+
+    <div class="progress-bar">
+      <span class="bar-top-text">58%</span>
+      <div class="single-range-bar">
+        <ion-range id="single-range"  value="58"></ion-range> 
+      </div>
+      <span class="bar-btm-text"> {{ 'You are' | translate }} 42% {{ 'away from your total goal! Keep going' | translate }}  </span>
+    </div>
+
+    <ion-card class="test-card">
+      <ion-card-content>
+        <ion-title>
+          {{ 'Test Taken' | translate }} <br>
+          <span>08/10</span>
+        </ion-title>
+        <div class="bar-section">
+          <div class="bar-item">
+            <div class="bar success"></div>
+            <p>  {{ 'Passed' | translate}} (06)</p>
+          </div>
+          <div class="bar-item">
+            <div class="bar danger"></div>
+            <p>  {{ 'Failed' | translate}} (02)</p>
+          </div>
+          <div class="bar-item">
+            <div class="bar primary"></div>
+            <p>  {{ 'not finished' | translate}} (03)</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    
+    
+
+  <!-- Two Column Section -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card (click)="clickTo()">
+          <ion-card-content>
+            <div class="img-wrapper">
+              <img src="assets/img/chapter.png" alt="Chapter" />
+            </div>
+            <ion-card-title>
+              {{ 'Chapters' | translate}}  
+              <ion-icon class="white-icons" name="chevron-forward-outline"></ion-icon>
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card (click)="clickToTest()">
+          <ion-card-content>
+            <div class="img-wrapper">
+              <img src="assets/img/test.png" alt="test" />
+            </div>
+            <ion-card-title (click)="clickTo()">
+              {{ 'Tests' | translate}} 
+              <ion-icon class="white-icons" name="chevron-forward-outline"></ion-icon>
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <ion-button expand="full" shape="round" class="share-button">
+    <ion-icon name="share-social-outline" slot="start"></ion-icon>
+    {{ 'Share Our App' | translate}}
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-button>
+
+  
+</ion-content>

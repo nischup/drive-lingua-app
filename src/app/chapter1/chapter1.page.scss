@@ -1,0 +1,25 @@
+ion-toolbar{
+    font-family: League Spartan;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px; /* Adjust based on your image dimensions */
+    }
+    
+    img {
+      max-width: 100%; /* Ensures the image scales properly */
+      height: auto; /* Maintains aspect ratio */
+      display: block;
+    }
+    
+    ion-card-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 14px; /* Adjust font size as needed */
+    }

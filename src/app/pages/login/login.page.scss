@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+ion-content {
+    --background: #F08E93 !important;
+}
+p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: center;
+    color: #100c0cb2;
+}
+ion-card{
+  justify-content: center; 
+  margin-top: 120px; 
+ border-radius: 20px;
+}
+ion-title {
+  font-family: 'Helvetica', sans-serif; // Custom font
+  font-size: 24px; // Font size
+  font-weight: 700; // Bold text
+  color: #333; // Text color
+  margin-top: 20px; // Spacing from the top
+}
+
+.custom-input {
+  height: 45px;
+  --border-radius: 30px;
+  --background: #f1f1f1; /* Light gray background */
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  ion-icon {
+    font-size: 20px;
+    color: #888; /* Icon color */
+    margin-right: 10px;
+  }
+  ion-input {
+    --padding-start: 10px;
+    color: #333; /* Text color */
+  }
+}
+
+.forgot-text{
+  text-align: right;
+  font-family:Helvetica;
+  color: #7c7979;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22.2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn-login {
+  border-radius: 10px;
+  --background: #EF7D82;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  text-transform: none;
+}
+.social-sign {
+  .ortext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #ccc;
+      margin: 0 10px; /* Spacing between the line and text */
+    }
+
+    span {
+      font-size: 14px;
+      color: #666;
+      white-space: nowrap; /* Prevent wrapping of the "Or" text */
+    }
+  }
+}
+.login{
+  --background: #FCFCFD;
+  text-transform:none;
+  color: #0d0c0c;
+}
+.googlesignimg{
+  height:24px;
+  width:24px;
+  padding-right: 5px;
+}
+.signtext{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #171414;
+}
+.text{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #c06464;
+}
+

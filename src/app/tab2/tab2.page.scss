@@ -1,0 +1,148 @@
+ion-content {
+  --background: #FDEDEE;
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.road-content {
+  --background: #FDEDEE;
+}
+
+.road-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  --background: #FDEDEE;
+  position: relative;
+}
+
+.road-svg {
+  width: 80%;
+  height: auto;
+}
+
+.regstration{
+  position: absolute;
+  top: 150px; 
+  left: 50px;
+}
+.first-step{
+  position: absolute;
+  top: 150px; 
+  left: 145px;
+}
+.start-driving{
+  position: absolute;
+  top: 150px; 
+  left: 240px;
+}
+.we-use-street{
+  position: absolute;
+  top: 240px; 
+  left: 240px;
+}
+.we-turn{
+  position: absolute;
+  top: 340px; 
+  left: 250px;
+}
+.piority1{
+  position: absolute;
+  top: 360px; 
+  left: 130px;
+}
+.piority2{
+  position: absolute;
+  top: 340px; 
+  left: 30px;
+}
+.rules{
+  position: absolute;
+  top: 440px; 
+  left: 5px;
+}
+.highway{
+  position: absolute;
+  top: 580px; 
+  left: 10px;
+}
+.driving{
+  position: absolute;
+  top: 580px; 
+  left: 115px;
+}
+.departure{
+  position: absolute;
+  top: 580px; 
+  left: 250px;
+}
+.exam{
+  position: absolute;
+  top: 475px; 
+  left: 260px;
+}
+
+.tree {
+  position: absolute;
+}
+
+.tree-1 {
+  top: 120px; /* Adjust position */
+  left: 70px;
+}
+
+.tree-2 {
+  top: 110px; /* Adjust position */
+  right: 155px;
+}
+
+.tree-3 {
+  top: 120px; /* Adjust position */
+  right: 30px;
+}
+
+.tree-4 {
+  top: 250px; /* Adjust position */
+  right: 190px;
+}
+
+.tree-5 {
+  top: 290px; /* Adjust position */
+  right: 290px;
+}
+.tree-6 {
+  top: 300px; /* Adjust position */
+  right: 220px;
+}
+.tree-7 {
+  top: 480px; /* Adjust position */
+  right:140px;
+}
+.tree-8 {
+  top: 560px; /* Adjust position */
+  right: 120px;
+}
+.tree-9 {
+  top: 450px; /* Adjust position */
+  right: 230px;
+}
+.tree-10 {
+  top: 530px; /* Adjust position */
+  right: 230px;
+}
+
+.ionlang {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --border-radius: 8px;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+

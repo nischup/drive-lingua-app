@@ -1,0 +1,20 @@
+p{
+    text-align: justify;
+}
+
+ion-toolbar{
+    font-family: League Spartan;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* In your SCSS file */
+.black-toolbar {
+    background-color: black;
+    color: black; /* Optional: if you want the text to be white */
+  }
+  
+  .white-icons {
+    color: black; /* Ensures the back button icon is white */
+  }
+  

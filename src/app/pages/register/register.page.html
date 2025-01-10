@@ -1,0 +1,49 @@
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+    <ion-title> {{ 'Register to DriveLingua' | translate }} </ion-title>
+    <p> {{ 'Enter your details below to register to DriveLingua app and continue' | translate }}</p>
+
+    <ion-item class="custom-input">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input placeholder="{{ 'Username' | translate}}"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-input placeholder="{{ 'Email' | translate }}"></ion-input>
+    </ion-item>
+    
+    <ion-item class="custom-input">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input placeholder="{{ 'Password' | translate }}" type="password"></ion-input>
+    </ion-item>
+
+  <div class="text-white">{{ 'Forgot Password' | translate }} ?</div>
+
+    <ion-button class="btn-login" expand="full" shape="round">{{ 'Signup' | translate }}</ion-button>
+  
+    <p>
+      {{ 'Already have an account' | translate }} ? <span class="text"  [routerLink]="['/login']"> {{ 'Sign In' | translate }}</span>
+      </p>
+
+    <div class="social-sign">
+      <div class="ortext">
+        <div class="line"></div>
+        <span> {{ 'Or' | translate }} </span>
+        <div class="line"></div>
+      </div>
+      <ion-button class="login" shape="round" expand="full" [routerLink]="['/home-blank']">
+        <img class="googlesignimg" src="assets/svg/googleicon.svg"> <span class="signtext"> {{ 'Continue With' | translate}} Google</span>
+      </ion-button>
+      <ion-button class="login" shape="round" expand="full" [routerLink]="['/home-blank']">
+        <img class="googlesignimg" src="assets/svg/fbicon.svg"> <span class="signtext"> {{ 'Continue With' | translate}} Facebook</span>
+      </ion-button>
+      <ion-button class="login" shape="round" expand="full" [routerLink]="['/home-blank']">
+        <img class="googlesignimg" src="assets/svg/appleicon.svg"> <span class="signtext">  {{ 'Continue With' | translate}} Apple</span>
+      </ion-button>
+    </div>
+    
+
+
+</ion-content>

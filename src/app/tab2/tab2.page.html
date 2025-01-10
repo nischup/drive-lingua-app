@@ -1,0 +1,176 @@
+<ion-content [fullscreen]="true" class="road-content">
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <!-- Left side image -->
+      <ion-col size="5" class="ion-text-start">
+        <img src="assets/img/lngimg.png" style="max-width: 100px;">
+      </ion-col>
+  
+      <ion-col size="1" ></ion-col>
+      <!-- Right side select -->
+      <ion-col size="5" class="ion-text-end">
+        <ion-select class="ionlang" [(ngModel)]="selectedLanguage" interface="popover" (ionChange)="switchLanguage($event.detail.value)">
+          <ion-select-option *ngFor="let language of filteredLanguages" [value]="language.name">
+            <img [src]="language.flag" alt="{{ language.name }} flag" class="flag-icon" />
+            {{ language.origin_name }} ({{ language.name }})
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+      
+      
+    </ion-row>
+  </ion-grid>
+
+  <div class="road-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 400" class="road-svg">
+      <path
+        d="M10 10 L190 10 
+           L190 160 L10 160 
+           L10 310 L190 310 
+           L190 240 L220 240"
+        stroke="#98A2B3"
+        stroke-width="30"
+        fill="none"
+      />
+      <path
+        d="M10 10 L190 10 
+           L190 160 L10 160 
+           L10 310 L190 310 
+           L190 240 L220 240"
+        stroke="white"
+        stroke-width="4"
+        stroke-dasharray="20, 50"
+        fill="none"
+      />
+    </svg>
+  </div>
+
+  <!-- Trees -->
+  <div class="tree tree-1">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>
+
+  <div class="tree tree-2">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+
+  <div class="tree tree-3">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+
+  <div class="tree tree-4">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+
+  <div class="tree tree-5">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+  <div class="tree tree-6">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+  <div class="tree tree-7">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+  <div class="tree tree-8">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+  <div class="tree tree-9">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>  
+
+  <div class="tree tree-10">
+    <svg width="17" height="31" viewBox="0 0 17 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.47046 19.5884V28.2647C5.47046 29.7753 6.69514 31 8.20578 31C9.71641 31 10.9411 29.7753 10.9411 28.2647V19.5884C10.085 19.892 9.1646 20.0589 8.20578 20.0589C7.24695 20.0589 6.32656 19.892 5.47046 19.5884Z" fill="#A78966"/>
+      <path d="M8.20584 0C3.68098 0 0 3.6811 0 8.20584V11.8528C0 15.4188 2.28693 18.4591 5.47052 19.5882C6.32662 19.8918 7.24701 20.0587 8.20584 20.0587C9.16466 20.0587 10.0849 19.8918 10.9412 19.5882C14.1247 18.4592 16.4117 15.4189 16.4117 11.853V8.20595C16.4117 3.68121 12.7307 0 8.20584 0Z" fill="#12B76A"/>
+    </svg>
+  </div>
+
+
+
+  <div class="regstration">
+    <img (click)="navigateToRegistration()" src="assets/svg/registration.svg">
+  </div>
+
+
+  <div class="first-step">
+    <img (click)="navigateToChapter1()" src="assets/svg/first-step.svg">
+  </div>
+
+  <div class="start-driving">
+    <img (click)="navigateToChapter2()" src="assets/svg/start-driving.svg">
+  </div>
+
+  <div class="we-use-street">
+    <img (click)="navigateToChapter3()" src="assets/svg/use-the-street.svg">
+  </div>
+
+  <div class="we-turn">
+    <img (click)="navigateToChapter4()" src="assets/svg/we-turn.svg">
+  </div>
+
+  <div class="piority1">
+    <img (click)="navigateToChapter5()" src="assets/svg/piority-part-1.svg">
+  </div>
+
+  <div class="piority2">
+    <img (click)="navigateToChapter6()" src="assets/svg/piority-part-2.svg">
+  </div>
+
+  <div class="rules">
+    <img (click)="navigateToChapter7()" src="assets/svg/follow-the-rules.svg">
+  </div>
+
+  <div class="highway">
+    <img (click)="navigateToChapter8()" src="assets/svg/highway.svg">
+  </div>
+
+  <div class="driving">
+    <img (click)="navigateToChapter9()" src="assets/svg/basic-driving.svg">
+  </div>
+
+  <div class="departure">
+    <img (click)="navigateToChapter10()" src="assets/svg/departure.svg">
+  </div>
+
+  <div class="exam">
+    <img (click)="navigateToChapter(10)" src="assets/svg/exam.svg">
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,111 @@
+<ion-toolbar class="black-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (ionBack)="goBack()"></ion-back-button>
+  </ion-buttons>
+ {{ 'Vocabulary' | translate }} 
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+<!--   
+  <ion-segment [(ngModel)]="selectedPart" (ionChange)="onSegmentChange($event)">
+    <ion-segment-button value="part1">
+      <ion-label>Part 1</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="part2">
+      <ion-label>Part 2</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="part3">
+      <ion-label>Part 3</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="selectedPart" class="content-container">
+    <div *ngSwitchCase="'part1'">
+      <ion-card>
+        <ion-card-content>
+          <div class="button-group">
+            <ion-button>
+              <img src="assets/flags/english.png" class="circle-img" alt="Icon 1" />
+              Driving
+            </ion-button>
+            <ion-button>
+              <img src="assets/flags/german.png" class="circle-img" alt="Icon 2" />
+            Faren
+            </ion-button>
+            
+            <ion-button>
+              <audio controls class="audio-player">
+                <source src="assets/audio/sample.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </ion-button>
+
+            <div class="navigation-icons">
+              <ion-icon name="chevron-back-outline" class="icon"></ion-icon>
+              <span class="page-info">1/24</span>
+              <ion-icon name="chevron-forward-outline" class="icon"></ion-icon>
+            </div>
+
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngSwitchCase="'part2'">
+      <h2>Content for Part 2</h2>
+      <p>This is the content for the second part.</p>
+    </div>
+    <div *ngSwitchCase="'part3'">
+      <h2>Content for Part 3</h2>
+      <p>This is the content for the third part.</p>
+    </div>
+    <div *ngSwitchDefault>
+      <h2>Welcome!</h2>
+    </div>
+  </div> -->
+
+
+  <ion-card>
+    <ion-card-content>
+      <div class="button-group">
+        <ion-button>
+          <img src="assets/flags/english.png" class="circle-img" alt="Icon 1" />
+          {{ vocList[currentIndex] }}
+        </ion-button>
+        <ion-button>
+          <img src="assets/flags/german.png" class="circle-img" alt="Icon 2" />
+          Fahren
+        </ion-button>
+  
+        <ion-button>
+          <audio controls class="audio-player">
+            <source src="assets/audio/sample.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </ion-button>
+      </div>
+  
+      <div class="vocabulary-display">
+        <!-- <p>{{ vocList[currentIndex] }}</p> -->
+      </div>
+  
+      <div class="navigation-icons">
+        <ion-icon
+          name="chevron-back-outline"
+          class="icon"
+          (click)="navigate(-1)"
+          [class.disabled]="currentIndex === 0"
+        ></ion-icon>
+        <span class="page-info">{{ currentIndex + 1 }}/{{ vocList.length }}</span>
+        <ion-icon
+          name="chevron-forward-outline"
+          class="icon"
+          (click)="navigate(1)"
+          [class.disabled]="currentIndex === vocList.length - 1"
+        ></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  
+</ion-content>
+

@@ -1,0 +1,30 @@
+/* Styling for ion-title */
+ion-title {
+    color: gray; 
+    font-weight: 500; 
+    padding-left: 10px;
+  }
+  /* Styling for ion-button */
+  ion-button {
+    --background: #F9FAFB; 
+    --color: black;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: none;
+  }
+  .ansbtn{
+    --background: #F08E93 !important;
+    color: #FFFFFF;
+  }
+  ion-radio-group {
+    ion-item {
+      --background: #f3f1f1; 
+      margin-bottom: 10px;
+      align-items: center; 
+      border-radius: 20px;
+    }
+  
+    ion-radio {
+      --border-radius: 50%; /* Ensures the radio itself stays circular */
+    }
+  }
+  
