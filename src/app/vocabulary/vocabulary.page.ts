@@ -78,7 +78,7 @@ export class VocabularyPage implements OnInit {
     this.translate.use('French'); // Temporarily set to German
     this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
       this.vocListGerman = germanList;
-
+        console.log(this.vocListGerman);
       // Reset to the user's selected language
       this.translate.use(this.selectedLanguage);
     });

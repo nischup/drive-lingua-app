@@ -121,7 +121,7 @@
 
         <ion-button>
           <audio controls class="audio-player">
-            <source src="assets/audio/sample.mp3" type="audio/mpeg" />
+             <source *ngIf="vocListGerman?.length" [src]="'assets/audio/chapter-1/'+vocListGerman[currentIndex]+'.wav'" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </ion-button>
@@ -144,8 +144,6 @@
     </ion-card-content>
   </div>
 </ion-card>
-
-
   
   
 </ion-content>
