@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-sentence',
@@ -15,9 +16,12 @@ export class SentencePage implements OnInit {
   chapterno: string = '';
   textTitle: string = '';
   sentList: string[] = [];
+  sentListEnglish: string[] = [];
+  sentListGerman: string[] = [];
   currentIndex: number = 0;
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
+  isTurning: boolean = false;
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -60,13 +64,35 @@ export class SentencePage implements OnInit {
   }
 
   getSentenceList() {
-    this.translate
-      .get(`SentenceList.${this.chapterno}`)
+    this.translate.get(`SentenceList.${this.chapterno}`)
       .subscribe((translatedTitle: string[]) => {
         this.sentList = translatedTitle;
         console.log(this.sentList);
       });
+
+      this.translate.use('French');
+      this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
+      this.sentListGerman = germanList;
+      console.log(this.sentListGerman);
+    });
   }
+
+// getSentenceList() {
+
+//   this.translate.use('English'); 
+//   this.translate.get(`SentenceList.${this.chapterno}`).subscribe((englishList: string[]) => {
+//     this.sentListEnglish = englishList;
+
+//     this.translate.use('French');
+//     this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
+//       this.sentListGerman = germanList;
+
+//       this.translate.use(this.selectedLanguage);
+//     });
+//   });
+// }
+
+
 
   navigate(direction: number) {
     const newIndex = this.currentIndex + direction;

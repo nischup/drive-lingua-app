@@ -15,9 +15,12 @@ export class VocabularyPage implements OnInit {
   defaultBackHref: string = '';
   chapterno: string = '';
   vocList: string[] = [];
+  vocListEnglish: string[] = [];
+  vocListGerman: string[] = [];
   currentIndex: number = 0;
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
+  isTurning: boolean = false;
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -58,20 +61,45 @@ export class VocabularyPage implements OnInit {
        }
   }
 
-  getVocabularyList() {
-    this.translate
-      .get(`VocabularyList.${this.chapterno}`)
-      .subscribe((translatedTitle: string[]) => {
-        this.vocList = translatedTitle;
-        console.log(this.vocList);
-      });
-  }
+  // getVocabularyList() {
+  //   this.translate
+  //     .get(`VocabularyList.${this.chapterno}`)
+  //     .subscribe((translatedTitle: string[]) => {
+  //       this.vocList = translatedTitle;
+  //       console.log(this.vocList);
+  //     });
+  // }
 
-  navigate(direction: number) {
-    const newIndex = this.currentIndex + direction;
-    if (newIndex >= 0 && newIndex < this.vocList.length) {
-      this.currentIndex = newIndex;
+  getVocabularyList() {
+  this.translate.use('English'); // Temporarily set to English
+  this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((englishList: string[]) => {
+    this.vocListEnglish = englishList;
+
+    this.translate.use('French'); // Temporarily set to German
+    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
+      this.vocListGerman = germanList;
+
+      // Reset to the user's selected language
+      this.translate.use(this.selectedLanguage);
+    });
+  });
+}
+
+
+  navigate(direction: number): void {
+    if ((direction === -1 && this.currentIndex === 0) || 
+        (direction === 1 && this.currentIndex === this.vocList.length - 1)) {
+      return; // Prevent navigating out of bounds
     }
+
+    // Trigger the page-turn animation
+    this.isTurning = true;
+
+    // Wait for animation to complete before updating content
+    setTimeout(() => {
+      this.currentIndex += direction;
+      this.isTurning = false; // Reset the animation state
+    }, 300); // Match the animation duration
   }
 
   switchLanguage(lang: string) {

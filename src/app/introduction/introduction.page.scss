@@ -18,3 +18,23 @@ ion-toolbar{
     color: black; /* Ensures the back button icon is white */
   }
   
+.animated-title {
+  font-weight: bold; /* Makes text bold */
+  text-align: center; /* Centers the text */
+  font-size: 1.8rem; /* Adjust the size as needed */
+  margin: 1rem 0; /* Adds some spacing */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Slight upward movement for a smooth fade */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
