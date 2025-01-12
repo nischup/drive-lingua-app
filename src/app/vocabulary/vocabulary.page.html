@@ -119,12 +119,17 @@
             {{ vocListGerman[currentIndex] }}
         </ion-button>
 
+        <!-- <ion-button>
+            {{ vocAudioList[currentIndex] }}
+        </ion-button> -->
+
         <ion-button>
           <audio controls class="audio-player">
-             <source *ngIf="vocListGerman?.length" [src]="'assets/audio/chapter-1/'+vocListGerman[currentIndex]+'.wav'" type="audio/mpeg" />
+            <source *ngIf="vocAudioList[currentIndex]" [src]="vocAudioList[currentIndex]" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </ion-button>
+        
       </div>
       <div class="navigation-icons">
         <ion-icon

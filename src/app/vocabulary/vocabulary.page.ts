@@ -17,6 +17,7 @@ export class VocabularyPage implements OnInit {
   vocList: string[] = [];
   vocListEnglish: string[] = [];
   vocListGerman: string[] = [];
+  vocAudioList: string[] = [];
   currentIndex: number = 0;
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
@@ -71,36 +72,45 @@ export class VocabularyPage implements OnInit {
   // }
 
   getVocabularyList() {
-  this.translate.use('English'); // Temporarily set to English
-  this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((englishList: string[]) => {
-    this.vocListEnglish = englishList;
+    this.translate.use('English'); // Temporarily set to English
+    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((englishList: string[]) => {
+      this.vocListEnglish = englishList;
 
-    this.translate.use('French'); // Temporarily set to German
-    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
-      this.vocListGerman = germanList;
-        console.log(this.vocListGerman);
-      // Reset to the user's selected language
-      this.translate.use(this.selectedLanguage);
+      this.translate.use('French'); // Temporarily set to German
+      this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
+        this.vocListGerman = germanList;
+          console.log(this.vocListGerman);
+        // Reset to the user's selected language
+        this.translate.use(this.selectedLanguage);
+      });
+
+      this.translate.get(`vocAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
+        this.vocAudioList = audioList;
+          console.log(this.vocAudioList);
+        // Reset to the user's selected language
+        this.translate.use(this.selectedLanguage);
+      });
+
     });
-  });
-}
-
+  }
 
   navigate(direction: number): void {
+    // Prevent navigating out of bounds
     if ((direction === -1 && this.currentIndex === 0) || 
-        (direction === 1 && this.currentIndex === this.vocList.length - 1)) {
-      return; // Prevent navigating out of bounds
+        (direction === 1 && this.currentIndex === this.vocListGerman.length - 1)) {
+      return;
     }
-
+  
     // Trigger the page-turn animation
     this.isTurning = true;
-
+  
     // Wait for animation to complete before updating content
     setTimeout(() => {
       this.currentIndex += direction;
       this.isTurning = false; // Reset the animation state
     }, 300); // Match the animation duration
   }
+  
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
