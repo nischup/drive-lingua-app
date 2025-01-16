@@ -28,13 +28,35 @@ export class Tab2Page {
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
   selectedLanguage: string = 'English'; // Default language
 
+ imagePath: string = 'assets/iconschapterpage/english/english1.svg'; // Default image path
+
   constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
 
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
+    const defaultLang = browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) 
+      ? browserLang 
+      : 'English';
+
+    this.selectedLanguage = defaultLang;
+    translate.use(defaultLang);
+    this.updateImagePath();
   }
+
+  updateImagePath() {
+    // Map language to its folder and file names
+    const languageMap: { [key: string]: string } = {
+      English: 'english/english1.svg',
+      Arabic: 'arabisch/arab1.svg',
+      Persian: 'persisch/pers1.svg',
+      // Add mappings for other languages as needed
+    };
+
+    this.imagePath = `assets/iconschapterpage/${languageMap[this.selectedLanguage] || 'english/english1.svg'}`;
+     console.log(this.imagePath);
+  }
+
 
   ngOnInit(): void {
     // Initialize the filtered list with all languages
@@ -52,6 +74,7 @@ export class Tab2Page {
     this.translate.use(lang);
     this.selectedLanguage = lang;
     localStorage.setItem('selectedLanguage', lang);
+    this.updateImagePath();
   }
 
   // Filter languages based on the search term
