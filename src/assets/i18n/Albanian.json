@@ -49,5 +49,52 @@
 "Vocabulary": "Fjalor",
 "Sentences": "Fjali",
 "Videos": "Video",
-"Chapter": "Kapitulli"
+"Chapter": "Kapitulli",
+"Before Exam": "Para  testit :",
+"Before Exam Details":"Dëshironi të bëni testin tuaj praktik, por instruktori i patentës ndërhyn shpesh gjatë orëve të drejtimit dhe ju këshillon kundër? Atëherë duhet ta dëgjoni. Ai nuk dëshiron t'ju bindë të merrni mësime të panevojshme drejtimi, por dëshiron që ju të merrni lejen e drejtimit sa më lirë të jetë e mundur dhe në fund t'ua rekomandoni autoshkollën të tjerëve. Provimet janë dukshëm më të shtrenjta se mësimet e drejtimit të automjetit dhe për këtë arsye do t'u sillnin autoshkollave më shumë para se disa mësime më shumë për vozitje. Pra, besoni instruktorit tuaj të vozitjes dhe vazhdoni të praktikoni. \n\n A është instruktori juaj i vozitjes i kënaqur me ju dhe ju rekomandon të bëni testin praktik? Më pas tregojini atij se ku ndiheni të pasigurt dhe çfarë dëshironi të praktikoni përsëri. Dhe merrni një takim. Tani duhet të adresoni pikat tuaja të dobëta në mënyrë që të ndiheni të sigurt. Sepse shumica e provimeve dështojnë, nuk janë për shkak të mungesës së njohurive, por për shkak të nervozizmit. Dhe siç e dimë të gjithë, mënyra më e mirë për ta kapërcyer këtë është të ndihesh i sigurt",
+
+
+    "chapters": {
+            "1": {
+              "title": "",
+              "details": ""
+          }, 
+          "2": {
+              "title": "",
+              "details": ""
+          }, 
+          "3": {
+              "title": "",
+              "details": ""
+          }, 
+          "4": {
+              "title": "",
+              "details": ""
+          }, 
+          "5": {
+              "title": "",
+              "details": ""
+          }, 
+          "6": {
+              "title": "",
+              "details": ""
+          }, 
+          "7": {
+              "title": "",
+              "details": ""
+          }, 
+          "8": {
+              "title": "",
+              "details": ""
+          }, 
+          "9": {
+              "title": "",
+              "details": ""
+          },
+          "10": {
+              "title": "",
+              "details": ""
+          }
+    }
+
 }

@@ -48,5 +48,51 @@
 "Vocabulary": "Kelime Dağarcığı",
 "Sentences": "Cümleler",
 "Videos": "Videolar",
- "Chapter": "Bölüm"
+"Chapter": "Bölüm",
+"Before Exam": "Sınav öncesi:",
+"Before Exam Details":"Pratik sınavına girmek istiyorsun, ancak eğitmenin sürüş dersleri esnasında sık sık müdahale ediyor ve sana sınava girmemeni mi tavsiye ediyor? O zaman onu mutlaka dinlemelisin. Niyeti seni gereksiz sürüş derslerine sokmak değil, sadece ehliyetini mümkün olduğunca uyguna almanı ve sonunda sürücü kursunu tavsiye etmeni amaçlıyor. Sınavlar, sürüş derslerine göre çok daha pahalıdır ve bu nedenle sürücü kurslarına birkaç sürüş dersinden daha fazla para kazandıracaktır. Bu nedenle, eğitmenine güven ve pratik yapmaya devam et. \n\n Sürüş eğitmenin senden memnun mu ve pratik sınava girmeni mi öneriyor? Ozaman ona kendini nerede güvensiz hissettiğini ve neyi tekrarlamak istediğini söyle. Ve pratik sınav için randevu almasını rica et. Şimdi kendini güvende hissetmek için zayıf noktalarını ele almalısın. Çünkü başarısız sınavların çoğu bilmezlikten değil, gerginlikten dolayı yanlış gider. Ve bunun üstesinden gelmenin en iyi yolu kendini güvende hissetmektir.",
+
+    "chapters": {
+            "1": {
+              "title": "",
+              "details": ""
+          }, 
+          "2": {
+              "title": "",
+              "details": ""
+          }, 
+          "3": {
+              "title": "",
+              "details": ""
+          }, 
+          "4": {
+              "title": "",
+              "details": ""
+          }, 
+          "5": {
+              "title": "",
+              "details": ""
+          }, 
+          "6": {
+              "title": "",
+              "details": ""
+          }, 
+          "7": {
+              "title": "",
+              "details": ""
+          }, 
+          "8": {
+              "title": "",
+              "details": ""
+          }, 
+          "9": {
+              "title": "",
+              "details": ""
+          },
+          "10": {
+              "title": "",
+              "details": ""
+          }
+    }
+    
 }

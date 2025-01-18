@@ -54,5 +54,51 @@
     "Edit Profile": "Editar perfil",
     "Notification": "Notificaciones",
     "Help & Support": "Ayuda y soporte",
-    "Sign Out": "Cerrar sesión"
-  }
+    "Sign Out": "Cerrar sesión",
+    "Before Exam": "Antes del examen:",
+    "Before Exam Details":"¿Quieres realizar tu examen práctico, pero el instructor todavía tiene que intervenir a veces y te desaconseja hacer el examen? Entonces deberías creerle. No quiere que pagues más clases de las necesarias. Lo que quiere es que obtengas tu licencia a un buen precio, que estés satisfecho y recomiendes la autoescuela. Los exámenes son mucho más caros que las clases de conducción, así que él ganaría más con un segundo examen que con unas pocas clases adicionales. Por favor, confía en el experto y practica más. \n\n Si tu instructor está satisfecho con tus habilidades de conducción, te recomendará que hagas el examen. Dile en qué aspectos todavía te sientes inseguro y qué quisieras practicar más. Fija una fecha para el examen. Ahora deberías trabajar en tus puntos débiles para sentirte más seguro. La mayoría de los exámenes fallidos no se deben a falta de conocimientos o habilidades, sino a la nerviosidad. Y la mejor manera de controlar la nerviosidad es sentirte seguro.",
+
+    "chapters": {
+            "1": {
+              "title": "",
+              "details": ""
+          }, 
+          "2": {
+              "title": "",
+              "details": ""
+          }, 
+          "3": {
+              "title": "",
+              "details": ""
+          }, 
+          "4": {
+              "title": "",
+              "details": ""
+          }, 
+          "5": {
+              "title": "",
+              "details": ""
+          }, 
+          "6": {
+              "title": "",
+              "details": ""
+          }, 
+          "7": {
+              "title": "",
+              "details": ""
+          }, 
+          "8": {
+              "title": "",
+              "details": ""
+          }, 
+          "9": {
+              "title": "",
+              "details": ""
+          },
+          "10": {
+              "title": "",
+              "details": ""
+          }
+    }
+
+}

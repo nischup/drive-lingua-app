@@ -123,6 +123,10 @@ export class Tab2Page {
   }
   navigateToChapter10() {
     this.router.navigate(['/tabs/chapter10/']);
+  }  
+
+  navigateToExam() {
+    this.router.navigate(['/tabs/beforeexam/']);
   }
 
 

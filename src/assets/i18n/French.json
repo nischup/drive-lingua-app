@@ -49,7 +49,53 @@
 "Sentences": "Sätze",
 "Videos": "Videos",
   "Chapter": "Kapitel",
+  "Before Exam": "Avant l’examen :",
+"Before Exam Details":"Vous souhaitez passer votre examen pratique, mais votre moniteur doit encore intervenir régulièrement et vous déconseille de passer le test ? Dans ce cas, vous devriez lui faire confiance. Il ne cherche pas à vous faire payer plus de leçons que nécessaire. Ce qu’il veut, c’est que vous obteniez votre permis à un bon rapport qualité-prix, que vous soyez satisfait et que vous recommandiez l’auto-école. Les examens sont bien plus coûteux que les leçons de conduite, donc il gagnerait davantage avec un deuxième examen qu’avec quelques leçons supplémentaires. Faites confiance à l’expert et pratiquez davantage. \n\n Si votre moniteur est satisfait de vos compétences de conduite, il vous conseillera de passer l’examen. Parlez-lui des points sur lesquels vous vous sentez encore incertain et de ce que vous souhaitez pratiquer davantage. Prenez rendez-vous pour l’examen. À ce stade, concentrez-vous sur vos points faibles pour vous sentir en confiance. La plupart des examens ratés ne sont pas dus à un manque de connaissances ou de compétences, mais à la nervosité. Et la meilleure façon de gérer la nervosité est de se sentir sûr de soi.",
 
+    "chapters": {
+            "1": {
+              "title": "",
+              "details": ""
+          }, 
+          "2": {
+              "title": "",
+              "details": ""
+          }, 
+          "3": {
+              "title": "",
+              "details": ""
+          }, 
+          "4": {
+              "title": "",
+              "details": ""
+          }, 
+          "5": {
+              "title": "",
+              "details": ""
+          }, 
+          "6": {
+              "title": "",
+              "details": ""
+          }, 
+          "7": {
+              "title": "",
+              "details": ""
+          }, 
+          "8": {
+              "title": "",
+              "details": ""
+          }, 
+          "9": {
+              "title": "",
+              "details": ""
+          },
+          "10": {
+              "title": "",
+              "details": ""
+          }
+    },
+
+    
 "VocabularyList": {
         "1": 
         [

@@ -88,6 +88,10 @@ const routes: Routes = [
         loadChildren: () => import('../test-answer/test-answer.module').then( m => m.TestAnswerPageModule)
       },
       {
+        path: 'beforeexam',
+        loadChildren: () => import('../beforeexam/beforeexam.module').then( m => m.BeforeexamPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

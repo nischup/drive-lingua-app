@@ -1,0 +1,15 @@
+<ion-toolbar class="black-toolbar">
+  <ion-buttons slot="start">
+    <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (ionBack)="goBack()"></ion-back-button>
+  </ion-buttons>
+ {{ 'Before Exam' | translate }}
+</ion-toolbar>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+
+
+  <!-- Details Section -->
+  <p [ngStyle]="{ 'white-space': 'pre-line' }">  {{ 'Before Exam Details' | translate }}  </p>
+
+</ion-content>
