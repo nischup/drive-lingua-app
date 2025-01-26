@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-tab2',
@@ -30,7 +31,7 @@ export class Tab2Page {
 
  imagePath: string = 'assets/iconschapterpage/english/english1.svg'; // Default image path
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private languageService: LanguageService, private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
 
@@ -71,10 +72,14 @@ export class Tab2Page {
   }
 
   switchLanguage(lang: string) {
-    this.translate.use(lang);
-    this.selectedLanguage = lang;
-    localStorage.setItem('selectedLanguage', lang);
-    this.updateImagePath();
+
+    this.languageService.setLanguage(lang); // Save the selected language
+
+    // this.translate.use(lang);
+    // this.selectedLanguage = lang;
+    // localStorage.setItem('selectedLanguage', lang);
+    // this.updateImagePath();
+    // this.languageService.setLanguage(language); // Save the selected language
   }
 
   // Filter languages based on the search term
