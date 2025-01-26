@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-vocabulary',
@@ -15,13 +15,14 @@ export class VocabularyPage implements OnInit {
   defaultBackHref: string = '';
   chapterno: string = '';
   vocList: string[] = [];
-  vocListEnglish: string[] = [];
+  vocListUserSelection: string[] = [];
   vocListGerman: string[] = [];
   vocAudioList: string[] = [];
   currentIndex: number = 0;
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
   isTurning: boolean = false;
+  
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -37,7 +38,7 @@ export class VocabularyPage implements OnInit {
     { name: 'Tuerk', flag: 'assets/flags/tuerk.png' },
   ];
   
-  constructor(private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
+  constructor( private languageService: LanguageService, private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
     translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
     translate.setDefaultLang('English');
   
@@ -46,20 +47,24 @@ export class VocabularyPage implements OnInit {
   }
 
   ngOnInit() {
-     // Access the 'chapterno' query parameter
-     this.route.queryParams.subscribe(params => {
+    // Access the 'chapterno' query parameter
+    this.route.queryParams.subscribe((params) => {
       this.chapterno = params['chapterno'] || '1'; // Default to '1' if not found
       this.getVocabularyList();
       this.setBackHref(); // Set dynamic back link
     });
+  
+    // Retrieve the persisted language
+    // const storedLanguage = localStorage.getItem('selectedLanguage');
+    // if (storedLanguage) {
+    //   this.selectedLanguage = storedLanguage;
+    //   this.switchLanguage(storedLanguage);
+    // } else {
+    //   this.translate.setDefaultLang(this.selectedLanguage);
+    // }
 
-       // Retrieve the persisted language
-       const storedLanguage = localStorage.getItem('selectedLanguage');
-       if (storedLanguage) {
-         this.switchLanguage(storedLanguage);
-       } else {
-         this.translate.setDefaultLang(this.selectedLanguage);
-       }
+     // Retrieve the selected language from the service
+     this.selectedLanguage = this.languageService.getLanguage();
   }
 
   // getVocabularyList() {
@@ -72,27 +77,27 @@ export class VocabularyPage implements OnInit {
   // }
 
   getVocabularyList() {
-    this.translate.use('English'); // Temporarily set to English
-    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((englishList: string[]) => {
-      this.vocListEnglish = englishList;
-
-      this.translate.use('French'); // Temporarily set to German
-      this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
-        this.vocListGerman = germanList;
-          console.log(this.vocListGerman);
-        // Reset to the user's selected language
-        this.translate.use(this.selectedLanguage);
+    // Fetch the German list (always in German)
+    this.translate.use('French'); // Set to German
+    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
+      this.vocListGerman = germanList;
+      console.log('German List:', this.vocListGerman);
+  
+      // Fetch the user's selected language list
+      this.translate.use(this.selectedLanguage); // Switch to the selected language
+      this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((userLanguageList: string[]) => {
+        this.vocListUserSelection = userLanguageList;
+        console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
       });
-
+  
+      // Fetch the audio list in the user's selected language
       this.translate.get(`vocAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
         this.vocAudioList = audioList;
-          console.log(this.vocAudioList);
-        // Reset to the user's selected language
-        this.translate.use(this.selectedLanguage);
+        console.log('Audio List:', this.vocAudioList);
       });
-
     });
   }
+  
 
   navigate(direction: number): void {
     // Prevent navigating out of bounds
@@ -112,12 +117,17 @@ export class VocabularyPage implements OnInit {
   }
   
 
-  switchLanguage(lang: string) {
-    this.translate.use(lang);
-    this.selectedLanguage = lang;
-    localStorage.setItem('selectedLanguage', lang);
+  switchLanguage(language: string) {
+    this.selectedLanguage = language;
+  
+    // Persist the selected language in localStorage
+    localStorage.setItem('selectedLanguage', language);
+  
+    // Update the translation service and re-fetch the vocabulary list
+    this.translate.use(language).subscribe(() => {
+      this.getVocabularyList();
+    });
   }
-
 
   onSegmentChange(event: any) {
     console.log('Selected Part:', event.detail.value);
