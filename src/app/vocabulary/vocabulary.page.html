@@ -6,62 +6,7 @@
 </ion-toolbar>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-<!--   
-  <ion-segment [(ngModel)]="selectedPart" (ionChange)="onSegmentChange($event)">
-    <ion-segment-button value="part1">
-      <ion-label>Part 1</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="part2">
-      <ion-label>Part 2</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="part3">
-      <ion-label>Part 3</ion-label>
-    </ion-segment-button>
-  </ion-segment>
 
-  <div [ngSwitch]="selectedPart" class="content-container">
-    <div *ngSwitchCase="'part1'">
-      <ion-card>
-        <ion-card-content>
-          <div class="button-group">
-            <ion-button>
-              <img src="assets/flags/english.png" class="circle-img" alt="Icon 1" />
-              Driving
-            </ion-button>
-            <ion-button>
-              <img src="assets/flags/german.png" class="circle-img" alt="Icon 2" />
-            Faren
-            </ion-button>
-            
-            <ion-button>
-              <audio controls class="audio-player">
-                <source src="assets/audio/sample.mp3" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            </ion-button>
-
-            <div class="navigation-icons">
-              <ion-icon name="chevron-back-outline" class="icon"></ion-icon>
-              <span class="page-info">1/24</span>
-              <ion-icon name="chevron-forward-outline" class="icon"></ion-icon>
-            </div>
-
-          </div>
-        </ion-card-content>
-      </ion-card>
-    </div>
-    <div *ngSwitchCase="'part2'">
-      <h2>Content for Part 2</h2>
-      <p>This is the content for the second part.</p>
-    </div>
-    <div *ngSwitchCase="'part3'">
-      <h2>Content for Part 3</h2>
-      <p>This is the content for the third part.</p>
-    </div>
-    <div *ngSwitchDefault>
-      <h2>Welcome!</h2>
-    </div>
-  </div> -->
 
   <h3 class="animated-title"> {{ 'Chapter' | translate }} - {{ chapterno }}</h3>
 
@@ -111,11 +56,21 @@
     <ion-card-content>
       <div class="button-group">
         <ion-button>
-          <img src="assets/flags/english.png" class="circle-img" alt="Icon 1" />
+            <img *ngIf="selectedLanguage === 'English'" src="assets/flags/english.png" class="circle-img" alt="English Flag" />
+            <img *ngIf="selectedLanguage === 'Spanish'" src="assets/flags/spanish.jpg" class="circle-img" alt="Spanish Flag" />
+            <img *ngIf="selectedLanguage === 'Persian'" src="assets/flags/iran.png" class="circle-img" alt="Iran Flag" />
+            <img *ngIf="selectedLanguage === 'Ukrain'" src="assets/flags/ukrain.png" class="circle-img" alt="Ukrain Flag" />
+            <img *ngIf="selectedLanguage === 'Vietnam'" src="assets/flags/vietnam.png" class="circle-img" alt="Vietnam Flag" />
+            <img *ngIf="selectedLanguage === 'Albanian'" src="assets/flags/albanian.png" class="circle-img" alt="Albanian Flag" />
+            <img *ngIf="selectedLanguage === 'French'" src="assets/flags/french.png" class="circle-img" alt="French Flag" />
+            <img *ngIf="selectedLanguage === 'Russian'" src="assets/flags/russian.jpg" class="circle-img" alt="Russian Flag" />
+            <img *ngIf="selectedLanguage === 'Chinese'" src="assets/flags/chinese.png" class="circle-img" alt="Chinese Flag" />
+            <img *ngIf="selectedLanguage === 'Tuerk'" src="assets/flags/tuerk.png" class="circle-img" alt="Tuerk Flag" />
+
           {{ vocListUserSelection[currentIndex] }}
         </ion-button>
         <ion-button>
-          <img src="assets/flags/german.png" class="circle-img" alt="Icon 2" />
+          <img src="assets/flags/french.png" class="circle-img" alt="Icon 2" />
             {{ vocListGerman[currentIndex] }}
         </ion-button>
 

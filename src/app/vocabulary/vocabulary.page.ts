@@ -31,7 +31,7 @@ export class VocabularyPage implements OnInit {
     { name: 'Ukrain', flag: 'assets/flags/ukrain.png' },
     { name: 'Vietnam', flag: 'assets/flags/vietnam.png' },
     { name: 'Albanian', flag: 'assets/flags/albanian.png' },
-    { name: 'French', flag: 'assets/flags/german.png' },
+    { name: 'French', flag: 'assets/flags/french.png' },
     { name: 'Spanish', flag: 'assets/flags/spanish.jpg' },
     { name: 'Russian', flag: 'assets/flags/russian.jpg' },
     { name: 'Chinese', flag: 'assets/flags/chinese.png' },
@@ -77,23 +77,25 @@ export class VocabularyPage implements OnInit {
   // }
 
   getVocabularyList() {
-    // Fetch the German list (always in German)
-    this.translate.use('French'); // Set to German
-    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
-      this.vocListGerman = germanList;
-      console.log('German List:', this.vocListGerman);
-  
+
       // Fetch the user's selected language list
       this.translate.use(this.selectedLanguage); // Switch to the selected language
       this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((userLanguageList: string[]) => {
         this.vocListUserSelection = userLanguageList;
         console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
       });
+
+    // Fetch the German list (always in German)
+    this.translate.use('French'); // Set to German
+    this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
+      this.vocListGerman = germanList;
+      console.log('German List:', this.vocListGerman);
+  
   
       // Fetch the audio list in the user's selected language
       this.translate.get(`vocAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
         this.vocAudioList = audioList;
-        console.log('Audio List:', this.vocAudioList);
+        // console.log('Audio List:', this.vocAudioList);
       });
     });
   }

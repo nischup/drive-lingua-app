@@ -14,12 +14,21 @@
     <ion-card-content>
       <div class="button-group">
         <ion-button>
-          <img src="assets/flags/english.png" class="circle-img" alt="Icon 1" />
+            <img *ngIf="selectedLanguage === 'English'" src="assets/flags/english.png" class="circle-img" alt="English Flag" />
+            <img *ngIf="selectedLanguage === 'Spanish'" src="assets/flags/spanish.jpg" class="circle-img" alt="Spanish Flag" />
+            <img *ngIf="selectedLanguage === 'Persian'" src="assets/flags/iran.png" class="circle-img" alt="Iran Flag" />
+            <img *ngIf="selectedLanguage === 'Ukrain'" src="assets/flags/ukrain.png" class="circle-img" alt="Ukrain Flag" />
+            <img *ngIf="selectedLanguage === 'Vietnam'" src="assets/flags/vietnam.png" class="circle-img" alt="Vietnam Flag" />
+            <img *ngIf="selectedLanguage === 'Albanian'" src="assets/flags/albanian.png" class="circle-img" alt="Albanian Flag" />
+            <img *ngIf="selectedLanguage === 'French'" src="assets/flags/french.png" class="circle-img" alt="French Flag" />
+            <img *ngIf="selectedLanguage === 'Russian'" src="assets/flags/russian.jpg" class="circle-img" alt="Russian Flag" />
+            <img *ngIf="selectedLanguage === 'Chinese'" src="assets/flags/chinese.png" class="circle-img" alt="Chinese Flag" />
+            <img *ngIf="selectedLanguage === 'Tuerk'" src="assets/flags/tuerk.png" class="circle-img" alt="Tuerk Flag" />
           <p> {{ sentList[currentIndex] }}</p>
         
         </ion-button>
         <ion-button>
-          <img src="assets/flags/german.png" class="circle-img" alt="Icon 2" />
+          <img src="assets/flags/french.png" class="circle-img" alt="Icon 2" />
            <p> {{ sentListGerman[currentIndex] }}</p>
         </ion-button>
         <ion-button>

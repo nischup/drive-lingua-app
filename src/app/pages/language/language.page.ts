@@ -15,7 +15,7 @@ export class LanguagePage implements OnInit {
     { name: 'Ukrain', origin_name: 'Українська', flag: 'assets/flags/ukrain.png' },
     { name: 'Vietnam', origin_name: 'Tiếng Việt', flag: 'assets/flags/vietnam.png' },
     { name: 'Albanian', origin_name: 'Shqip', flag: 'assets/flags/albanian.png' },
-    { name: 'French', origin_name: 'Français', flag: 'assets/flags/german.png' },
+    { name: 'French', origin_name: 'Français', flag: 'assets/flags/french.png' },
     { name: 'Spanish', origin_name: 'Español', flag: 'assets/flags/spanish.jpg' },
     { name: 'Russian', origin_name: 'Русский', flag: 'assets/flags/russian.jpg' },
     { name: 'Chinese', origin_name: '中文', flag: 'assets/flags/chinese.png' },

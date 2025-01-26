@@ -30,7 +30,7 @@ export class SentencePage implements OnInit {
     { name: 'Ukrain', flag: 'assets/flags/ukrain.png' },
     { name: 'Vietnam', flag: 'assets/flags/vietnam.png' },
     { name: 'Albanian', flag: 'assets/flags/albanian.png' },
-    { name: 'French', flag: 'assets/flags/german.png' },
+    { name: 'French', flag: 'assets/flags/french.png' },
     { name: 'Spanish', flag: 'assets/flags/spanish.jpg' },
     { name: 'Russian', flag: 'assets/flags/russian.jpg' },
     { name: 'Chinese', flag: 'assets/flags/chinese.png' },
