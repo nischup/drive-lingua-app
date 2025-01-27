@@ -122,16 +122,21 @@
 
 
 
-  <div class="registration">
+ <!--  <div class="registration">
     <img 
       [src]="imagePath" 
       (click)="navigateToRegistration()" 
       alt="{{ selectedLanguage }} icon"
     />
+  </div> -->
+ 
+
+
+  <div class="registration">
+    <img (click)="navigateToRegistration()" src="assets/svg/registration.svg">
   </div>
 
-
-
+  
   <div class="first-step">
     <img (click)="navigateToChapter1()" src="assets/svg/first-step.svg">
   </div>
