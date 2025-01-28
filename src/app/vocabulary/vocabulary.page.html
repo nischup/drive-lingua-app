@@ -79,10 +79,26 @@
         </ion-button> -->
 
         <ion-button>
-          <audio controls class="audio-player">
+          <!-- <audio controls class="audio-player">
             <source *ngIf="vocAudioList[currentIndex]" [src]="vocAudioList[currentIndex]" type="audio/mpeg" />
             Your browser does not support the audio element.
-          </audio>
+          </audio> -->
+
+
+          <div *ngIf="vocAudioList.length > 0; else noAudio">
+            <div *ngFor="let audio of vocAudioList; let i = index" class="audio-item">
+              <p>Audio {{ i + 1 }}</p>
+              <audio controls>
+                <source [src]="audio" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          
+          <ng-template #noAudio>
+            <p>No audio files available.</p>
+          </ng-template>
+
         </ion-button>
         
       </div>

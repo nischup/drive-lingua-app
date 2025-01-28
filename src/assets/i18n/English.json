@@ -804,5 +804,13 @@
         "What does the control lamp with the 'P' symbol tell you?"
     
       ]
-    }
+    },
+      "vocAudioList": {
+        "1": [
+          "assets/audio/file1.mp3",
+          "assets/audio/file2.mp3",
+          "assets/audio/file3.mp3"
+        ]
+      }
+    
   }

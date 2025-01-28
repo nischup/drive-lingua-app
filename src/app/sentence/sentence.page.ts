@@ -22,6 +22,7 @@ export class SentencePage implements OnInit {
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
   isTurning: boolean = false;
+  senAudioList: string[] = [];
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -74,6 +75,14 @@ export class SentencePage implements OnInit {
       this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
       this.sentListGerman = germanList;
       console.log(this.sentListGerman);
+
+         // Fetch the audio list in the user's selected language
+         this.translate.get(`senAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
+          this.senAudioList = audioList;
+          console.log('Audio List:', this.senAudioList);
+        });
+
+
     });
   }
 
