@@ -18,6 +18,7 @@ export class VocabularyPage implements OnInit {
   vocListUserSelection: string[] = [];
   vocListGerman: string[] = [];
   vocAudioList: string[] = [];
+  currentAudio: string | null = null; // Current audio file
   currentIndex: number = 0;
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
@@ -53,17 +54,6 @@ export class VocabularyPage implements OnInit {
       this.getVocabularyList();
       this.setBackHref(); // Set dynamic back link
     });
-  
-    // Retrieve the persisted language
-    // const storedLanguage = localStorage.getItem('selectedLanguage');
-    // if (storedLanguage) {
-    //   this.selectedLanguage = storedLanguage;
-    //   this.switchLanguage(storedLanguage);
-    // } else {
-    //   this.translate.setDefaultLang(this.selectedLanguage);
-    // }
-
-     // Retrieve the selected language from the service
      this.selectedLanguage = this.languageService.getLanguage();
   }
 
@@ -95,28 +85,51 @@ export class VocabularyPage implements OnInit {
       // Fetch the audio list in the user's selected language
       this.translate.get(`vocAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
         this.vocAudioList = audioList;
-        // console.log('Audio List:', this.vocAudioList);
+        console.log(this.vocAudioList);
+        if (this.vocAudioList.length > 0) {
+          this.currentIndex = 0;  // Ensure we start at index 0
+          this.currentAudio = this.vocAudioList[0]; // Set the first audio but don't auto-play yet
+        }
       });
     });
   }
   
 
   navigate(direction: number): void {
-    // Prevent navigating out of bounds
     if ((direction === -1 && this.currentIndex === 0) || 
         (direction === 1 && this.currentIndex === this.vocListGerman.length - 1)) {
       return;
     }
   
-    // Trigger the page-turn animation
     this.isTurning = true;
   
-    // Wait for animation to complete before updating content
     setTimeout(() => {
       this.currentIndex += direction;
-      this.isTurning = false; // Reset the animation state
-    }, 300); // Match the animation duration
+      this.updateAudioSource(true); // Now it plays only when navigating
+      this.isTurning = false;
+    }, 300);
   }
+  
+
+  updateAudioSource(autoPlay = true): void {
+    if (this.vocAudioList.length > this.currentIndex) {
+      this.currentAudio = this.vocAudioList[this.currentIndex];
+  
+      setTimeout(() => {
+        const audioElement = document.getElementById("audioPlayer") as HTMLAudioElement;
+        if (audioElement) {
+          audioElement.load(); // Reloads the new source
+          if (autoPlay) {
+            audioElement.play().catch(error => console.log("Auto-play failed:", error));
+          }
+        }
+      }, 100);
+    } else {
+      this.currentAudio = null;
+    }
+  }
+  
+  
   
 
   switchLanguage(language: string) {
