@@ -31,12 +31,21 @@
           <img src="assets/flags/french.png" class="circle-img" alt="Icon 2" />
            <p> {{ sentListGerman[currentIndex] }}</p>
         </ion-button>
-        <ion-button>
-          <audio controls class="audio-player">
-            <source src="assets/audio/sample.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-        </ion-button>
+
+
+      <ion-button>
+          <div *ngIf="currentAudio; else noAudio">
+              <!-- <p>Audio {{ currentIndex + 1 }}</p> -->
+              <audio id="audioPlayer" controls>
+                <source [src]="currentAudio" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          
+            <ng-template #noAudio>
+              <p>No audio files available.</p>
+            </ng-template>
+          </ion-button>
 
         <div class="navigation-icons">
           <ion-icon

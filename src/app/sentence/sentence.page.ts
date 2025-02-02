@@ -23,6 +23,7 @@ export class SentencePage implements OnInit {
   selectedLanguage: string = 'English'; // Default language
   isTurning: boolean = false;
   senAudioList: string[] = [];
+  currentAudio: string | null = null; // Current audio file
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -80,6 +81,11 @@ export class SentencePage implements OnInit {
          this.translate.get(`senAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
           this.senAudioList = audioList;
           console.log('Audio List:', this.senAudioList);
+        if (this.senAudioList.length > 0) {
+          this.currentIndex = 0;  // Ensure we start at index 0
+          this.currentAudio = this.senAudioList[0]; // Set the first audio but don't auto-play yet
+        }
+
         });
 
 
@@ -102,11 +108,36 @@ export class SentencePage implements OnInit {
 // }
 
 
+   navigate(direction: number): void {
+    if ((direction === -1 && this.currentIndex === 0) || 
+        (direction === 1 && this.currentIndex === this.sentListGerman.length - 1)) {
+      return;
+    }
+  
+    // this.isTurning = true;
+  
+    setTimeout(() => {
+      this.currentIndex += direction;
+      this.updateAudioSource(true); // Now it plays only when navigating
+      this.isTurning = false;
+    }, 300);
+  }
 
-  navigate(direction: number) {
-    const newIndex = this.currentIndex + direction;
-    if (newIndex >= 0 && newIndex < this.sentList.length) {
-      this.currentIndex = newIndex;
+    updateAudioSource(autoPlay = true): void {
+    if (this.senAudioList.length > this.currentIndex) {
+      this.currentAudio = this.senAudioList[this.currentIndex];
+  
+      setTimeout(() => {
+        const audioElement = document.getElementById("audioPlayer") as HTMLAudioElement;
+        if (audioElement) {
+          audioElement.load(); // Reloads the new source
+          if (autoPlay) {
+            audioElement.play().catch(error => console.log("Auto-play failed:", error));
+          }
+        }
+      }, 100);
+    } else {
+      this.currentAudio = null;
     }
   }
 
