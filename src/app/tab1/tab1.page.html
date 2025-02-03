@@ -24,13 +24,17 @@
   <h5> {{ 'welcome' | translate }}</h5>
   <h3> {{ 'You are' | translate}}<br> {{ 'doing well' | translate}}</h3>
 
-    <div class="progress-bar">
-      <span class="bar-top-text">58%</span>
-      <div class="single-range-bar">
-        <ion-range id="single-range"  value="58"></ion-range> 
-      </div>
-      <span class="bar-btm-text"> {{ 'You are' | translate }} 42% {{ 'away from your total goal! Keep going' | translate }}  </span>
+  <div class="progress-bar">
+    <span class="bar-top-text">{{ progressPercentage.toFixed(0) }}%</span>
+    <div class="single-range-bar">
+      <ion-range id="single-range" [value]="progressPercentage"></ion-range> 
     </div>
+    <span class="bar-btm-text">
+      {{ 'You are' | translate }} {{ (100 - progressPercentage).toFixed(0) }}% 
+      {{ 'away from your total goal! Keep going' | translate }}
+    </span>
+  </div>
+  
 
     <ion-card class="test-card">
       <ion-card-content>

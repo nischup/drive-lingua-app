@@ -107,6 +107,12 @@ export class VocabularyPage implements OnInit {
       this.currentIndex += direction;
       this.updateAudioSource(true); // Now it plays only when navigating
       this.isTurning = false;
+
+      // Check if this is the last word in the list (user finished vocabulary)
+      if (this.currentIndex === this.vocListGerman.length - 1) {
+        this.completeVocabularyForChapter(Number(this.chapterno));
+      }
+
     }, 300);
   }
   
@@ -128,8 +134,29 @@ export class VocabularyPage implements OnInit {
       this.currentAudio = null;
     }
   }
+
+  completeVocabularyForChapter(chapterIndex: number) {
+    let chapterProgress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
   
+    if (!chapterProgress[chapterIndex]) {
+      chapterProgress[chapterIndex] = { vocab: false, sentence: false };
+    }
   
+    if (!chapterProgress[chapterIndex].vocab) {
+      chapterProgress[chapterIndex].vocab = true;
+  
+      // Increase progress by 5% for vocabulary completion
+      let completedChapters = Number(localStorage.getItem('completedChapters')) || 0;
+      completedChapters += 5;
+  
+      // Save updated progress
+      localStorage.setItem('chapterProgress', JSON.stringify(chapterProgress));
+      localStorage.setItem('completedChapters', completedChapters.toString());
+  
+      // Notify other pages about the update
+      window.dispatchEvent(new Event('storage'));
+    }
+  }
   
 
   switchLanguage(language: string) {

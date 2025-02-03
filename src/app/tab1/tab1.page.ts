@@ -9,6 +9,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class Tab1Page {
 
+  totalChapters = 10;
+  completedChapters = 0;
+  progressPercentage = 0;
+
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
     { name: 'Arabic', origin_name: 'العربية', flag: 'assets/flags/arabic.png' },
@@ -34,8 +38,16 @@ export class Tab1Page {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
-  }
 
+    this.loadProgress(); // Load progress initially
+
+    // Listen for storage updates when data changes from other pages
+    window.addEventListener('storage', () => {
+      this.loadProgress();
+    });
+
+  }
+  
   ngOnInit(): void {
     // Initialize the filtered list with all languages
     this.filteredLanguages = [...this.languages];
@@ -46,6 +58,15 @@ export class Tab1Page {
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
+  }
+
+  loadProgress() {
+    this.completedChapters = Number(localStorage.getItem('completedChapters')) || 0;
+    this.calculateProgress();
+  }
+
+  calculateProgress() {
+    this.progressPercentage = (this.completedChapters / (this.totalChapters * 10)) * 100;
   }
 
   switchLanguage(lang: string) {
@@ -61,6 +82,12 @@ export class Tab1Page {
       language.name.toLowerCase().includes(term) ||
       language.origin_name.toLowerCase().includes(term)
     );
+  }
+
+
+  updateProgress(newCompletedChapters: number) {
+    this.completedChapters = newCompletedChapters;
+    this.progressPercentage = (this.completedChapters / this.totalChapters) * 100;
   }
   
   clickTo(){
