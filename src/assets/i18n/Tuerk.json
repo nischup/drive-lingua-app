@@ -682,7 +682,35 @@
             "Park eden araçları geçtikten sonra sağa sinyal vermelisin"
  
         ],
-        "6": [],
+        "6": [
+          "Otobüs duraklarında dikkatli olmalısın",
+            "Eğer bir otobüs dörtlülerini yakıp otobüs durağında duruyorsa, onu ancak yürüme hızında sollayabilirsin",
+            "İlk önce yolcuların inmesine izin ver",
+            "Otobüs sola sinyal verdi, ona lütfen izin ver",
+            "Dönel kavşağında lütfen ikinci çıkıştan çık",
+            "Burasıdır anayolun bittiği yer",
+            "Ingolstadt yönünde ilerle",
+            "Burada serbest sürebilirsin",
+            "Sana ait bir şeritin var",
+            "Trafik lambası trafik işaret levhalarından üstündür",
+            "Polis trafik lambasından üstündür",
+            "Trafik kurallarına uymak önemlidir",
+            "Bu 'Dur' işareti levhası şu an için geçerli değildir",
+            "Polisin göğsünü veya sırtını gördüğün anda, frene basmalısın",
+            "Polis sana doğru yan bir şekilde duruyorsa, sürebilirsin",
+            "Polisin talimatlarına uy",
+            "Sürücü sana el işaretiyle kendi yol hakkını veriyor",
+            "Eğer trafik lambası kırmızı gösteriyor ise, bu yeşil ok levhasının 'durma' çizgisinde tamamen durmalısın",
+            "Yeşil oklu trafik ışığında durmadan ilerleyebilirsin",
+            "Burada sola dönüş trafik lambası bulunuyor",
+            "Eğer trafik lambası sarı yanıp sönüyorsa, trafik işaret levhalarını dikkate almalısın",
+            "Yeşil oldu",
+            "Trafik lambası kırmızı",
+            "Devam etmeye hazırlıklı ol",
+            "Sabırlı ol",
+            "Bu bir trafik lambası değil, madeni levhadır"
+
+        ],
         "7": [
             "Yerleşim alanında daima cocukların karşına çıkabileceğini göz önünde bulundurmalısın",
             "Demiryolu geçidinde yavaşça git",

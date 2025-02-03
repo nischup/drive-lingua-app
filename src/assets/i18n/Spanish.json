@@ -689,7 +689,35 @@
           "Después de pasar los vehículos estacionados, debes volver a la derecha"
 
         ],
-        "6": [],
+        "6": [
+              "Debes tener cuidado en las paradas de autobús",
+              "Si un autobús con las luces de emergencia está parado en una parada, solo puedes adelantarlo a paso de peatón",
+              "Deja que los pasajeros bajen primero",
+              "El autobús indica a la izquierda, déjalo salir",
+              "Toma la segunda salida en la rotonda",
+              "Aquí termina la carretera prioritaria",
+              "Conduce en dirección a Ingolstadt",
+              "Aquí tienes vía libre",
+              "Tienes tu propio carril",
+              "El semáforo tiene prioridad sobre las señales de tráfico",
+              "El policía anula el semáforo",
+              "Es importante que respetes las normas de tráfico",
+              "La señal de stop no se aplica aquí",
+              "Si ves el pecho o la espalda, debes presionar el freno",
+              "Si el policía está de perfil respecto a ti, puedes conducir",
+              "Sigue las instrucciones de los policías",
+              "El conductor te hace señas para que pases",
+              "Si el semáforo está en rojo, debes detenerte en la línea de parada con la señal de flecha verde",
+              "Con una flecha verde en el semáforo, puedes continuar sin detenerte",
+              "Aquí tienes un semáforo para girar a la izquierda",
+              "Si el semáforo parpadea en amarillo, debes respetar las señales de tráfico",
+              "Tienes luz verde",
+              "El semáforo está en rojo",
+              "Prepárate para continuar el viaje",
+              "Mantente paciente",
+              "Eso no es un semáforo, sino una señal de metal"
+
+        ],
         "7": [
           "En la zona residencial debes esperar niños",
           "Conduce despacio sobre el paso a nivel",
