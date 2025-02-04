@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-language',
@@ -7,6 +8,11 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./language.page.scss'],
 })
 export class LanguagePage implements OnInit {
+
+  totalChapters = 10;
+  completedChapters = 0;
+  progressPercentage = 0;
+
   // List of languages with their flags
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -27,7 +33,7 @@ export class LanguagePage implements OnInit {
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
   selectedLanguage: string = 'English'; // Default language
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
 
@@ -45,6 +51,17 @@ export class LanguagePage implements OnInit {
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
+
+    // Retrieve progress from localStorage
+    const storedProgress = Number(localStorage.getItem('completedChapters')) || 0;
+    this.progressPercentage = (storedProgress / (this.totalChapters * 10)) * 100;
+
+    // Redirect if progress is greater than 0
+    if (this.progressPercentage > 0) {
+      this.router.navigate(['/tabs/tab1']);
+      console.log('Redirecting to tab2...');
+    }
+
   }
 
   switchLanguage(lang: string) {

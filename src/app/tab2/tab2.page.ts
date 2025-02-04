@@ -67,8 +67,9 @@ export class Tab2Page {
   }
 
   switchLanguage(lang: string) {
-
-    this.languageService.setLanguage(lang); // Save the selected language
+    this.translate.use(lang);
+    this.selectedLanguage = lang;
+    localStorage.setItem('selectedLanguage', lang);
   }
 
   // Filter languages based on the search term
