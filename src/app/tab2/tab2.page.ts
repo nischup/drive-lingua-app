@@ -82,7 +82,7 @@ export class Tab2Page {
   }
 
   navigateToRegistration() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/tabs/registration-info']);
   }
 
   navigateToChapter(id: number) {

@@ -92,6 +92,10 @@ const routes: Routes = [
         loadChildren: () => import('../beforeexam/beforeexam.module').then( m => m.BeforeexamPageModule)
       },
       {
+        path: 'registration-info',
+        loadChildren: () => import('../registration-info/registration-info.module').then( m => m.RegistrationInfoPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

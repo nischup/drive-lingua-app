@@ -59,7 +59,6 @@ export class LanguagePage implements OnInit {
     // Redirect if progress is greater than 0
     if (this.progressPercentage > 0) {
       this.router.navigate(['/tabs/tab1']);
-      console.log('Redirecting to tab2...');
     }
 
   }
