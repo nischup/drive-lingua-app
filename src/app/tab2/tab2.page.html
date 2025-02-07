@@ -10,7 +10,7 @@
       <ion-col size="1" ></ion-col>
       <!-- Right side select -->
       <ion-col size="5" class="ion-text-end">
-        <ion-select class="ionlang" [(ngModel)]="selectedLanguage" interface="popover" (ionChange)="switchLanguage($event.detail.value)">
+        <ion-select class="ionlang" [(ngModel)]="selectedLanguage" interface="popover" (ionChange)="switchLanguage($event.detail.value); updateImagePath()">
           <ion-select-option *ngFor="let language of filteredLanguages" [value]="language.name">
             <img [src]="language.flag" alt="{{ language.name }} flag" class="flag-icon" />
             {{ language.origin_name }} ({{ language.name }})
@@ -122,54 +122,53 @@
  
 
   <div class="registration">
-    <img (click)="navigateToRegistration()" src="assets/svg/registration.svg">
+    <img (click)="navigateToRegistration()" [src]="imagePaths['registration']" alt="Registration">
   </div>
-
   
-  <div class="first-step">
-    <img (click)="navigateToChapter1()" src="assets/svg/first-step.svg">
+  
+   <div class="first-step">
+    <img (click)="navigateToChapter1()" [src]="imagePaths['firstStep']" alt="First Step">
   </div>
-
+  
   <div class="start-driving">
-    <img (click)="navigateToChapter2()" src="assets/svg/start-driving.svg">
+    <img (click)="navigateToChapter2()" [src]="imagePaths['startDriving']" alt="Start Driving">
   </div>
-
+  
   <div class="we-use-street">
-    <img (click)="navigateToChapter3()" src="assets/svg/use-the-street.svg">
+    <img (click)="navigateToChapter3()" [src]="imagePaths['useStreet']" alt="Use the Street">
   </div>
-
+  
   <div class="we-turn">
-    <img (click)="navigateToChapter4()" src="assets/svg/we-turn.svg">
+    <img (click)="navigateToChapter4()" [src]="imagePaths['weTurn']" alt="We Turn">
   </div>
-
+  
   <div class="piority1">
-    <img (click)="navigateToChapter5()" src="assets/svg/piority-part-1.svg">
+    <img (click)="navigateToChapter5()" [src]="imagePaths['priority1']" alt="Priority Part 1">
   </div>
-
+  
   <div class="piority2">
-    <img (click)="navigateToChapter6()" src="assets/svg/piority-part-2.svg">
+    <img (click)="navigateToChapter6()" [src]="imagePaths['priority2']" alt="Priority Part 2">
   </div>
-
+  
   <div class="rules">
-    <img (click)="navigateToChapter7()" src="assets/svg/follow-the-rules.svg">
+    <img (click)="navigateToChapter7()" [src]="imagePaths['rules']" alt="Follow the Rules">
   </div>
-
+  
   <div class="highway">
-    <img (click)="navigateToChapter8()" src="assets/svg/highway.svg">
+    <img (click)="navigateToChapter8()" [src]="imagePaths['highway']" alt="Highway">
   </div>
-
+  
   <div class="driving">
-    <img (click)="navigateToChapter9()" src="assets/svg/basic-driving.svg">
+    <img (click)="navigateToChapter9()" [src]="imagePaths['driving']" alt="Basic Driving">
   </div>
-
+  
   <div class="departure">
-    <img (click)="navigateToChapter10()" src="assets/svg/departure.svg">
+    <img (click)="navigateToChapter10()" [src]="imagePaths['departure']" alt="Departure">
   </div>
-
+  
   <div class="exam">
-    <img (click)="navigateToExam()" src="assets/svg/exam.svg">
-  </div>
-
+    <img (click)="navigateToExam()" [src]="imagePaths['exam']" alt="Exam">
+  </div> 
 
 
 </ion-content>
