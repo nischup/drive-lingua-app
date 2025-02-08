@@ -241,12 +241,8 @@ export class Tab2Page {
       departure: `assets/iconschapterpage/${selectedLangMap.departure}`,
       exam: `assets/iconschapterpage/${selectedLangMap.exam}`,
     };
-  
-    console.log(this.imagePaths);
   }
   
-  
-
   switchLanguage(lang: string) {
     this.translate.use(lang);
     this.selectedLanguage = lang;
@@ -254,7 +250,6 @@ export class Tab2Page {
     this.updateImagePath();
   }
 
-  // Filter languages based on the search term
   filterLanguages(): void {
     const term = this.searchTerm.toLowerCase();
     this.filteredLanguages = this.languages.filter((language) =>
