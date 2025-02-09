@@ -27,7 +27,12 @@
   <div class="progress-bar">
     <span class="bar-top-text">{{ progressPercentage.toFixed(0) }}%</span>
     <div class="single-range-bar">
-      <ion-range id="single-range" [value]="progressPercentage"></ion-range> 
+
+      <div class="bar-container">
+        <div class="bar progress" [style.width]="progressPercentage + '%'"></div>
+      </div>
+
+      <!-- <ion-range id="single-range" [value]="progressPercentage"></ion-range>  -->
     </div>
     <span class="bar-btm-text">
       {{ 'You are' | translate }} {{ (100 - progressPercentage).toFixed(0) }}% 
@@ -36,28 +41,35 @@
   </div>
   
 
-    <ion-card class="test-card">
-      <ion-card-content>
-        <ion-title>
-          {{ 'Test Taken' | translate }} <br>
-          <span>08/10</span>
-        </ion-title>
-        <div class="bar-section">
-          <div class="bar-item">
-            <div class="bar success"></div>
-            <p>  {{ 'Passed' | translate}} (06)</p>
-          </div>
-          <div class="bar-item">
-            <div class="bar danger"></div>
-            <p>  {{ 'Failed' | translate}} (02)</p>
-          </div>
-          <div class="bar-item">
-            <div class="bar primary"></div>
-            <p>  {{ 'not finished' | translate}} (03)</p>
-          </div>
+  <ion-card class="test-card" *ngIf="testResults">
+    <ion-card-content>
+      <ion-title>
+        {{ 'Test Taken' | translate }} <br>
+        <span>{{ testResults.date }}</span>
+      </ion-title>
+      <div class="bar-section">
+        <div class="bar-item">
+          <div class="bar success"></div>
+          <p>{{ 'Passed' | translate }} ({{ testResults.passed }})</p>
         </div>
-      </ion-card-content>
-    </ion-card>
+        <div class="bar-item">
+          <div class="bar danger"></div>
+          <p>{{ 'Failed' | translate }} ({{ testResults.failed }})</p>
+        </div>
+        <div class="bar-item">
+          <div class="bar primary"></div>
+          <p>{{ 'Not Finished' | translate }} ({{ testResults.notFinished }})</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngIf="!testResults">
+    <ion-card-content>
+      <ion-title>{{ 'No Test Results Found' | translate }}</ion-title>
+    </ion-card-content>
+  </ion-card>
+  
     
     
 

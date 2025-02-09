@@ -98,7 +98,7 @@ export class Tab2Page {
         exam: 'arabisch/arab12.svg'  
       },
       Persian: { 
-        registration: 'ukrainisch/ukrain1.svg', 
+        registration: 'persisch/pers1.svg', 
         firstStep: 'persisch/pers2.svg', 
         startDriving: 'persisch/pers3.svg', 
         useStreet: 'persisch/pers4.svg', 

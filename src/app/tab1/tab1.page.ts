@@ -12,6 +12,7 @@ export class Tab1Page {
   totalChapters = 10;
   completedChapters = 0;
   progressPercentage = 0;
+  testResults: any = null;
 
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -39,9 +40,10 @@ export class Tab1Page {
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
 
-    this.loadProgress(); // Load progress initially
+    this.loadProgress(); 
+    this.loadTestResults();
 
-    // Listen for storage updates when data changes from other pages
+    window.addEventListener('testResultsUpdated', this.updateTestResults.bind(this));
     window.addEventListener('storage', () => {
       this.loadProgress();
     });
@@ -58,6 +60,21 @@ export class Tab1Page {
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('testResultsUpdated', this.updateTestResults.bind(this));
+  }
+
+  loadTestResults() {
+    const results = localStorage.getItem('latestTestResults');
+    if (results) {
+      this.testResults = JSON.parse(results);
+    }
+  }
+
+  updateTestResults(event: any) {
+    this.testResults = event.detail;
   }
 
   loadProgress() {

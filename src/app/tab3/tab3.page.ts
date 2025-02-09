@@ -8,7 +8,16 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+
+  qList: any[] = [];
+  currentQuestionIndex: number = 0;
   selectedOption: string | null = null;
+  answerChecked: boolean = false;  
+  isCorrect: boolean = false;  
+
+  searchTerm: string = '';
+  filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
+  selectedLanguage: string = 'English'; // Default language
 
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -24,17 +33,13 @@ export class Tab3Page {
     { name: 'Tuerk', origin_name: 'Türkçe', flag: 'assets/flags/tuerk.png' },
   ];
 
-  // Search term, filtered list, and selected language
-  searchTerm: string = '';
-  filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
-  selectedLanguage: string = 'English'; // Default language
-
   constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
+    // this.getAllQuestions();
   }
 
   ngOnInit(): void {
@@ -47,7 +52,59 @@ export class Tab3Page {
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
+    this.getAllQuestions();
   }
+
+  get currentQuestion() {
+    return this.qList[this.currentQuestionIndex];
+  }
+  get totalQuestions() {
+    return this.qList.length;
+  }
+
+  getAllQuestions() {
+    this.translate.get('questions').subscribe((translatedQuestions: any) => {
+      this.qList = Object.values(translatedQuestions);
+    });
+  }
+  checkAns() {
+    this.answerChecked = true;
+    this.isCorrect = this.selectedOption === this.currentQuestion.correctAnswer;
+  }
+  
+  nextQ() {
+    const passed = this.qList.filter(q => q.isCorrect).length;
+    const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
+    const notFinished = this.qList.length - (passed + failed);
+  
+    if (this.currentQuestionIndex < this.totalQuestions - 1) {
+      this.currentQuestionIndex++;
+      this.selectedOption = null;
+      this.answerChecked = false;
+      this.isCorrect = false;
+    } else {
+      this.saveTestResults(passed, failed, notFinished);
+    }
+  }
+  
+  
+
+
+  saveTestResults(passed: number, failed: number, notFinished: number) {
+    const testResults = {
+      date: new Date().toLocaleDateString(),
+      total: this.totalQuestions,
+      passed,
+      failed,
+      notFinished
+    };
+    localStorage.setItem('latestTestResults', JSON.stringify(testResults));
+    const event = new CustomEvent('testResultsUpdated', { detail: testResults });
+    window.dispatchEvent(event);
+    console.log('Test Results Saved:', testResults);
+  }
+  
+  
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
@@ -62,14 +119,6 @@ export class Tab3Page {
       language.name.toLowerCase().includes(term) ||
       language.origin_name.toLowerCase().includes(term)
     );
-  }
-  
-  checkAns() {
-    if (this.selectedOption) {
-      this.router.navigate(['/tabs/test-answer'], {
-        queryParams: { answer: this.selectedOption },
-      });
-    }
   }
 
 

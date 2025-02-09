@@ -4,12 +4,24 @@ ion-title {
     font-weight: 500; 
     padding-left: 10px;
   }
+
+h4 {
+    color: gray; 
+    font-weight: 500; 
+    padding-left: 10px;
+    text-align: center;
+  }
   /* Styling for ion-button */
   ion-button {
     --background: #F9FAFB; 
     --color: black;
     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: none;
+    margin-top: 10px;
+  }
+  .ansbtncheck{
+    --background: #bf7e16 !important;
+    color: #FFFFFF;
   }
   .ansbtn{
     --background: #F08E93 !important;
@@ -27,4 +39,19 @@ ion-title {
       --border-radius: 50%; /* Ensures the radio itself stays circular */
     }
   }
+
+  .navigation-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between icons and text */
+    margin: 16px 0; /* Space around the navigation section */
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #1d1515; /* White icons */
+    cursor: pointer;
+  }
+  
   

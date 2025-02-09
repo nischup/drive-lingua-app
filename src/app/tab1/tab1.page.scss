@@ -136,6 +136,22 @@ ion-card-title {
   .ionlang{
     margin-right: 12px;
   }
+
+  .bar-container {
+    width: 100%;
+    background-color: #f0f0f0; /* Light background */
+    border-radius: 20px;
+    // height: 20px;
+    position: relative;
+  }
+  
+  .bar.progress {
+    height: 100%;
+    background-color: rgb(251, 189, 199);;
+    border-radius: 20px;
+    transition: width 0.3s ease; /* Smooth transition */
+  }
+  
   
   
   
