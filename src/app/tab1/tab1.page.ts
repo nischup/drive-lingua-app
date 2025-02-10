@@ -15,6 +15,7 @@ export class Tab1Page {
   testResults: any = null;
   totalTest = 10;
   takenTests: any[] = [];  
+  takenTestCount: number = 0;
 
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -44,6 +45,7 @@ export class Tab1Page {
     this.loadProgress(); 
     this.loadTestResults();
     this.loadTakenTests();
+    this.loadTakenTestCount();
 
     window.addEventListener('testResultsUpdated', this.updateTestResults.bind(this));
 
@@ -56,6 +58,9 @@ export class Tab1Page {
       this.takenTests = event.detail;  
       console.log('Received updated taken tests:', this.takenTests);
     });
+
+    window.addEventListener('takenTestCountUpdated', this.updateTakenTestCount);
+
   }
   
   ngOnInit(): void {
@@ -84,6 +89,16 @@ export class Tab1Page {
     const storedTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
     this.takenTests = storedTests;  // Fixed naming to takenTests
   }
+
+   loadTakenTestCount() {
+    const storedCount = localStorage.getItem('takenTestCount');
+    this.takenTestCount = storedCount ? parseInt(storedCount, 10) : 0;
+  }
+
+  updateTakenTestCount = (event: Event) => {
+    const customEvent = event as CustomEvent;
+    this.takenTestCount = customEvent.detail;
+  };
 
   updateTestResults(event: any) {
     this.testResults = event.detail;

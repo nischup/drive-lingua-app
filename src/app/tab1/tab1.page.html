@@ -45,7 +45,7 @@
     <ion-card-content>
       <ion-title>
         {{ 'Test Taken' | translate }} <br>
-        <!-- <span> {{ takenTestsCount }} /{{ totalTest }} </span> -->
+        <span> {{ takenTestCount }} /{{ totalTest }} </span>
       </ion-title>
       <div class="bar-section">
         <div class="bar-item">
@@ -111,6 +111,18 @@
     {{ 'Share Our App' | translate}}
     <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-button>
+
+  <!-- <ion-list>
+    <h3> My Test Summary </h3>
+    <ion-item *ngFor="let test of takenTests; let i = index">
+      <ion-label>
+        <h2>Test {{ i + 1 }} - {{ test.date }}</h2>
+        <p>Passed: {{ test.passed }} | Failed: {{ test.failed }} | Not Finished: {{ test.notFinished }}</p>
+        <p>Total Questions: {{ test.total }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list> -->
+  
 
   
 </ion-content>

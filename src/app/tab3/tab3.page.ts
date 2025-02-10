@@ -15,6 +15,7 @@ export class Tab3Page {
   answerChecked: boolean = false;  
   isCorrect: boolean = false;  
   takenTest = 0;
+  takenTestCount = 0;
 
   searchTerm: string = '';
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
@@ -77,27 +78,36 @@ export class Tab3Page {
     currentQuestion.isCorrect = this.selectedOption === currentQuestion.correctAnswer;
     this.answerChecked = true;
     this.isCorrect = currentQuestion.isCorrect;
-    console.log(`Question ${this.currentQuestionIndex + 1}:`, currentQuestion);
+    if (this.currentQuestionIndex === this.totalQuestions - 1) {
+      const passed = this.qList.filter(q => q.isCorrect).length;
+      const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
+      const notFinished = this.qList.length - (passed + failed);
+      this.saveTestResults(passed, failed, notFinished);
+    }
   }
+  
 
-  
   nextQ() {
-    const passed = this.qList.filter(q => q.isCorrect).length;
-    console.log("pass = " + passed);
-    const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
-     console.log("fail = " + failed);
-    const notFinished = this.qList.length - (passed + failed);
-     console.log("notfinish = " + notFinished);
-  
     if (this.currentQuestionIndex < this.totalQuestions - 1) {
       this.currentQuestionIndex++;
       this.selectedOption = null;
       this.answerChecked = false;
       this.isCorrect = false;
     } else {
-      this.saveTestResults(passed, failed, notFinished);
+      this.currentQuestionIndex = 0;
+      this.selectedOption = null;
+      this.answerChecked = false;
+      this.isCorrect = false;
+      // If you want to clear the previous answers for a fresh start
+      this.qList.forEach(q => {
+        q.selectedOption = null;
+        q.isCorrect = false;
+      });
+      // this.router.navigate(['/tabs/tab1']);
     }
   }
+  
+  
   
   saveTestResults(passed: number, failed: number, notFinished: number) {
     const testResults = {
@@ -108,31 +118,26 @@ export class Tab3Page {
       notFinished
     };
 
-   // Save the latest test results
-  localStorage.setItem('latestTestResults', JSON.stringify(testResults));
+    localStorage.setItem('latestTestResults', JSON.stringify(testResults));
+    const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
+    existingTests.push(testResults);
+    localStorage.setItem('takenTests', JSON.stringify(existingTests));
+    const takenTestCount = existingTests.length;
+    localStorage.setItem('takenTestCount', takenTestCount.toString());
 
-  // Update the list of taken tests
-  const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
-  existingTests.push(testResults);
-  localStorage.setItem('takenTests', JSON.stringify(existingTests));
+    setTimeout(() => {
+      const takenTestCountEvent = new CustomEvent('takenTestCountUpdated', { detail: takenTestCount });
+      window.dispatchEvent(takenTestCountEvent);
+    }, 100); 
 
-  // Dispatch events with unique variable names
-  const testResultsEvent = new CustomEvent('testResultsUpdated', { detail: testResults });
-  window.dispatchEvent(testResultsEvent);
-
-  const takenTestsEvent = new CustomEvent('takenTestsUpdated', { detail: existingTests });
-  window.dispatchEvent(takenTestsEvent);
-  
-  this.getTakenTestsCount();
-  console.log('Test Results Saved:', testResults);
-  console.log('All Taken Tests:', existingTests);
-
+    const testResultsEvent = new CustomEvent('testResultsUpdated', { detail: testResults });
+    window.dispatchEvent(testResultsEvent);
 
   }
 
   getTakenTestsCount() {
-  const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
-  this.takenTest = existingTests.length;
+    const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
+    this.takenTestCount = existingTests.length;
 }
 
 

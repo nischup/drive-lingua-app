@@ -125,9 +125,9 @@ export class VocabularyPage implements OnInit {
         const audioElement = document.getElementById("audioPlayer") as HTMLAudioElement;
         if (audioElement) {
           audioElement.load(); // Reloads the new source
-          if (autoPlay) {
-            audioElement.play().catch(error => console.log("Auto-play failed:", error));
-          }
+          // if (autoPlay) {
+          //   audioElement.play().catch(error => console.log("Auto-play failed:", error));
+          // }
         }
       }, 100);
     } else {

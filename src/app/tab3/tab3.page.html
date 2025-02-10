@@ -58,6 +58,7 @@
   </ion-radio-group>
 </ion-list>
 
+
 <ion-button 
   class="ansbtncheck" 
   expand="full" 
@@ -67,6 +68,7 @@
   {{ 'Check Answer' | translate }}
 </ion-button>
 
+
 <ion-button 
   *ngIf="answerChecked"
   class="ansbtn" 
@@ -75,6 +77,7 @@
   (click)="nextQ()">
   {{ 'Next Question' | translate }}
 </ion-button>
+
 
 
 </ion-content>
