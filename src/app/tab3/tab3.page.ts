@@ -14,6 +14,7 @@ export class Tab3Page {
   selectedOption: string | null = null;
   answerChecked: boolean = false;  
   isCorrect: boolean = false;  
+  takenTest = 0;
 
   searchTerm: string = '';
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
@@ -53,11 +54,13 @@ export class Tab3Page {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
     this.getAllQuestions();
+    this.getTakenTestsCount();
   }
 
   get currentQuestion() {
     return this.qList[this.currentQuestionIndex];
   }
+
   get totalQuestions() {
     return this.qList.length;
   }
@@ -67,15 +70,24 @@ export class Tab3Page {
       this.qList = Object.values(translatedQuestions);
     });
   }
+
   checkAns() {
+    const currentQuestion = this.qList[this.currentQuestionIndex];
+    currentQuestion.selectedOption = this.selectedOption;
+    currentQuestion.isCorrect = this.selectedOption === currentQuestion.correctAnswer;
     this.answerChecked = true;
-    this.isCorrect = this.selectedOption === this.currentQuestion.correctAnswer;
+    this.isCorrect = currentQuestion.isCorrect;
+    console.log(`Question ${this.currentQuestionIndex + 1}:`, currentQuestion);
   }
+
   
   nextQ() {
     const passed = this.qList.filter(q => q.isCorrect).length;
+    console.log("pass = " + passed);
     const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
+     console.log("fail = " + failed);
     const notFinished = this.qList.length - (passed + failed);
+     console.log("notfinish = " + notFinished);
   
     if (this.currentQuestionIndex < this.totalQuestions - 1) {
       this.currentQuestionIndex++;
@@ -87,9 +99,6 @@ export class Tab3Page {
     }
   }
   
-  
-
-
   saveTestResults(passed: number, failed: number, notFinished: number) {
     const testResults = {
       date: new Date().toLocaleDateString(),
@@ -98,13 +107,34 @@ export class Tab3Page {
       failed,
       notFinished
     };
-    localStorage.setItem('latestTestResults', JSON.stringify(testResults));
-    const event = new CustomEvent('testResultsUpdated', { detail: testResults });
-    window.dispatchEvent(event);
-    console.log('Test Results Saved:', testResults);
+
+   // Save the latest test results
+  localStorage.setItem('latestTestResults', JSON.stringify(testResults));
+
+  // Update the list of taken tests
+  const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
+  existingTests.push(testResults);
+  localStorage.setItem('takenTests', JSON.stringify(existingTests));
+
+  // Dispatch events with unique variable names
+  const testResultsEvent = new CustomEvent('testResultsUpdated', { detail: testResults });
+  window.dispatchEvent(testResultsEvent);
+
+  const takenTestsEvent = new CustomEvent('takenTestsUpdated', { detail: existingTests });
+  window.dispatchEvent(takenTestsEvent);
+  
+  this.getTakenTestsCount();
+  console.log('Test Results Saved:', testResults);
+  console.log('All Taken Tests:', existingTests);
+
+
   }
-  
-  
+
+  getTakenTestsCount() {
+  const existingTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
+  this.takenTest = existingTests.length;
+}
+
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
@@ -112,7 +142,6 @@ export class Tab3Page {
     localStorage.setItem('selectedLanguage', lang);
   }
 
-  // Filter languages based on the search term
   filterLanguages(): void {
     const term = this.searchTerm.toLowerCase();
     this.filteredLanguages = this.languages.filter((language) =>
@@ -120,6 +149,5 @@ export class Tab3Page {
       language.origin_name.toLowerCase().includes(term)
     );
   }
-
 
 }

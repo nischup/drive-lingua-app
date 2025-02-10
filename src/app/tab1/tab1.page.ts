@@ -13,6 +13,8 @@ export class Tab1Page {
   completedChapters = 0;
   progressPercentage = 0;
   testResults: any = null;
+  totalTest = 10;
+  takenTests: any[] = [];  
 
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -28,10 +30,9 @@ export class Tab1Page {
     { name: 'Tuerk', origin_name: 'Türkçe', flag: 'assets/flags/tuerk.png' },
   ];
 
-  // Search term, filtered list, and selected language
   searchTerm: string = '';
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
-  selectedLanguage: string = 'English'; // Default language
+  selectedLanguage: string = 'English';
 
   constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
@@ -42,18 +43,23 @@ export class Tab1Page {
 
     this.loadProgress(); 
     this.loadTestResults();
+    this.loadTakenTests();
 
     window.addEventListener('testResultsUpdated', this.updateTestResults.bind(this));
+
     window.addEventListener('storage', () => {
       this.loadProgress();
     });
 
+    // Fix: Use consistent naming for takenTests
+    window.addEventListener('takenTestsUpdated', (event: any) => {
+      this.takenTests = event.detail;  
+      console.log('Received updated taken tests:', this.takenTests);
+    });
   }
   
   ngOnInit(): void {
-    // Initialize the filtered list with all languages
     this.filteredLanguages = [...this.languages];
-    // Retrieve the persisted language
     const storedLanguage = localStorage.getItem('selectedLanguage');
     if (storedLanguage) {
       this.switchLanguage(storedLanguage);
@@ -64,6 +70,7 @@ export class Tab1Page {
 
   ngOnDestroy() {
     window.removeEventListener('testResultsUpdated', this.updateTestResults.bind(this));
+    window.removeEventListener('takenTestsUpdated', this.loadTakenTests);
   }
 
   loadTestResults() {
@@ -71,6 +78,11 @@ export class Tab1Page {
     if (results) {
       this.testResults = JSON.parse(results);
     }
+  }
+
+  loadTakenTests() {
+    const storedTests = JSON.parse(localStorage.getItem('takenTests') || '[]');
+    this.takenTests = storedTests;  // Fixed naming to takenTests
   }
 
   updateTestResults(event: any) {
@@ -92,7 +104,6 @@ export class Tab1Page {
     localStorage.setItem('selectedLanguage', lang);
   }
 
-  // Filter languages based on the search term
   filterLanguages(): void {
     const term = this.searchTerm.toLowerCase();
     this.filteredLanguages = this.languages.filter((language) =>
@@ -100,7 +111,6 @@ export class Tab1Page {
       language.origin_name.toLowerCase().includes(term)
     );
   }
-
 
   updateProgress(newCompletedChapters: number) {
     this.completedChapters = newCompletedChapters;
@@ -114,5 +124,4 @@ export class Tab1Page {
   clickToTest(){
     this.router.navigate(['/tabs/tab3']);
   }
-
 }
