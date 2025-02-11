@@ -45,9 +45,6 @@
     "Incomplete": "Incomplete",
     "Home":"Home",
     "Setting": "Setting",
-    "Question": "Question",
-    "Check Answer": "Check Answer",
-    "Next Question": "Next Question",
     "Edit Profile": "Edit Profile",
     "Notification": "Notification",
     "Help & Support": "Help & Support",
@@ -65,11 +62,12 @@
     "Would you know how it works": "Would you know how it works?",
     "Learn the dialect of your region": "Learn the dialect of your region.",
     "Would you have known": "Would you have known?",
-    "Learn the dialect of your region": "Learn the dialect of your region.",
-    "Would you have known": "Would you have known?",
-    "Learn the dialect of your region": "Learn the dialect of your region.",
     "Here is an overview of all basic driving tasks": "Here is an overview of all basic driving tasks",
     "This is how the departure control works": "This is how the departure control works",
+    "Videos of Chapter": "Videos of Chapter",
+    "Check Answer": "Check Answer",
+    "Next Question": "Next Question",
+    "Question": "Question",
     
     "questions": {
       "1": {
