@@ -81,7 +81,8 @@ export class Chapter1Page implements OnInit {
   }
 
   clickToVideo() {
-    this.router.navigate(['/tabs/video']);
+    const chapterno = '1';
+    this.router.navigate(['/tabs/video'], { queryParams: { chapterno } });
   }
 
 }

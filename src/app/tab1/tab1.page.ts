@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class Tab1Page {
 
+  isModalOpen = false;
   totalChapters = 10;
   completedChapters = 0;
   progressPercentage = 0;
@@ -139,4 +140,13 @@ export class Tab1Page {
   clickToTest(){
     this.router.navigate(['/tabs/tab3']);
   }
+
+    openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
 }

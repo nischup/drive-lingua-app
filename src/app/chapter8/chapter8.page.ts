@@ -79,8 +79,9 @@ export class Chapter8Page implements OnInit {
     this.router.navigate(['/tabs/vocabulary'], { queryParams: { chapterno } });
   }
 
-  clickToVideo() {
-    this.router.navigate(['/tabs/video']);
+   clickToVideo() {
+    const chapterno = '8';
+    this.router.navigate(['/tabs/video'], { queryParams: { chapterno } });
   }
 
 }

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { VideoPageRoutingModule } from './video-routing.module';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { VideoPage } from './video.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { VideoPage } from './video.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    VideoPageRoutingModule
+    VideoPageRoutingModule,
+    TranslateModule 
   ],
   declarations: [VideoPage]
 })

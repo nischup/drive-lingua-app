@@ -152,6 +152,31 @@ ion-card-title {
     transition: width 0.3s ease; /* Smooth transition */
   }
   
-  
+.chevron-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 20px;
+}
+
+ion-modal {
+  --height: 70%; 
+  --border-radius: 20px 20px 0 0;
+  --background: transparent; 
+  --backdrop-opacity: 0.5;   
+}
+
+
+// ion-modal::part(content) {
+//   background: var(--ion-background-color, #fff); 
+//   border-radius: 20px 20px 0 0;
+//   padding: 16px;
+// }
+
   
   

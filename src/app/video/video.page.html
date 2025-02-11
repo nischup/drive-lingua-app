@@ -2,7 +2,7 @@
   <ion-buttons slot="start">
     <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (ionBack)="goBack()"></ion-back-button>
   </ion-buttons>
-  Videos
+  Videos of Chapter {{ chapterno }}
 </ion-toolbar>
 
 
@@ -12,6 +12,11 @@
       <ion-title size="large">Video</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '1'">
+
+  <h3> {{ 'Would you know how it works' | translate }} </h3>
 
   <div class="video-container">
     <iframe
@@ -23,5 +28,627 @@
       allowfullscreen
     ></iframe>
   </div>
+
+</div>
+
+<div class="chapterwisevideo" *ngIf="chapterno === '2'">
+
+   <p>{{ 'No video available for this chapter.' | translate }}</p>
+
+</div>
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '3'">
+
+  <h3> {{ 'Learn the dialect of your region' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_6"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_7"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>  
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap3_8"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+</div>
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '4'">
+
+  <h3> {{ 'Would you have known' | translate }} ?</h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap4_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap4_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap4_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap4_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap4_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div> 
+
+</div>
+
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '5'">
+
+  <h3> {{ 'Learn the dialect of your region' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_6"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_7"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap5_8"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+
+</div>
+
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '6'">
+
+  <h3> {{ 'Learn the dialect of your region' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_6"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_7"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap6_8"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+
+</div>
+
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '7'">
+
+  <h3> {{ 'Would you have known' | translate }} ?</h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap7_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap7_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap7_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap7_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap7_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+</div>
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '8'">
+
+  <h3> {{ 'Learn the dialect of your region' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_6"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_7"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap8_8"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+
+</div>
+
+
+
+<div class="chapterwisevideo" *ngIf="chapterno === '9'">
+
+  <h3> {{ 'Here is an overview of all basic driving tasks' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_3"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_4"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_5"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_6"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>   
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap9_7"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>    
+
+
+</div>
+
+<div class="chapterwisevideo" *ngIf="chapterno === '10'">
+
+  <h3> {{ 'This is how the departure control works' | translate }} </h3>
+
+  <div class="video-container">
+    <iframe
+      width="100%"
+      height="315"
+      [src]="sanitizedVideoUrlChap10_1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div> 
+</div>
+
+
   
 </ion-content>

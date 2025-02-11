@@ -78,8 +78,10 @@ export class Chapter7Page implements OnInit {
     const chapterno = '7';
     this.router.navigate(['/tabs/vocabulary'], { queryParams: { chapterno } });
   }
-  clickToVideo() {
-    this.router.navigate(['/tabs/video']);
+  
+   clickToVideo() {
+    const chapterno = '7';
+    this.router.navigate(['/tabs/video'], { queryParams: { chapterno } });
   }
 
 }
