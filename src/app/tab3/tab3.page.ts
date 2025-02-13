@@ -66,11 +66,20 @@ export class Tab3Page {
     return this.qList.length;
   }
 
-  getAllQuestions() {
-    this.translate.get('questions').subscribe((translatedQuestions: any) => {
-      this.qList = Object.values(translatedQuestions);
-    });
-  }
+getAllQuestions() {
+  this.translate.get('questions').subscribe((translatedQuestions: any) => {
+    this.qList = this.shuffleArray(Object.values(translatedQuestions));
+    this.currentQuestionIndex = 0; 
+  });
+}
+
+private shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
   checkAns() {
     const currentQuestion = this.qList[this.currentQuestionIndex];
@@ -85,6 +94,8 @@ export class Tab3Page {
       this.saveTestResults(passed, failed, notFinished);
     }
   }
+
+  
   
 
   nextQ() {
