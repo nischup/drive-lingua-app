@@ -145,50 +145,104 @@
       "13": {
         "id": "13",
         "question": "Before you start driving, you need to signal left",
-        "options": ["Beijing", "Seoul", "Bangkok", "Tokyo"],
-        "correctAnswer": "Tokyo"
+        "options": ["Blinke links, bevor du losfährst", "Nachdem du losgefahren bist, musst du links blinken", "Blinke bitte nach rechts", "Du musst vor dem Losfahren rechts blinken"],
+        "correctAnswer": "Blinke links, bevor du losfährst"
       },
       "14": {
         "id": "14",
-        "question": "Which sport is known as 'the beautiful game'?",
-        "options": ["Basketball", "Cricket", "Soccer", "Tennis"],
-        "correctAnswer": "Soccer"
+        "question": "Press the clutch all the way down",
+        "options": ["Drücke die Kupplung halb", "Drücke die Bremse voll durch", "Lass die Kupplung zum Schleifpunkt kommen", "Drücke die Kupplung ganz durch"],
+        "correctAnswer": "Drücke die Kupplung ganz durch"
       },
       "15": {
         "id": "15",
-        "question": "What gas do plants absorb from the atmosphere?",
-        "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
-        "correctAnswer": "Carbon Dioxide"
+        "question": "Start the engine",
+        "options": ["Schalte den Motor aus", "Drehe den Schlüssel", "Schalte den Motor an", "Zieh den Schlüssel ab"],
+        "correctAnswer": "Schalte den Motor an"
       },
       "16": {
         "id": "16",
-        "question": "How many sides does a hexagon have?",
-        "options": ["5", "6", "7", "8"],
-        "correctAnswer": "6"
+        "question": "Stay at the side of the road",
+        "options": ["Fahre auf den Bordstein", "Fahre nicht zu dicht am Rand", "Bleib am Fahrbahnrand stehen", "Die Fahrbahn hat einen Rand"],
+        "correctAnswer": "Bleib am Fahrbahnrand stehen"
       },
       "17": {
         "id": "17",
-        "question": "What is the hardest natural substance on Earth?",
-        "options": ["Gold", "Iron", "Diamond", "Silver"],
-        "correctAnswer": "Diamond"
+        "question": "Take your feet away",
+        "options": ["Nimm die Füße weg", "Strecke deine Füße ", "Drücke mit den Füßen", "Dein Fuß ist Druck"],
+        "correctAnswer": "Nimm die Füße weg"
       },
       "18": {
         "id": "18",
-        "question": "Which language has the most native speakers?",
-        "options": ["English", "Hindi", "Mandarin Chinese", "Spanish"],
-        "correctAnswer": "Mandarin Chinese"
+        "question": "You released the clutch too quickly",
+        "options": ["Lass die Kupplung schnell los", "Drücke die Kupplung ganz durch", "Drücke schnell Kupplung und Bremse", "Du hast die Kupplung zu schnell losgelassen"],
+        "correctAnswer": "Du hast die Kupplung zu schnell losgelassen"
       },
       "19": {
         "id": "19",
-        "question": "Which country is known as the Land of the Rising Sun?",
-        "options": ["China", "South Korea", "Japan", "Thailand"],
-        "correctAnswer": "Japan"
+        "question": "Drive at walking speed",
+        "options": ["Gehe zu Fuß", "Fahre Schrittgeschwindigkeit", "Schrittgeschwindigkeit ist unter 10 km/h", "Fahre Gehen Geschwindigkeit"],
+        "correctAnswer": "Fahre Schrittgeschwindigkeit"
       },
       "20": {
         "id": "20",
-        "question": "What is the largest mammal in the world?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
-        "correctAnswer": "Blue Whale"
+        "question": "Shift up a gear",
+        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
+      },
+      "21": {
+        "id": "21",
+        "question": "You need to accelerate a bit more",
+        "options": ["Du beschleunigst zu schnell", "Du musst etwas mehr beschleunigen", "Dein Gas ist zu viel", "Nimm das Gas weg"],
+        "correctAnswer": "Du musst etwas mehr beschleunigen"
+      },
+      "22": {
+        "id": "22",
+        "question": "Only 30 km/h is allowed here",
+        "options": ["Hier sind nur 30 km/h erlaubt", "Fahre mindestens 30 km/h", "Fahre genau 30 km/h", "Hier ist eine 30er Zone"],
+        "correctAnswer": "Hier sind nur 30 km/h erlaubt"
+      },
+      "23": {
+        "id": "23",
+        "question": "Please steer more gently",
+        "options": ["Bitte lenke etwas mehr", "Bitte lenke nicht zu viel", "Bitte lenke nach rechts", "Bitte lenke etwas sanfter"],
+        "correctAnswer": "Bitte lenke etwas sanfter"
+      },
+      "24": {
+        "id": "24",
+        "question": "You need to brake hard here",
+        "options": ["Deine Bremse ist sehr stark", "Hier musst du leichter Bremsen", "Hier musst du stark bremsen", "Hier musst du stärker bremsen"],
+        "correctAnswer": "Hier musst du stark bremsen"
+      },
+      "25": {
+        "id": "25",
+        "question": "Stay further to the right in the curve",
+        "options": ["Biege nach rechts ab", "Bleib in der Kurve weiter rechts", "Blinke vor der Kurve rechts", "Wir wollen nach rechts abbiegen"],
+        "correctAnswer": "Bleib in der Kurve weiter rechts"
+      },
+      "26": {
+        "id": "26",
+        "question": "Turn your head",
+        "options": ["Stelle die Kopfstütze ein", "Kopf nach unten", "Drehe deinen Kopf", "Dein Kopf ist zu weit vorne"],
+        "correctAnswer": "Drehe deinen Kopf"
+      },
+      "27": {
+        "id": "27",
+        "question": "Look more ahead",
+        "options": ["Drehe deinen Kopf", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
+      },
+      "28": {
+        "id": "28",
+        "question": "Shift up a gear",
+        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
+      },
+      "29": {
+        "id": "29",
+        "question": "Shift up a gear",
+        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
       }
     },
 
