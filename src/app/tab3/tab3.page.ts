@@ -66,20 +66,38 @@ export class Tab3Page {
     return this.qList.length;
   }
 
+// getAllQuestions() {
+//   this.translate.get('questions').subscribe((translatedQuestions: any) => {
+//     this.qList = this.shuffleArray(Object.values(translatedQuestions));
+//     this.currentQuestionIndex = 0; 
+//   });
+// }
+
+
+// private shuffleArray(array: any[]): any[] {
+//     for (let i = array.length - 1; i > 0; i--) {
+//       const j = Math.floor(Math.random() * (i + 1));
+//       [array[i], array[j]] = [array[j], array[i]];
+//     }
+//     return array;
+// }
+
 getAllQuestions() {
   this.translate.get('questions').subscribe((translatedQuestions: any) => {
-    this.qList = this.shuffleArray(Object.values(translatedQuestions));
+    const allQuestions = Object.values(translatedQuestions);
+    this.qList = this.shuffleArray(allQuestions).slice(0, 20); // Take only 20 random questions
     this.currentQuestionIndex = 0; 
   });
 }
 
 private shuffleArray(array: any[]): any[] {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
+
 
   checkAns() {
     const currentQuestion = this.qList[this.currentQuestionIndex];

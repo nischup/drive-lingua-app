@@ -65,6 +65,430 @@
 "Register":"Regjistrimi",
 "Register information": "Faleminderit që punoni me platformën mësimore DriveLingua!\n\nJu këshillojmë që të filloni të mësoni në platformën tonë menjëherë pas regjistrimit në autoshkollën tuaj. Dy kapituj në javë janë perfekte për sukses të shpejtë. Nëse gjithçka funksionon mirë, duhet të plotësoni të dymbëdhjetë kapitujt përpara se të filloni trajnimin praktik. Përpara mësimit tuaj të parë praktik, duhet të përsërisni kapitujt një dhe dy.\n\nPas çdo mësimi duhet të flisni me mësuesin tuaj për përmbajtjen e mësimit tuaj të ardhshëm. Tani mund të përsërisni kapitullin me atë temë përpara mësimit tuaj të ardhshëm të drejtimit.\n\nDriveLingua ju ndihmon të kuptoni udhëzimet, por nuk zë vendin e instruktorit. Në varësi të njohurive tuaja gjermane, mund të jetë e rëndësishme të sillni dikë, i cili ju ndihmon gjithashtu të kuptoni shpjegimin e mësuesit tuaj. Është shumë e rëndësishme të kuptoni gabimet tuaja, në mënyrë që të përmirësoni drejtimin tuaj dhe të kaloni provimin në fund të trajnimit tuaj. Flisni për këtë opsion me instruktorin tuaj, ai do t'ju japë një këshillë.\n\nSë pari, ju duhet të regjistroheni në autoshkollën tuaj, nëse nuk e keni bërë tashmë. Nëse jeni i regjistruar në shkollë, duhet të pyesni nëse ju dërgojnë dokumentet në zyrën e patentë shoferit të vendndodhjes tuaj. Nëse jo, duhet ta bëni vetë. Duhet të sillni formularin e regjistrimit, të plotësuar nga autoshkolla, një fotografi biometrike, një certifikatë të ndihmës së parë, një test sysh për patentë shoferin dhe pasaportën ose ID-në tuaj. Nëse nuk keni pasaportë ose ID, sillni të gjitha dokumentet, që të mos ju mungojë asgjë.\n\nKur të bëhet regjistrimi, duhet të filloni sa më shpejt të studioni dhe të shkoni në mësimet teorike, sepse keni kohë për një vit për të kaluar testin teorik. Nëse nuk mund ta bëni këtë brenda një viti, duhet të aplikoni përsëri. Kjo nuk është një gjë e madhe, por kushton kohë dhe para.\n\nNjë problem më i madh është, kur kaloni provimin teorik dhe nuk kaloni brenda një viti provimin praktik. Më pas duhet të rinovoni provimin teorik. Pra, mos humbisni kohë.",
 
+
+"questions": {
+      "1": {
+        "id": "1",
+        "question": "Rregulloni vendin tuaj",
+        "options": ["Stelle deinen Sitz vor", "Stelle deinen Sitz ein", "Stelle deinen Sitz zurück", "Stelle die Kopfstütze ein"],
+        "correctAnswer": "Stelle deinen Sitz ein"
+      },
+      "2": {
+        "id": "2",
+        "question": ":Shiko në pasqyrën e brendshme",
+        "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
+        "correctAnswer": "Schau in den Innenspiegel"
+      },
+      "3": {
+        "id": "3",
+        "question": "Ky është çelsi i dritës",
+        "options": ["Das ist der Lichtschalter", "Schalte das Licht ein", "Fahr mit Abblendlicht", "Das ist die Warnblinkanlage"],
+        "correctAnswer": "Das ist der Lichtschalter"
+      },
+      "4": {
+        "id": "4",
+        "question": "Pedali i djathtë është gazi",
+        "options": ["Drücke das Gas leicht durch", "Das Linke Pedal ist die Kupplung", "Das Rechte Pedal ist das Gas", "Das mittlere Pedal ist die Bremse"],
+        "correctAnswer": "Das Rechte Pedal ist das Gas"
+      },
+      "5": {
+        "id": "5",
+        "question": "Fikni sinjalin",
+        "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
+        "correctAnswer": "Schalte den Blinker aus"
+      },
+      "6": {
+        "id": "6",
+        "question": "Kaloni në shpejtësinë e 5-të",
+        "options": ["Schalte in den 5. Gang", "Nimm den 5. Gang raus", "Nimm den 4. Gang", "Schalte in den 4. Gang"],
+        "correctAnswer": "Schalte in den 5. Gang"
+      },
+      "7": {
+        "id": "7",
+        "question": "Vendos në modalitetin Drive",
+        "options": ["Fahre los", "Stelle auf Drive", "Wir wollen Fahren", "Nimm den Gang raus"],
+        "correctAnswer": "Stelle auf Drive"
+      },
+      "8": {
+        "id": "8",
+        "question": "Të lutem përdor brezin e sigurimit",
+        "options": ["Benutze bitte den Gurt", "Benutze den Blinker", "Bitte gebe etwas Gas", "Bitte nimm den ersten Gang"],
+        "correctAnswer": "Benutze bitte den Gurt"
+      },
+      "9": {
+        "id": "9",
+        "question": "Shtypni levën për të çliruar frenën e dorës",
+        "options": ["Ziehe die Handbremse an", "Löse die Handbremse", "Drücke den Hebel, um die Handbremse zu lösen", "Drücke die Lösung der Handbremse"],
+        "correctAnswer": "Drücke den Hebel, um die Handbremse zu lösen"
+      },
+      "10": {
+        "id": "10",
+        "question": "Vendos pasqyrën e majtë lart",
+        "options": ["Schaue hoch in den linken Spiegel", "Stelle den linken Spiegel ein", "Schaue in den rechten Spiegel", "Stelle den linken Spiegel höher"],
+        "correctAnswer": "Stelle den linken Spiegel höher"
+      },
+      "11": {
+        "id": "11",
+        "question": "Mbështetësja e shpinës duhet të jetë pak përpara",
+        "options": ["Dein Rücken muss gerade Sein", "Stelle die Rückenlehne ein", "Die Rückenlehne muss etwas hinter", "Die Rückenlehne muss etwas nach vorne"],
+        "correctAnswer": "Die Rückenlehne muss etwas nach vorne"
+      },
+      "12": {
+        "id": "12",
+        "question": "Jep pak gaz për të nisur",
+        "options": ["Gib zum Anfahren etwas Gas", "Fahre ohne Gas an", "Wir wollen Anfahren", "Nimm das Gas etwas weg"],
+        "correctAnswer": "Gib zum Anfahren etwas Gas"
+      },
+      "13": {
+        "id": "13",
+        "question": "Para se të nisesh, duhet të ndizni sinjalin e majtë",
+        "options": ["Blinke links, bevor du losfährst", "Nachdem du losgefahren bist, musst du links blinken", "Blinke bitte nach rechts", "Du musst vor dem Losfahren rechts blinken"],
+        "correctAnswer": "Blinke links, bevor du losfährst"
+      },
+      "14": {
+        "id": "14",
+        "question": "Shtypni gjithë pedalin e embrionit",
+        "options": ["Drücke die Kupplung halb", "Drücke die Bremse voll durch", "Lass die Kupplung zum Schleifpunkt kommen", "Drücke die Kupplung ganz durch"],
+        "correctAnswer": "Drücke die Kupplung ganz durch"
+      },
+      "15": {
+        "id": "15",
+        "question": "Nise motorin",
+        "options": ["Schalte den Motor aus", "Drehe den Schlüssel", "Schalte den Motor an", "Zieh den Schlüssel ab"],
+        "correctAnswer": "Schalte den Motor an"
+      },
+      "16": {
+        "id": "16",
+        "question": "Qëndro në anën e rrugës",
+        "options": ["Fahre auf den Bordstein", "Fahre nicht zu dicht am Rand", "Bleib am Fahrbahnrand stehen", "Die Fahrbahn hat einen Rand"],
+        "correctAnswer": "Bleib am Fahrbahnrand stehen"
+      },
+      "17": {
+        "id": "17",
+        "question": "Heq këmbët",
+        "options": ["Nimm die Füße weg", "Strecke deine Füße ", "Drücke mit den Füßen", "Dein Fuß ist Druck"],
+        "correctAnswer": "Nimm die Füße weg"
+      },
+      "18": {
+        "id": "18",
+        "question": "E ke lënë embrionin shumë shpejt",
+        "options": ["Lass die Kupplung schnell los", "Drücke die Kupplung ganz durch", "Drücke schnell Kupplung und Bremse", "Du hast die Kupplung zu schnell losgelassen"],
+        "correctAnswer": "Du hast die Kupplung zu schnell losgelassen"
+      },
+      "19": {
+        "id": "19",
+        "question": "Shkoni me shpejtësi ecje",
+        "options": ["Gehe zu Fuß", "Fahre Schrittgeschwindigkeit", "Schrittgeschwindigkeit ist unter 10 km/h", "Fahre Gehen Geschwindigkeit"],
+        "correctAnswer": "Fahre Schrittgeschwindigkeit"
+      },
+      "20": {
+        "id": "20",
+        "question": "Kaloni në një shpejtësi më të lartë",
+        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
+      },
+      "21": {
+        "id": "21",
+        "question": "Duhet të shpejtosh pak më shumë",
+        "options": ["Du beschleunigst zu schnell", "Du musst etwas mehr beschleunigen", "Dein Gas ist zu viel", "Nimm das Gas weg"],
+        "correctAnswer": "Du musst etwas mehr beschleunigen"
+      },
+      "22": {
+        "id": "22",
+        "question": "Këtu lejohet vetëm 30 km/h",
+        "options": ["Hier sind nur 30 km/h erlaubt", "Fahre mindestens 30 km/h", "Fahre genau 30 km/h", "Hier ist eine 30er Zone"],
+        "correctAnswer": "Hier sind nur 30 km/h erlaubt"
+      },
+      "23": {
+        "id": "23",
+        "question": "Lutem, drejtoje më butë",
+        "options": ["Bitte lenke etwas mehr", "Bitte lenke nicht zu viel", "Bitte lenke nach rechts", "Bitte lenke etwas sanfter"],
+        "correctAnswer": "Bitte lenke etwas sanfter"
+      },
+      "24": {
+        "id": "24",
+        "question": "Duhet të frenosh fort këtu",
+        "options": ["Deine Bremse ist sehr stark", "Hier musst du leichter Bremsen", "Hier musst du stark bremsen", "Hier musst du stärker bremsen"],
+        "correctAnswer": "Hier musst du stark bremsen"
+      },
+      "25": {
+        "id": "25",
+        "question": "Vazhdoni të drejtoni më shumë djathtas në kthesë",
+        "options": ["Biege nach rechts ab", "Bleib in der Kurve weiter rechts", "Blinke vor der Kurve rechts", "Wir wollen nach rechts abbiegen"],
+        "correctAnswer": "Bleib in der Kurve weiter rechts"
+      },
+      "26": {
+        "id": "26",
+        "question": "Kthe kokën tënde",
+        "options": ["Stelle die Kopfstütze ein", "Kopf nach unten", "Drehe deinen Kopf", "Dein Kopf ist zu weit vorne"],
+        "correctAnswer": "Drehe deinen Kopf"
+      },
+      "27": {
+        "id": "27",
+        "question": "Shiko më shumë përpara",
+        "options": ["Drehe deinen Kopf", "Schau mehr nach hinten", "Schau mehr nach vorne", "Schau in den Spiegel"],
+        "correctAnswer": "Schau mehr nach vorne"
+      },
+      "28": {
+        "id": "28",
+        "question": "Po hyjmë në rrethrrotullim",
+        "options": ["Wir verlassen den Kreisverkehr", "Beim Einfahren in den Kreisverkehr nicht blinken", "Wir blinken beim Verlassen des Kreisverkehrs", "Wir fahren in den Kreisverkehr ein"],
+        "correctAnswer": "Wir fahren in den Kreisverkehr ein"
+      },
+      "29": {
+        "id": "29",
+        "question": "Mos ngas shumë pranë ishullit të mesëm",
+        "options": ["Fahre auf die Mittelinsel", "Fahre nicht zu nah an die Mittelinsel", "Die Mittelinsel darf nicht überfahren werden", "Bleibe an der Mittelinsel"],
+        "correctAnswer": "Fahre nicht zu nah an die Mittelinsel"
+      },
+      "30": {
+        "id": "30",
+        "question": "Mbaj shpejtësinë",
+        "options": ["Halte die Geschwindigkeit bei", "Reduziere deine Geschwindigkeit", "Deine Geschwindigkeit ist zu hoch", "Halte das Gaspedal"],
+        "correctAnswer": "Halte die Geschwindigkeit bei"
+      },
+      "31": {
+        "id": "31",
+        "question": "Të lutem, kalo në rrugën tjetër majtas",
+        "options": ["Bitte fahre etwas weiter links", "Bitte halte dich an der linken Seite fest", "Bitte fahre die nächste Straße nach links", "Bitte fahre etwas weiter rechts"],
+        "correctAnswer": "Bitte fahre die nächste Straße nach links"
+      },
+      "32": {
+        "id": "32",
+        "question": "Shiko mbi shpatull",
+        "options": ["Schau dir meine Schulter an", "Mache einen Schulterblick", "Überprüfe deine Schulter", "Schau in die Spiegel"],
+        "correctAnswer": "Mache einen Schulterblick"
+      },
+      "33": {
+        "id": "33",
+        "question": "Shiko rrugën për biçikleta",
+        "options": ["Hier ist ein Radfahrer", "Schau auf den Radweg um", "Fahr besser mit dem Rad", "Der Radfahrer hat Vorfahrt"],
+        "correctAnswer": "Schau auf den Radweg um"
+      },
+      "34": {
+        "id": "34",
+        "question": "Kontrollo zonën e verbër",
+        "options": ["Kontrolliere den toten Winkel", "Der Winkel ist tot", "Du hast einen Blinden Punkt im Auge", "Der Fußgänger ist blind"],
+        "correctAnswer": "Kontrolliere den toten Winkel"
+      },
+      "35": {
+        "id": "35",
+        "question": "Don't brake, you have the right of way",
+        "options": ["Bremse bitte, der andere hat Vorfahrt", "Bremse, auch wenn du Vorfahrt hast", "Wer bremst verliert", "Nicht bremsen, du hast Vorfahrt"],
+        "correctAnswer": "Nicht bremsen, du hast Vorfahrt"
+      },
+      "36": {
+        "id": "36",
+        "question": "Kushto vëmendje vijave në rrugë",
+        "options": ["Achte auf die Fahrbahn", "Die Linien auf der Fahrbahn sind egal", "Achte auf die Linien auf der Fahrbahn", "Ziehe eine Linie auf der Straße"],
+        "correctAnswer": "Achte auf die Linien auf der Fahrbahn"
+      },
+      "37": {
+        "id": "37",
+        "question": "Lëviz pak në kryqëzim",
+        "options": ["Teste die vordere Kreuzung", "Taste dich in die Kreuzung vor", "Teste das Kreuz", "Teste dich in die Kreuzung vor"],
+        "correctAnswer": "Taste dich in die Kreuzung vor"
+      },
+      "38": {
+        "id": "38",
+        "question": "Driço me kujdes në qendër të kryqëzimit",
+        "options": ["Fahre schnell in die Mitte der Kreuzung", "Fahre vorsichtig in die Kreuzungsmitte", "Fahre in die Mitte der Kreuzung", "Fahre schnell in die Kreuzungsmitte"],
+        "correctAnswer": "Fahre vorsichtig in die Kreuzungsmitte"
+      },
+      "39": {
+        "id": "39",
+        "question": "Mos harro të sinjalizosh",
+        "options": ["Vergiss nicht zu blinken", "Das Blinken musst du vergessen", "Vergiss das Blinken", "Den Blinker kann man essen"],
+        "correctAnswer": "Vergiss nicht zu blinken"
+      },
+      "40": {
+        "id": "40",
+        "question": "Futuni në rrugë herët",
+        "options": ["Nimm die frühe Position", "Ordne dich frühzeitig ein", "Führe die Ordnung", "Ordne die Position"],
+        "correctAnswer": "Ordne dich frühzeitig ein"
+      },
+      "41": {
+        "id": "41",
+        "question": "Lërgoni kalimtarët të kalojnë rrugën",
+        "options": ["Gehe zu Fuß über die Straße", "Lass dem Fußgänger die Straße zuerst überqueren", "Überquere die Straße vor dem Fußgänger", "Überfahre den Fußgänger auf der Straße"],
+        "correctAnswer": "Lass dem Fußgänger die Straße zuerst überqueren"
+      },
+      "42": {
+        "id": "42",
+        "question": "Hapa është mjaft e gjerë, mos hezito për shumë kohë",
+        "options": ["Die Lücke ist zu klein, warte noch", "Die Lücke ist zu groß, warte noch", "Die Lücke ist klein, zögere nicht", "Die Lücke ist groß genug, zögere nicht zu lange"],
+        "correctAnswer": "Die Lücke ist groß genug, zögere nicht zu lange"
+      },
+      "43": {
+        "id": "43",
+        "question": "Kjo është një rrugë me një drejtim",
+        "options": ["Fahre falsch herum in die Einbahnstraße", "Das ist eine Einbahnstraße", "Fahre in die Einbahnstraße", "Einbahnstraßen sind gefährlich"],
+        "correctAnswer": "Das ist eine Einbahnstraße"
+      },
+      "44": {
+        "id": "44",
+        "question": "Ju lutem, ndiqni rrugën me përparësi",
+        "options": ["Bitte folge der Vorfahrtstraße", "Gib dem Querverkehr bitte Vorfahrt", "Bitte leiste den Vorfahrtregeln folge", "Die Vorfahrtstraße geht nach links"],
+        "correctAnswer": "Bitte folge der Vorfahrtstraße"
+      },
+      "45": {
+        "id": "45",
+        "question": "Këtu duhet të jepni përparësi",
+        "options": ["Du hast hier Vorfahrt", "Die Vorfahrt ist wichtig", "Vorfahrt ist immer ohne Gewähr", "Hier musst du Vorfahrt gewähren"],
+        "correctAnswer": "Hier musst du Vorfahrt gewähren"
+      },
+      "46": {
+        "id": "46",
+        "question": "Mbaj një distancë të mjaftueshme nga automjetet e parkura",
+        "options": ["Halte genügend Abstand zu den parkenden Fahrzeugen", "Parkende Fahrzeuge müssen Abstand zueinander halten", "Halte neben dem grünen Auto", "Das Fahrzeug hält zu wenig Abstand"],
+        "correctAnswer": "Halte genügend Abstand zu den parkenden Fahrzeugen"
+      },
+      "47": {
+        "id": "47",
+        "question": "Të lutem, kaloni në shiritin e djathtë",
+        "options": ["Fahre immer rechts", "Wechsel bitte auf die rechte Spur", "Wechsel bitte auf die linke Spur", "Biege bitte rechts ab"],
+        "correctAnswer": "Wechsel bitte auf die rechte Spur"
+      },
+      "48": {
+        "id": "48",
+        "question": "Duhet të jesh gati të frenosh këtu",
+        "options": ["Bereite deine Bremsen vor", "Hier musst du bremsen", "Hier musst du bremsbereit sein", "Deine Bremse ist bereit"],
+        "correctAnswer": "Hier musst du bremsbereit sein"
+      },
+      "49": {
+        "id": "49",
+        "question": "Në zonat me kufizim shpejtësie 30 km/h, zakonisht zbatohet rregulli 'Djathtas para majtas'",
+        "options": ["Fahre erst nach rechts, dann nach links", "In 30er Zonen fährt man rechts", "In 30er Zonen gilt meist rechts vor links", "Fahre 30 mal Rechts und dann Links"],
+        "correctAnswer": "In 30er Zonen gilt meist rechts vor links"
+      },
+      "50": {
+        "id": "50",
+        "question": "Autobusi ka nevojë për shumë hapësirë",
+        "options": ["Der Bus braucht viel Platz", "Mache dem Bus Platz", "Hier ist eine Bushaltestelle", "Der Platz ist für Busse gedacht"],
+        "correctAnswer": "Der Bus braucht viel Platz"
+      },
+      "51": {
+        "id": "51",
+        "question": "Duhet të presësh fëmijët te kalimi i këmbësorëve",
+        "options": ["Kinder sind auch Fußgänger", "Kinder beachten die Regeln immer", "Bitte beachte Kinder", "Am Fußgängerüberweg musst du mit Kindern rechnen"],
+        "correctAnswer": "Am Fußgängerüberweg musst du mit Kindern rechnen"
+      },
+      "52": {
+        "id": "52",
+        "question": "Ke dritën e gjelbër",
+        "options": ["Da ist eine Ampel", "Du hast Grün", "Das Auto ist Grün", "Die Ampel zeigt rot"],
+        "correctAnswer": "Du hast Grün"
+      },
+      "53": {
+        "id": "53",
+        "question": "Be patient",
+        "options": ["Fahre los", "Bleib stehen", "Biege langsam ab", "Bleib geduldig"],
+        "correctAnswer": "Qëndro i duruar"
+      },
+      "54": {
+        "id": "54",
+        "question": "Autobusi tregon majtas, lejoji të nisët",
+        "options": ["Der Bus blinkt, fahre Schritt vorbei", "Der Bus blinkt links, überhole ihn", "Der Bus blinkt links, ermögliche ihm das Abfahren", "Schalte den linken Blinker ein und überhole den Bus"],
+        "correctAnswer": "Der Bus blinkt links, ermögliche ihm das Abfahren"
+      },
+      "55": {
+        "id": "55",
+        "question": "Merrni dalje e dytë në kryqëzim",
+        "options": ["Fahre in den zweiten Kreisverkehr", "Nimm am Kreisverkehr die zweite Ausfahrt", "Fahre zweimal um den Kreisverkehr", "Der Kreisverkehr hat zwei Ausfahrten"],
+        "correctAnswer": "Nimm am Kreisverkehr die zweite Ausfahrt"
+      },
+      "56": {
+        "id": "56",
+        "question": "Këtu mbaron rruga me përparësi",
+        "options": ["Die Vorfahrtstraße endet hier", "Du befindest dich auf der Vorfahrtstraße", "Folge der Vorfahrtstraße", "Gewähre die Vorfahrt"],
+        "correctAnswer": "Die Vorfahrtstraße endet hier"
+      },
+      "57": {
+        "id": "57",
+        "question": "Keni shiritin tuaj të veçantë",
+        "options": ["Deine Spur endet hier", "Du musst Spur wechseln", "Du hast eine eigene Spur", "Halte die Spur besser"],
+        "correctAnswer": "Du hast eine eigene Spur"
+      },
+      "58": {
+        "id": "58",
+        "question": "Vozit ngadalë mbi kalimin e trenit",
+        "options": ["Die Bahn fährt langsam", "Fahre langsam über den Bahnübergang", "Fahre langsam an den Bahnübergang ran", "Lasse die Bahn langsam fahren"],
+        "correctAnswer": "Fahre langsam über den Bahnübergang"
+      },
+      "59": {
+        "id": "59",
+        "question": "Po bllokon kalimin në kryqëzim",
+        "options": ["Die Kreuzung ist klein", "Fahre in die Kreuzung", "Meide die Kreuzung", "Du blockierst die Kreuzung"],
+        "correctAnswer": "Du blockierst die Kreuzung"
+      },
+      "60": {
+        "id": "60",
+        "question": "Kthehu në anën e djathtë pas automjetit të parkuar",
+        "options": ["Fahre gegen das Auto", "Das Auto parkt zu weit rechts", "Fahre nach dem parkenden Auto auf die Rechte Seite zurück", "Fahre rechts an das Auto ran"],
+        "correctAnswer": "Fahre nach dem parkenden Auto auf die Rechte Seite zurück"
+      },
+      "61": {
+        "id": "61",
+        "question": "Shiko fillimisht pasqyrat, pastaj ndiz sinjalin",
+        "options": ["Zuerst in die Spiegel schauen, dann blinken", "Blinke zuerst, dann schau in die Spiegel", "Vor dem Blinken mache einen Schulterblick", "Der Spiegel blinkt zuerst"],
+        "correctAnswer": "Zuerst in die Spiegel schauen, dann blinken"
+      },
+      "62": {
+        "id": "62",
+        "question": "Hyj në kruazimin me rreth",
+        "options": ["Verlasse den Kreisverkehr", "Fahre in den Kreisverkehr ein", "Meide den Kreisverkehr", "Fahre rechts um den Kreisverkehr"],
+        "correctAnswer": "Ordne dich frühzeitig ein"
+      },
+      "63": {
+        "id": "63",
+        "question": "Jemi brenda qytetit",
+        "options": ["Wir fahren in den Ort", "Wir verlassen den Ort", "Wir passieren das Ortsschild", "Wir sind innerorts"],
+        "correctAnswer": "Wir sind innerorts"
+      },
+      "64": {
+        "id": "64",
+        "question": "Vija është e pandërprerë",
+        "options": ["Die Linie ist durchgezogen", "Die Linie darfst du nicht überfahren", "Fahre an der Linie", "Überfahre die Linie nicht"],
+        "correctAnswer": "Die Linie ist durchgezogen"
+      },
+      "65": {
+        "id": "65",
+        "question": "Mos ndjek shumë ngushtë",
+        "options": ["Fahre auf der Straße", "Ärgere dich nicht", "Der Verkehr ist dicht", "Fahre nicht zu dicht auf"],
+        "correctAnswer": "Fahre nicht zu dicht auf"
+      },
+      "66": {
+        "id": "66",
+        "question": "Respekto rregullin e qarkullimit në shiritin e djathtë",
+        "options": ["Halte an der rechten Seite an", "Halte dich an das Rechtsfahrgebot", "Biege an der Haltestelle rechts ab", "Fahre rechts an den Rand"],
+        "correctAnswer": "Halte dich an das Rechtsfahrgebot"
+      },
+      "67": {
+        "id": "67",
+        "question": "Po parkojmë mbrapa pas automjetit blu",
+        "options": ["Wir parken neben dem blauen Auto ein", "Wir parken beim blauen Auto rückwärts ein", "Wir parken beim blauen Auto rückwärts ein", "Fahre rückwärts auf den Parkplatz"],
+        "correctAnswer": "Wir parken beim blauen Auto rückwärts ein"
+      },
+      "68": {
+        "id": "68",
+        "question": "Goma nuk duhet të ketë asnjë dëmtim",
+        "options": ["Der Reifen darf keine Beschädigung haben", "Der Reifen macht einen Schaden", "Beschädige den Reifen ein bisschen", "Im Reifen leben Schädlinge"],
+        "correctAnswer": "Der Reifen darf keine Beschädigung haben"
+      },
+      "69": {
+        "id": "69",
+        "question": "Ndiz dritat e afërta",
+        "options": ["Schalte das Standlicht ein", "Schalte das Abblendlicht ein", "Schalte das Fernlicht ein", "Schalte das Bremslicht ein"],
+        "correctAnswer": "Schalte das Abblendlicht ein"
+      },
+      "70": {
+        "id": "70",
+        "question": "Watch the vehicle behind you",
+        "options": ["Der Fahrer hinter dir beobachtet dich", "Beobachte das Fahrzeug hinter dir", "Beobachte die Heckscheibe", "Schau mehr nach hinten"],
+        "correctAnswer": "Beobachte das Fahrzeug hinter dir"
+      }
+    },
+
     "chapters": {
             "1": {
               "title": "Fillimi - Hyrje",

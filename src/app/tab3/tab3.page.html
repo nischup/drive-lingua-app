@@ -34,7 +34,7 @@
 
 
 
-<h4 *ngIf="currentQuestion">{{ currentQuestion.question }}</h4>
+<h4 *ngIf="currentQuestion">{{ currentQuestion.question | translate }}</h4>
 <ion-list *ngIf="currentQuestion">
   <ion-radio-group [(ngModel)]="selectedOption">
     <ion-item *ngFor="let option of currentQuestion.options"

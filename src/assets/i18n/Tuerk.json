@@ -64,6 +64,430 @@
 "Before Exam": "Sınav öncesi:",
 "Before Exam Details":"Pratik sınavına girmek istiyorsun, ancak eğitmenin sürüş dersleri esnasında sık sık müdahale ediyor ve sana sınava girmemeni mi tavsiye ediyor? O zaman onu mutlaka dinlemelisin. Niyeti seni gereksiz sürüş derslerine sokmak değil, sadece ehliyetini mümkün olduğunca uyguna almanı ve sonunda sürücü kursunu tavsiye etmeni amaçlıyor. Sınavlar, sürüş derslerine göre çok daha pahalıdır ve bu nedenle sürücü kurslarına birkaç sürüş dersinden daha fazla para kazandıracaktır. Bu nedenle, eğitmenine güven ve pratik yapmaya devam et. \n\n Sürüş eğitmenin senden memnun mu ve pratik sınava girmeni mi öneriyor? Ozaman ona kendini nerede güvensiz hissettiğini ve neyi tekrarlamak istediğini söyle. Ve pratik sınav için randevu almasını rica et. Şimdi kendini güvende hissetmek için zayıf noktalarını ele almalısın. Çünkü başarısız sınavların çoğu bilmezlikten değil, gerginlikten dolayı yanlış gider. Ve bunun üstesinden gelmenin en iyi yolu kendini güvende hissetmektir.",
 
+
+    "questions": {
+      "1": {
+        "id": "1",
+        "question": "Adjust your seat",
+        "options": ["Stelle deinen Sitz vor", "Stelle deinen Sitz ein", "Stelle deinen Sitz zurück", "Stelle die Kopfstütze ein"],
+        "correctAnswer": "Stelle deinen Sitz ein"
+      },
+      "2": {
+        "id": "2",
+        "question": ":Look in the rearview (interior) mirror",
+        "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
+        "correctAnswer": "Schau in den Innenspiegel"
+      },
+      "3": {
+        "id": "3",
+        "question": "This is the light switch",
+        "options": ["Das ist der Lichtschalter", "Schalte das Licht ein", "Fahr mit Abblendlicht", "Das ist die Warnblinkanlage"],
+        "correctAnswer": "Das ist der Lichtschalter"
+      },
+      "4": {
+        "id": "4",
+        "question": "The right pedal is the gas",
+        "options": ["Drücke das Gas leicht durch", "Das Linke Pedal ist die Kupplung", "Das Rechte Pedal ist das Gas", "Das mittlere Pedal ist die Bremse"],
+        "correctAnswer": "Das Rechte Pedal ist das Gas"
+      },
+      "5": {
+        "id": "5",
+        "question": "Turn oft he indicator",
+        "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
+        "correctAnswer": "Schalte den Blinker aus"
+      },
+      "6": {
+        "id": "6",
+        "question": "Shift to 5th gear",
+        "options": ["Schalte in den 5. Gang", "Nimm den 5. Gang raus", "Nimm den 4. Gang", "Schalte in den 4. Gang"],
+        "correctAnswer": "Schalte in den 5. Gang"
+      },
+      "7": {
+        "id": "7",
+        "question": "Set to Drive",
+        "options": ["Fahre los", "Stelle auf Drive", "Wir wollen Fahren", "Nimm den Gang raus"],
+        "correctAnswer": "Stelle auf Drive"
+      },
+      "8": {
+        "id": "8",
+        "question": "Please use the seatbelt",
+        "options": ["Benutze bitte den Gurt", "Benutze den Blinker", "Bitte gebe etwas Gas", "Bitte nimm den ersten Gang"],
+        "correctAnswer": "Benutze bitte den Gurt"
+      },
+      "9": {
+        "id": "9",
+        "question": "Press the lever to release the handbrake",
+        "options": ["Ziehe die Handbremse an", "Löse die Handbremse", "Drücke den Hebel, um die Handbremse zu lösen", "Drücke die Lösung der Handbremse"],
+        "correctAnswer": "Drücke den Hebel, um die Handbremse zu lösen"
+      },
+      "10": {
+        "id": "10",
+        "question": "Set your left mirror higher",
+        "options": ["Schaue hoch in den linken Spiegel", "Stelle den linken Spiegel ein", "Schaue in den rechten Spiegel", "Stelle den linken Spiegel höher"],
+        "correctAnswer": "Stelle den linken Spiegel höher"
+      },
+      "11": {
+        "id": "11",
+        "question": "The backrest needs to be slightly tilted forward",
+        "options": ["Dein Rücken muss gerade Sein", "Stelle die Rückenlehne ein", "Die Rückenlehne muss etwas hinter", "Die Rückenlehne muss etwas nach vorne"],
+        "correctAnswer": "Die Rückenlehne muss etwas nach vorne"
+      },
+      "12": {
+        "id": "12",
+        "question": " Give a little gas to start moving",
+        "options": ["Gib zum Anfahren etwas Gas", "Fahre ohne Gas an", "Wir wollen Anfahren", "Nimm das Gas etwas weg"],
+        "correctAnswer": "Gib zum Anfahren etwas Gas"
+      },
+      "13": {
+        "id": "13",
+        "question": "Before you start driving, you need to signal left",
+        "options": ["Blinke links, bevor du losfährst", "Nachdem du losgefahren bist, musst du links blinken", "Blinke bitte nach rechts", "Du musst vor dem Losfahren rechts blinken"],
+        "correctAnswer": "Blinke links, bevor du losfährst"
+      },
+      "14": {
+        "id": "14",
+        "question": "Press the clutch all the way down",
+        "options": ["Drücke die Kupplung halb", "Drücke die Bremse voll durch", "Lass die Kupplung zum Schleifpunkt kommen", "Drücke die Kupplung ganz durch"],
+        "correctAnswer": "Drücke die Kupplung ganz durch"
+      },
+      "15": {
+        "id": "15",
+        "question": "Start the engine",
+        "options": ["Schalte den Motor aus", "Drehe den Schlüssel", "Schalte den Motor an", "Zieh den Schlüssel ab"],
+        "correctAnswer": "Schalte den Motor an"
+      },
+      "16": {
+        "id": "16",
+        "question": "Stay at the side of the road",
+        "options": ["Fahre auf den Bordstein", "Fahre nicht zu dicht am Rand", "Bleib am Fahrbahnrand stehen", "Die Fahrbahn hat einen Rand"],
+        "correctAnswer": "Bleib am Fahrbahnrand stehen"
+      },
+      "17": {
+        "id": "17",
+        "question": "Take your feet away",
+        "options": ["Nimm die Füße weg", "Strecke deine Füße ", "Drücke mit den Füßen", "Dein Fuß ist Druck"],
+        "correctAnswer": "Nimm die Füße weg"
+      },
+      "18": {
+        "id": "18",
+        "question": "You released the clutch too quickly",
+        "options": ["Lass die Kupplung schnell los", "Drücke die Kupplung ganz durch", "Drücke schnell Kupplung und Bremse", "Du hast die Kupplung zu schnell losgelassen"],
+        "correctAnswer": "Du hast die Kupplung zu schnell losgelassen"
+      },
+      "19": {
+        "id": "19",
+        "question": "Drive at walking speed",
+        "options": ["Gehe zu Fuß", "Fahre Schrittgeschwindigkeit", "Schrittgeschwindigkeit ist unter 10 km/h", "Fahre Gehen Geschwindigkeit"],
+        "correctAnswer": "Fahre Schrittgeschwindigkeit"
+      },
+      "20": {
+        "id": "20",
+        "question": "Shift up a gear",
+        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "correctAnswer": "Schalte einen Gang hoch"
+      },
+      "21": {
+        "id": "21",
+        "question": "You need to accelerate a bit more",
+        "options": ["Du beschleunigst zu schnell", "Du musst etwas mehr beschleunigen", "Dein Gas ist zu viel", "Nimm das Gas weg"],
+        "correctAnswer": "Du musst etwas mehr beschleunigen"
+      },
+      "22": {
+        "id": "22",
+        "question": "Only 30 km/h is allowed here",
+        "options": ["Hier sind nur 30 km/h erlaubt", "Fahre mindestens 30 km/h", "Fahre genau 30 km/h", "Hier ist eine 30er Zone"],
+        "correctAnswer": "Hier sind nur 30 km/h erlaubt"
+      },
+      "23": {
+        "id": "23",
+        "question": "Please steer more gently",
+        "options": ["Bitte lenke etwas mehr", "Bitte lenke nicht zu viel", "Bitte lenke nach rechts", "Bitte lenke etwas sanfter"],
+        "correctAnswer": "Bitte lenke etwas sanfter"
+      },
+      "24": {
+        "id": "24",
+        "question": "You need to brake hard here",
+        "options": ["Deine Bremse ist sehr stark", "Hier musst du leichter Bremsen", "Hier musst du stark bremsen", "Hier musst du stärker bremsen"],
+        "correctAnswer": "Hier musst du stark bremsen"
+      },
+      "25": {
+        "id": "25",
+        "question": "Stay further to the right in the curve",
+        "options": ["Biege nach rechts ab", "Bleib in der Kurve weiter rechts", "Blinke vor der Kurve rechts", "Wir wollen nach rechts abbiegen"],
+        "correctAnswer": "Bleib in der Kurve weiter rechts"
+      },
+      "26": {
+        "id": "26",
+        "question": "Turn your head",
+        "options": ["Stelle die Kopfstütze ein", "Kopf nach unten", "Drehe deinen Kopf", "Dein Kopf ist zu weit vorne"],
+        "correctAnswer": "Drehe deinen Kopf"
+      },
+      "27": {
+        "id": "27",
+        "question": "Look more ahead",
+        "options": ["Drehe deinen Kopf", "Schau mehr nach hinten", "Schau mehr nach vorne", "Schau in den Spiegel"],
+        "correctAnswer": "Schau mehr nach vorne"
+      },
+      "28": {
+        "id": "28",
+        "question": "We enter the roundabout",
+        "options": ["Wir verlassen den Kreisverkehr", "Beim Einfahren in den Kreisverkehr nicht blinken", "Wir blinken beim Verlassen des Kreisverkehrs", "Wir fahren in den Kreisverkehr ein"],
+        "correctAnswer": "Wir fahren in den Kreisverkehr ein"
+      },
+      "29": {
+        "id": "29",
+        "question": "Don't drive too close to the center island",
+        "options": ["Fahre auf die Mittelinsel", "Fahre nicht zu nah an die Mittelinsel", "Die Mittelinsel darf nicht überfahren werden", "Bleibe an der Mittelinsel"],
+        "correctAnswer": "Fahre nicht zu nah an die Mittelinsel"
+      },
+      "30": {
+        "id": "30",
+        "question": "Keep the speed steady",
+        "options": ["Halte die Geschwindigkeit bei", "Reduziere deine Geschwindigkeit", "Deine Geschwindigkeit ist zu hoch", "Halte das Gaspedal"],
+        "correctAnswer": "Halte die Geschwindigkeit bei"
+      },
+      "31": {
+        "id": "31",
+        "question": "Please take the next left turn",
+        "options": ["Bitte fahre etwas weiter links", "Bitte halte dich an der linken Seite fest", "Bitte fahre die nächste Straße nach links", "Bitte fahre etwas weiter rechts"],
+        "correctAnswer": "Bitte fahre die nächste Straße nach links"
+      },
+      "32": {
+        "id": "32",
+        "question": "Do a shoulder check",
+        "options": ["Schau dir meine Schulter an", "Mache einen Schulterblick", "Überprüfe deine Schulter", "Schau in die Spiegel"],
+        "correctAnswer": "Mache einen Schulterblick"
+      },
+      "33": {
+        "id": "33",
+        "question": "Look at the bike lane",
+        "options": ["Hier ist ein Radfahrer", "Schau auf den Radweg um", "Fahr besser mit dem Rad", "Der Radfahrer hat Vorfahrt"],
+        "correctAnswer": "Schau auf den Radweg um"
+      },
+      "34": {
+        "id": "34",
+        "question": "Check the blind spot",
+        "options": ["Kontrolliere den toten Winkel", "Der Winkel ist tot", "Du hast einen Blinden Punkt im Auge", "Der Fußgänger ist blind"],
+        "correctAnswer": "Kontrolliere den toten Winkel"
+      },
+      "35": {
+        "id": "35",
+        "question": "Don't brake, you have the right of way",
+        "options": ["Bremse bitte, der andere hat Vorfahrt", "Bremse, auch wenn du Vorfahrt hast", "Wer bremst verliert", "Nicht bremsen, du hast Vorfahrt"],
+        "correctAnswer": "Nicht bremsen, du hast Vorfahrt"
+      },
+      "36": {
+        "id": "36",
+        "question": "Pay attention to the lines on the road",
+        "options": ["Achte auf die Fahrbahn", "Die Linien auf der Fahrbahn sind egal", "Achte auf die Linien auf der Fahrbahn", "Ziehe eine Linie auf der Straße"],
+        "correctAnswer": "Achte auf die Linien auf der Fahrbahn"
+      },
+      "37": {
+        "id": "37",
+        "question": "Edge forward into the intersection",
+        "options": ["Teste die vordere Kreuzung", "Taste dich in die Kreuzung vor", "Teste das Kreuz", "Teste dich in die Kreuzung vor"],
+        "correctAnswer": "Taste dich in die Kreuzung vor"
+      },
+      "38": {
+        "id": "38",
+        "question": "Drive carefully to the center of the intersection",
+        "options": ["Fahre schnell in die Mitte der Kreuzung", "Fahre vorsichtig in die Kreuzungsmitte", "Fahre in die Mitte der Kreuzung", "Fahre schnell in die Kreuzungsmitte"],
+        "correctAnswer": "Fahre vorsichtig in die Kreuzungsmitte"
+      },
+      "39": {
+        "id": "39",
+        "question": "Don't forget to signal",
+        "options": ["Vergiss nicht zu blinken", "Das Blinken musst du vergessen", "Vergiss das Blinken", "Den Blinker kann man essen"],
+        "correctAnswer": "Vergiss nicht zu blinken"
+      },
+      "40": {
+        "id": "40",
+        "question": "Get into position early",
+        "options": ["Nimm die frühe Position", "Ordne dich frühzeitig ein", "Führe die Ordnung", "Ordne die Position"],
+        "correctAnswer": "Ordne dich frühzeitig ein"
+      },
+      "41": {
+        "id": "41",
+        "question": "Let the pedestrian cross the street",
+        "options": ["Gehe zu Fuß über die Straße", "Lass dem Fußgänger die Straße zuerst überqueren", "Überquere die Straße vor dem Fußgänger", "Überfahre den Fußgänger auf der Straße"],
+        "correctAnswer": "Lass dem Fußgänger die Straße zuerst überqueren"
+      },
+      "42": {
+        "id": "42",
+        "question": "The gap is wide enough, don't hesitate too long",
+        "options": ["Die Lücke ist zu klein, warte noch", "Die Lücke ist zu groß, warte noch", "Die Lücke ist klein, zögere nicht", "Die Lücke ist groß genug, zögere nicht zu lange"],
+        "correctAnswer": "Die Lücke ist groß genug, zögere nicht zu lange"
+      },
+      "43": {
+        "id": "43",
+        "question": "This is a one-way street",
+        "options": ["Fahre falsch herum in die Einbahnstraße", "Das ist eine Einbahnstraße", "Fahre in die Einbahnstraße", "Einbahnstraßen sind gefährlich"],
+        "correctAnswer": "Das ist eine Einbahnstraße"
+      },
+      "44": {
+        "id": "44",
+        "question": "Please follow the priority road",
+        "options": ["Bitte folge der Vorfahrtstraße", "Gib dem Querverkehr bitte Vorfahrt", "Bitte leiste den Vorfahrtregeln folge", "Die Vorfahrtstraße geht nach links"],
+        "correctAnswer": "Bitte folge der Vorfahrtstraße"
+      },
+      "45": {
+        "id": "45",
+        "question": "You must yield here",
+        "options": ["Du hast hier Vorfahrt", "Die Vorfahrt ist wichtig", "Vorfahrt ist immer ohne Gewähr", "Hier musst du Vorfahrt gewähren"],
+        "correctAnswer": "Hier musst du Vorfahrt gewähren"
+      },
+      "46": {
+        "id": "46",
+        "question": "Keep a sufficient distance from the parked vehicles",
+        "options": ["Halte genügend Abstand zu den parkenden Fahrzeugen", "Parkende Fahrzeuge müssen Abstand zueinander halten", "Halte neben dem grünen Auto", "Das Fahrzeug hält zu wenig Abstand"],
+        "correctAnswer": "Halte genügend Abstand zu den parkenden Fahrzeugen"
+      },
+      "47": {
+        "id": "47",
+        "question": "Please switch to the right lane",
+        "options": ["Fahre immer rechts", "Wechsel bitte auf die rechte Spur", "Wechsel bitte auf die linke Spur", "Biege bitte rechts ab"],
+        "correctAnswer": "Wechsel bitte auf die rechte Spur"
+      },
+      "48": {
+        "id": "48",
+        "question": "You need to be ready to brake here",
+        "options": ["Bereite deine Bremsen vor", "Hier musst du bremsen", "Hier musst du bremsbereit sein", "Deine Bremse ist bereit"],
+        "correctAnswer": "Hier musst du bremsbereit sein"
+      },
+      "49": {
+        "id": "49",
+        "question": "In 30 km/h zones, usually 'Right before Left' applies",
+        "options": ["Fahre erst nach rechts, dann nach links", "In 30er Zonen fährt man rechts", "In 30er Zonen gilt meist rechts vor links", "Fahre 30 mal Rechts und dann Links"],
+        "correctAnswer": "In 30er Zonen gilt meist rechts vor links"
+      },
+      "50": {
+        "id": "50",
+        "question": "The bus needs a lot of space",
+        "options": ["Der Bus braucht viel Platz", "Mache dem Bus Platz", "Hier ist eine Bushaltestelle", "Der Platz ist für Busse gedacht"],
+        "correctAnswer": "Der Bus braucht viel Platz"
+      },
+      "51": {
+        "id": "51",
+        "question": "You need to expect children at the pedestrian crossing",
+        "options": ["Kinder sind auch Fußgänger", "Kinder beachten die Regeln immer", "Bitte beachte Kinder", "Am Fußgängerüberweg musst du mit Kindern rechnen"],
+        "correctAnswer": "Am Fußgängerüberweg musst du mit Kindern rechnen"
+      },
+      "52": {
+        "id": "52",
+        "question": "You have a green light",
+        "options": ["Da ist eine Ampel", "Du hast Grün", "Das Auto ist Grün", "Die Ampel zeigt rot"],
+        "correctAnswer": "Du hast Grün"
+      },
+      "53": {
+        "id": "53",
+        "question": "Be patient",
+        "options": ["Fahre los", "Bleib stehen", "Biege langsam ab", "Bleib geduldig"],
+        "correctAnswer": "Bleib geduldig"
+      },
+      "54": {
+        "id": "54",
+        "question": "The bus is signaling left, allow it to depart",
+        "options": ["Der Bus blinkt, fahre Schritt vorbei", "Der Bus blinkt links, überhole ihn", "Der Bus blinkt links, ermögliche ihm das Abfahren", "Schalte den linken Blinker ein und überhole den Bus"],
+        "correctAnswer": "Der Bus blinkt links, ermögliche ihm das Abfahren"
+      },
+      "55": {
+        "id": "55",
+        "question": "Take the second exit at the roundabout",
+        "options": ["Fahre in den zweiten Kreisverkehr", "Nimm am Kreisverkehr die zweite Ausfahrt", "Fahre zweimal um den Kreisverkehr", "Der Kreisverkehr hat zwei Ausfahrten"],
+        "correctAnswer": "Nimm am Kreisverkehr die zweite Ausfahrt"
+      },
+      "56": {
+        "id": "56",
+        "question": "The priority road ends here",
+        "options": ["Die Vorfahrtstraße endet hier", "Du befindest dich auf der Vorfahrtstraße", "Folge der Vorfahrtstraße", "Gewähre die Vorfahrt"],
+        "correctAnswer": "Die Vorfahrtstraße endet hier"
+      },
+      "57": {
+        "id": "57",
+        "question": "You have your own lane",
+        "options": ["Deine Spur endet hier", "Du musst Spur wechseln", "Du hast eine eigene Spur", "Halte die Spur besser"],
+        "correctAnswer": "Du hast eine eigene Spur"
+      },
+      "58": {
+        "id": "58",
+        "question": "Drive slowly over the train crossing",
+        "options": ["Die Bahn fährt langsam", "Fahre langsam über den Bahnübergang", "Fahre langsam an den Bahnübergang ran", "Lasse die Bahn langsam fahren"],
+        "correctAnswer": "Fahre langsam über den Bahnübergang"
+      },
+      "59": {
+        "id": "59",
+        "question": "You are blocking the intersection",
+        "options": ["Die Kreuzung ist klein", "Fahre in die Kreuzung", "Meide die Kreuzung", "Du blockierst die Kreuzung"],
+        "correctAnswer": "Du blockierst die Kreuzung"
+      },
+      "60": {
+        "id": "60",
+        "question": "Drive back to the right edge after the parked vehicle",
+        "options": ["Fahre gegen das Auto", "Das Auto parkt zu weit rechts", "Fahre nach dem parkenden Auto auf die Rechte Seite zurück", "Fahre rechts an das Auto ran"],
+        "correctAnswer": "Fahre nach dem parkenden Auto auf die Rechte Seite zurück"
+      },
+      "61": {
+        "id": "61",
+        "question": "First check the mirrors, then signal",
+        "options": ["Zuerst in die Spiegel schauen, dann blinken", "Blinke zuerst, dann schau in die Spiegel", "Vor dem Blinken mache einen Schulterblick", "Der Spiegel blinkt zuerst"],
+        "correctAnswer": "Zuerst in die Spiegel schauen, dann blinken"
+      },
+      "62": {
+        "id": "62",
+        "question": "Enter the roundabout",
+        "options": ["Verlasse den Kreisverkehr", "Fahre in den Kreisverkehr ein", "Meide den Kreisverkehr", "Fahre rechts um den Kreisverkehr"],
+        "correctAnswer": "Ordne dich frühzeitig ein"
+      },
+      "63": {
+        "id": "63",
+        "question": "We are in the city",
+        "options": ["Wir fahren in den Ort", "Wir verlassen den Ort", "Wir passieren das Ortsschild", "Wir sind innerorts"],
+        "correctAnswer": "Wir sind innerorts"
+      },
+      "64": {
+        "id": "64",
+        "question": "The line is solid",
+        "options": ["Die Linie ist durchgezogen", "Die Linie darfst du nicht überfahren", "Fahre an der Linie", "Überfahre die Linie nicht"],
+        "correctAnswer": "Die Linie ist durchgezogen"
+      },
+      "65": {
+        "id": "65",
+        "question": "Don't tailgate",
+        "options": ["Fahre auf der Straße", "Ärgere dich nicht", "Der Verkehr ist dicht", "Fahre nicht zu dicht auf"],
+        "correctAnswer": "Fahre nicht zu dicht auf"
+      },
+      "66": {
+        "id": "66",
+        "question": "Stick to the right lane",
+        "options": ["Halte an der rechten Seite an", "Halte dich an das Rechtsfahrgebot", "Biege an der Haltestelle rechts ab", "Fahre rechts an den Rand"],
+        "correctAnswer": "Halte dich an das Rechtsfahrgebot"
+      },
+      "67": {
+        "id": "67",
+        "question": "We are reversing into the parking space behind the blue vehicle",
+        "options": ["Wir parken neben dem blauen Auto ein", "Wir parken beim blauen Auto rückwärts ein", "Wir parken beim blauen Auto rückwärts ein", "Fahre rückwärts auf den Parkplatz"],
+        "correctAnswer": "Wir parken beim blauen Auto rückwärts ein"
+      },
+      "68": {
+        "id": "68",
+        "question": "The tire must not have any damage",
+        "options": ["Der Reifen darf keine Beschädigung haben", "Der Reifen macht einen Schaden", "Beschädige den Reifen ein bisschen", "Im Reifen leben Schädlinge"],
+        "correctAnswer": "Der Reifen darf keine Beschädigung haben"
+      },
+      "69": {
+        "id": "69",
+        "question": "Turn on the low beam headlights",
+        "options": ["Schalte das Standlicht ein", "Schalte das Abblendlicht ein", "Schalte das Fernlicht ein", "Schalte das Bremslicht ein"],
+        "correctAnswer": "Schalte das Abblendlicht ein"
+      },
+      "70": {
+        "id": "70",
+        "question": "Watch the vehicle behind you",
+        "options": ["Der Fahrer hinter dir beobachtet dich", "Beobachte das Fahrzeug hinter dir", "Beobachte die Heckscheibe", "Schau mehr nach hinten"],
+        "correctAnswer": "Beobachte das Fahrzeug hinter dir"
+      }
+    },
+    
     "chapters": {
             "1": {
               "title": "İlk adımlar",
