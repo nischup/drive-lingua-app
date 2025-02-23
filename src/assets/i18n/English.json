@@ -78,7 +78,7 @@
       },
       "2": {
         "id": "2",
-        "question": ":Look in the rearview (interior) mirror",
+        "question": "Look in the rearview (interior) mirror",
         "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
         "correctAnswer": "Schau in den Innenspiegel"
       },
@@ -96,7 +96,7 @@
       },
       "5": {
         "id": "5",
-        "question": "Turn oft he indicator",
+        "question": "Turn of  the indicator",
         "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
         "correctAnswer": "Schalte den Blinker aus"
       },

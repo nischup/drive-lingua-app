@@ -65,124 +65,124 @@
  "Before Exam Details":"你想参加实际路考，但驾驶教练经常在驾驶课程中进行干预，并建议你不要这样做？那么你应该听他的。他不想说服你参加不必要的驾驶课程，而是希望你能尽可能便宜地拿到驾驶执照，并在最后向他人推荐该驾驶学校。考试比驾驶课要贵得多，因此会让驾驶学校比多上几节驾驶课更赚钱。因此，请相信你的驾驶教练并继续练习。 \n\n 如果你的教练对你的驾驶技术感到满意，他建议你去参加考试。告诉他你在哪些方面仍然感到不确定，以及你想多练习什么。约定考试时间。现在你应该减少你的弱点，如此你才会感到安全。最失败的考试不是因为知识不足或技能缺失，而是由于紧张。而解决紧张的最好方法是感到安全。",
 
 
-    "questions": {
+  "questions": {
       "1": {
         "id": "1",
-        "question": "Adjust your seat",
+        "question": "调整座位",
         "options": ["Stelle deinen Sitz vor", "Stelle deinen Sitz ein", "Stelle deinen Sitz zurück", "Stelle die Kopfstütze ein"],
         "correctAnswer": "Stelle deinen Sitz ein"
       },
       "2": {
         "id": "2",
-        "question": ":Look in the rearview (interior) mirror",
+        "question": "看后视镜",
         "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
         "correctAnswer": "Schau in den Innenspiegel"
       },
       "3": {
         "id": "3",
-        "question": "This is the light switch",
+        "question": "这是开关",
         "options": ["Das ist der Lichtschalter", "Schalte das Licht ein", "Fahr mit Abblendlicht", "Das ist die Warnblinkanlage"],
         "correctAnswer": "Das ist der Lichtschalter"
       },
       "4": {
         "id": "4",
-        "question": "The right pedal is the gas",
+        "question": "右侧踏板是油门",
         "options": ["Drücke das Gas leicht durch", "Das Linke Pedal ist die Kupplung", "Das Rechte Pedal ist das Gas", "Das mittlere Pedal ist die Bremse"],
         "correctAnswer": "Das Rechte Pedal ist das Gas"
       },
       "5": {
         "id": "5",
-        "question": "Turn oft he indicator",
+        "question": "关闭转向灯",
         "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
         "correctAnswer": "Schalte den Blinker aus"
       },
       "6": {
         "id": "6",
-        "question": "Shift to 5th gear",
+        "question": "切换到第五档",
         "options": ["Schalte in den 5. Gang", "Nimm den 5. Gang raus", "Nimm den 4. Gang", "Schalte in den 4. Gang"],
         "correctAnswer": "Schalte in den 5. Gang"
       },
       "7": {
         "id": "7",
-        "question": "Set to Drive",
+        "question": "设置为驾驶模式",
         "options": ["Fahre los", "Stelle auf Drive", "Wir wollen Fahren", "Nimm den Gang raus"],
         "correctAnswer": "Stelle auf Drive"
       },
       "8": {
         "id": "8",
-        "question": "Please use the seatbelt",
+        "question": "请系上安全带",
         "options": ["Benutze bitte den Gurt", "Benutze den Blinker", "Bitte gebe etwas Gas", "Bitte nimm den ersten Gang"],
         "correctAnswer": "Benutze bitte den Gurt"
       },
       "9": {
         "id": "9",
-        "question": "Press the lever to release the handbrake",
+        "question": "按下杠杆以释放手刹",
         "options": ["Ziehe die Handbremse an", "Löse die Handbremse", "Drücke den Hebel, um die Handbremse zu lösen", "Drücke die Lösung der Handbremse"],
         "correctAnswer": "Drücke den Hebel, um die Handbremse zu lösen"
       },
       "10": {
         "id": "10",
-        "question": "Set your left mirror higher",
+        "question": "把左侧镜子调高",
         "options": ["Schaue hoch in den linken Spiegel", "Stelle den linken Spiegel ein", "Schaue in den rechten Spiegel", "Stelle den linken Spiegel höher"],
         "correctAnswer": "Stelle den linken Spiegel höher"
       },
       "11": {
         "id": "11",
-        "question": "The backrest needs to be slightly tilted forward",
+        "question": "座椅靠背需要稍微向前倾",
         "options": ["Dein Rücken muss gerade Sein", "Stelle die Rückenlehne ein", "Die Rückenlehne muss etwas hinter", "Die Rückenlehne muss etwas nach vorne"],
         "correctAnswer": "Die Rückenlehne muss etwas nach vorne"
       },
       "12": {
         "id": "12",
-        "question": " Give a little gas to start moving",
+        "question": "给一点油门开始行驶",
         "options": ["Gib zum Anfahren etwas Gas", "Fahre ohne Gas an", "Wir wollen Anfahren", "Nimm das Gas etwas weg"],
         "correctAnswer": "Gib zum Anfahren etwas Gas"
       },
       "13": {
         "id": "13",
-        "question": "Before you start driving, you need to signal left",
+        "question": "在你出发之前，必须打左转向灯",
         "options": ["Blinke links, bevor du losfährst", "Nachdem du losgefahren bist, musst du links blinken", "Blinke bitte nach rechts", "Du musst vor dem Losfahren rechts blinken"],
         "correctAnswer": "Blinke links, bevor du losfährst"
       },
       "14": {
         "id": "14",
-        "question": "Press the clutch all the way down",
+        "question": "踩下离合器到底",
         "options": ["Drücke die Kupplung halb", "Drücke die Bremse voll durch", "Lass die Kupplung zum Schleifpunkt kommen", "Drücke die Kupplung ganz durch"],
         "correctAnswer": "Drücke die Kupplung ganz durch"
       },
       "15": {
         "id": "15",
-        "question": "Start the engine",
+        "question": "启动发动机",
         "options": ["Schalte den Motor aus", "Drehe den Schlüssel", "Schalte den Motor an", "Zieh den Schlüssel ab"],
         "correctAnswer": "Schalte den Motor an"
       },
       "16": {
         "id": "16",
-        "question": "Stay at the side of the road",
+        "question": "停在路边",
         "options": ["Fahre auf den Bordstein", "Fahre nicht zu dicht am Rand", "Bleib am Fahrbahnrand stehen", "Die Fahrbahn hat einen Rand"],
         "correctAnswer": "Bleib am Fahrbahnrand stehen"
       },
       "17": {
         "id": "17",
-        "question": "Take your feet away",
+        "question": "抬起你的脚",
         "options": ["Nimm die Füße weg", "Strecke deine Füße ", "Drücke mit den Füßen", "Dein Fuß ist Druck"],
         "correctAnswer": "Nimm die Füße weg"
       },
       "18": {
         "id": "18",
-        "question": "You released the clutch too quickly",
+        "question": "你离合器放得太快了",
         "options": ["Lass die Kupplung schnell los", "Drücke die Kupplung ganz durch", "Drücke schnell Kupplung und Bremse", "Du hast die Kupplung zu schnell losgelassen"],
         "correctAnswer": "Du hast die Kupplung zu schnell losgelassen"
       },
       "19": {
         "id": "19",
-        "question": "Drive at walking speed",
+        "question": "以步行速度行驶",
         "options": ["Gehe zu Fuß", "Fahre Schrittgeschwindigkeit", "Schrittgeschwindigkeit ist unter 10 km/h", "Fahre Gehen Geschwindigkeit"],
         "correctAnswer": "Fahre Schrittgeschwindigkeit"
       },
       "20": {
         "id": "20",
-        "question": "Shift up a gear",
+        "question": "换到更高的档位",
         "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
         "correctAnswer": "Schalte einen Gang hoch"
       },
