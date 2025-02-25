@@ -68,31 +68,31 @@
     "questions": {
       "1": {
         "id": "1",
-        "question": "Adjust your seat",
+        "question": "Налаштуйте своє місце",
         "options": ["Stelle deinen Sitz vor", "Stelle deinen Sitz ein", "Stelle deinen Sitz zurück", "Stelle die Kopfstütze ein"],
         "correctAnswer": "Stelle deinen Sitz ein"
       },
       "2": {
         "id": "2",
-        "question": ":Look in the rearview (interior) mirror",
+        "question": "Подивися в дзеркало заднього виду",
         "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
         "correctAnswer": "Schau in den Innenspiegel"
       },
       "3": {
         "id": "3",
-        "question": "This is the light switch",
+        "question": "Це вимикач світла",
         "options": ["Das ist der Lichtschalter", "Schalte das Licht ein", "Fahr mit Abblendlicht", "Das ist die Warnblinkanlage"],
         "correctAnswer": "Das ist der Lichtschalter"
       },
       "4": {
         "id": "4",
-        "question": "The right pedal is the gas",
+        "question": "Правий педаль - це газ",
         "options": ["Drücke das Gas leicht durch", "Das Linke Pedal ist die Kupplung", "Das Rechte Pedal ist das Gas", "Das mittlere Pedal ist die Bremse"],
         "correctAnswer": "Das Rechte Pedal ist das Gas"
       },
       "5": {
         "id": "5",
-        "question": "Turn oft he indicator",
+        "question": "Вимкни покажчик повороту",
         "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
         "correctAnswer": "Schalte den Blinker aus"
       },
