@@ -110,238 +110,382 @@
   "questions": {
       "1": {
         "id": "1",
-        "question": "Adjust your seat",
+        "question": "اضبط مقعدك",
         "options": ["Stelle deinen Sitz vor", "Stelle deinen Sitz ein", "Stelle deinen Sitz zurück", "Stelle die Kopfstütze ein"],
         "correctAnswer": "Stelle deinen Sitz ein"
       },
       "2": {
         "id": "2",
-        "question": ":Look in the rearview (interior) mirror",
+        "question": "انظر في مرآة الرؤية الخلفية (الداخلية)",
         "options": ["Stelle den Rückspiegel ein", "Schau in die Aussenspiegel", "Schau in den Innenspiegel", "Blinke bitte links"],
         "correctAnswer": "Schau in den Innenspiegel"
       },
       "3": {
         "id": "3",
-        "question": "This is the light switch",
+        "question": "هذا هو مفتاح الضوء",
         "options": ["Das ist der Lichtschalter", "Schalte das Licht ein", "Fahr mit Abblendlicht", "Das ist die Warnblinkanlage"],
         "correctAnswer": "Das ist der Lichtschalter"
       },
       "4": {
         "id": "4",
-        "question": "The right pedal is the gas",
+        "question": "البدال الأيمن هو البنزين",
         "options": ["Drücke das Gas leicht durch", "Das Linke Pedal ist die Kupplung", "Das Rechte Pedal ist das Gas", "Das mittlere Pedal ist die Bremse"],
         "correctAnswer": "Das Rechte Pedal ist das Gas"
       },
       "5": {
         "id": "5",
-        "question": "Turn oft he indicator",
+        "question": "أطفئ المؤشر",
         "options": ["Bitte blinken", "Schalte den Blinker an", "Schalte die Warnblinkanlage an", "Schalte den Blinker aus"],
         "correctAnswer": "Schalte den Blinker aus"
       },
       "6": {
         "id": "6",
-        "question": "Shift to 5th gear",
+        "question": "انتقل إلى الترس الخامس",
         "options": ["Schalte in den 5. Gang", "Nimm den 5. Gang raus", "Nimm den 4. Gang", "Schalte in den 4. Gang"],
         "correctAnswer": "Schalte in den 5. Gang"
       },
       "7": {
         "id": "7",
-        "question": "Set to Drive",
+        "question": "ضع على وضع القيادة",
         "options": ["Fahre los", "Stelle auf Drive", "Wir wollen Fahren", "Nimm den Gang raus"],
         "correctAnswer": "Stelle auf Drive"
       },
       "8": {
         "id": "8",
-        "question": "Please use the seatbelt",
+        "question": "يرجى استخدام حزام الأمان",
         "options": ["Benutze bitte den Gurt", "Benutze den Blinker", "Bitte gebe etwas Gas", "Bitte nimm den ersten Gang"],
         "correctAnswer": "Benutze bitte den Gurt"
       },
       "9": {
         "id": "9",
-        "question": "Press the lever to release the handbrake",
+        "question": "اضغط على الرافعة لإفراز فرامل اليد",
         "options": ["Ziehe die Handbremse an", "Löse die Handbremse", "Drücke den Hebel, um die Handbremse zu lösen", "Drücke die Lösung der Handbremse"],
         "correctAnswer": "Drücke den Hebel, um die Handbremse zu lösen"
       },
       "10": {
         "id": "10",
-        "question": "Set your left mirror higher",
+        "question": "ضع مرآتك اليسرى أعلى",
         "options": ["Schaue hoch in den linken Spiegel", "Stelle den linken Spiegel ein", "Schaue in den rechten Spiegel", "Stelle den linken Spiegel höher"],
         "correctAnswer": "Stelle den linken Spiegel höher"
       },
-      "11": {
+       "11": {
         "id": "11",
-        "question": "The backrest needs to be slightly tilted forward",
-        "options": ["Dein Rücken muss gerade Sein", "Stelle die Rückenlehne ein", "Die Rückenlehne muss etwas hinter", "Die Rückenlehne muss etwas nach vorne"],
+        "question": "يجب أن تكون مسند الظهر مائلًا قليلاً للأمام",
+        "options": [
+          "Dein Rücken muss gerade Sein",
+          "Stelle die Rückenlehne ein",
+          "Die Rückenlehne muss etwas hinter",
+          "Die Rückenlehne muss etwas nach vorne"
+        ],
         "correctAnswer": "Die Rückenlehne muss etwas nach vorne"
       },
       "12": {
         "id": "12",
-        "question": " Give a little gas to start moving",
-        "options": ["Gib zum Anfahren etwas Gas", "Fahre ohne Gas an", "Wir wollen Anfahren", "Nimm das Gas etwas weg"],
+        "question": "أعطِ بعض البنزين للانطلاق",
+        "options": [
+          "Gib zum Anfahren etwas Gas",
+          "Fahre ohne Gas an",
+          "Wir wollen Anfahren",
+          "Nimm das Gas etwas weg"
+        ],
         "correctAnswer": "Gib zum Anfahren etwas Gas"
       },
       "13": {
         "id": "13",
-        "question": "Before you start driving, you need to signal left",
-        "options": ["Blinke links, bevor du losfährst", "Nachdem du losgefahren bist, musst du links blinken", "Blinke bitte nach rechts", "Du musst vor dem Losfahren rechts blinken"],
+        "question": "قبل أن تبدأ القيادة، يجب أن تشير لليسار",
+        "options": [
+          "Blinke links, bevor du losfährst",
+          "Nachdem du losgefahren bist, musst du links blinken",
+          "Blinke bitte nach rechts",
+          "Du musst vor dem Losfahren rechts blinken"
+        ],
         "correctAnswer": "Blinke links, bevor du losfährst"
       },
       "14": {
         "id": "14",
-        "question": "Press the clutch all the way down",
-        "options": ["Drücke die Kupplung halb", "Drücke die Bremse voll durch", "Lass die Kupplung zum Schleifpunkt kommen", "Drücke die Kupplung ganz durch"],
+        "question": "اضغط على الدبرياج حتى النهاية",
+        "options": [
+          "Drücke die Kupplung halb",
+          "Drücke die Bremse voll durch",
+          "Lass die Kupplung zum Schleifpunkt kommen",
+          "Drücke die Kupplung ganz durch"
+        ],
         "correctAnswer": "Drücke die Kupplung ganz durch"
       },
       "15": {
         "id": "15",
-        "question": "Start the engine",
-        "options": ["Schalte den Motor aus", "Drehe den Schlüssel", "Schalte den Motor an", "Zieh den Schlüssel ab"],
+        "question": "ابدأ تشغيل المحرك",
+        "options": [
+          "Schalte den Motor aus",
+          "Drehe den Schlüssel",
+          "Schalte den Motor an",
+          "Zieh den Schlüssel ab"
+        ],
         "correctAnswer": "Schalte den Motor an"
       },
       "16": {
         "id": "16",
-        "question": "Stay at the side of the road",
-        "options": ["Fahre auf den Bordstein", "Fahre nicht zu dicht am Rand", "Bleib am Fahrbahnrand stehen", "Die Fahrbahn hat einen Rand"],
+        "question": "ابقَ عند جانب الطريق",
+        "options": [
+          "Fahre auf den Bordstein",
+          "Fahre nicht zu dicht am Rand",
+          "Bleib am Fahrbahnrand stehen",
+          "Die Fahrbahn hat einen Rand"
+        ],
         "correctAnswer": "Bleib am Fahrbahnrand stehen"
       },
       "17": {
         "id": "17",
-        "question": "Take your feet away",
-        "options": ["Nimm die Füße weg", "Strecke deine Füße ", "Drücke mit den Füßen", "Dein Fuß ist Druck"],
+        "question": "اخرج قدميك من الدواسات",
+        "options": [
+          "Nimm die Füße weg",
+          "Strecke deine Füße",
+          "Drücke mit den Füßen",
+          "Dein Fuß ist Druck"
+        ],
         "correctAnswer": "Nimm die Füße weg"
       },
       "18": {
         "id": "18",
-        "question": "You released the clutch too quickly",
-        "options": ["Lass die Kupplung schnell los", "Drücke die Kupplung ganz durch", "Drücke schnell Kupplung und Bremse", "Du hast die Kupplung zu schnell losgelassen"],
+        "question": "أنت أطلقت الدبرياج بسرعة كبيرة",
+        "options": [
+          "Lass die Kupplung schnell los",
+          "Drücke die Kupplung ganz durch",
+          "Drücke schnell Kupplung und Bremse",
+          "Du hast die Kupplung zu schnell losgelassen"
+        ],
         "correctAnswer": "Du hast die Kupplung zu schnell losgelassen"
       },
       "19": {
         "id": "19",
-        "question": "Drive at walking speed",
-        "options": ["Gehe zu Fuß", "Fahre Schrittgeschwindigkeit", "Schrittgeschwindigkeit ist unter 10 km/h", "Fahre Gehen Geschwindigkeit"],
+        "question": "قد القيادة بسرعة المشي",
+        "options": [
+          "Gehe zu Fuß",
+          "Fahre Schrittgeschwindigkeit",
+          "Schrittgeschwindigkeit ist unter 10 km/h",
+          "Fahre Gehen Geschwindigkeit"
+        ],
         "correctAnswer": "Fahre Schrittgeschwindigkeit"
       },
       "20": {
         "id": "20",
-        "question": "Shift up a gear",
-        "options": ["Schalte einen Gang runter", "Nimm den Gang raus", "Schalte einen Gang hoch", "Nimm einen höheren Gang"],
+        "question": "انتقل إلى الترس الأعلى",
+        "options": [
+          "Schalte einen Gang runter",
+          "Nimm den Gang raus",
+          "Schalte einen Gang hoch",
+          "Nimm einen höheren Gang"
+        ],
         "correctAnswer": "Schalte einen Gang hoch"
-      },
-      "21": {
-        "id": "21",
-        "question": "You need to accelerate a bit more",
-        "options": ["Du beschleunigst zu schnell", "Du musst etwas mehr beschleunigen", "Dein Gas ist zu viel", "Nimm das Gas weg"],
-        "correctAnswer": "Du musst etwas mehr beschleunigen"
-      },
-      "22": {
-        "id": "22",
-        "question": "Only 30 km/h is allowed here",
-        "options": ["Hier sind nur 30 km/h erlaubt", "Fahre mindestens 30 km/h", "Fahre genau 30 km/h", "Hier ist eine 30er Zone"],
-        "correctAnswer": "Hier sind nur 30 km/h erlaubt"
-      },
-      "23": {
-        "id": "23",
-        "question": "Please steer more gently",
-        "options": ["Bitte lenke etwas mehr", "Bitte lenke nicht zu viel", "Bitte lenke nach rechts", "Bitte lenke etwas sanfter"],
-        "correctAnswer": "Bitte lenke etwas sanfter"
-      },
-      "24": {
-        "id": "24",
-        "question": "You need to brake hard here",
-        "options": ["Deine Bremse ist sehr stark", "Hier musst du leichter Bremsen", "Hier musst du stark bremsen", "Hier musst du stärker bremsen"],
-        "correctAnswer": "Hier musst du stark bremsen"
-      },
-      "25": {
-        "id": "25",
-        "question": "Stay further to the right in the curve",
-        "options": ["Biege nach rechts ab", "Bleib in der Kurve weiter rechts", "Blinke vor der Kurve rechts", "Wir wollen nach rechts abbiegen"],
-        "correctAnswer": "Bleib in der Kurve weiter rechts"
-      },
-      "26": {
-        "id": "26",
-        "question": "Turn your head",
-        "options": ["Stelle die Kopfstütze ein", "Kopf nach unten", "Drehe deinen Kopf", "Dein Kopf ist zu weit vorne"],
-        "correctAnswer": "Drehe deinen Kopf"
-      },
-      "27": {
-        "id": "27",
-        "question": "Look more ahead",
-        "options": ["Drehe deinen Kopf", "Schau mehr nach hinten", "Schau mehr nach vorne", "Schau in den Spiegel"],
-        "correctAnswer": "Schau mehr nach vorne"
-      },
-      "28": {
-        "id": "28",
-        "question": "We enter the roundabout",
-        "options": ["Wir verlassen den Kreisverkehr", "Beim Einfahren in den Kreisverkehr nicht blinken", "Wir blinken beim Verlassen des Kreisverkehrs", "Wir fahren in den Kreisverkehr ein"],
-        "correctAnswer": "Wir fahren in den Kreisverkehr ein"
-      },
-      "29": {
-        "id": "29",
-        "question": "Don't drive too close to the center island",
-        "options": ["Fahre auf die Mittelinsel", "Fahre nicht zu nah an die Mittelinsel", "Die Mittelinsel darf nicht überfahren werden", "Bleibe an der Mittelinsel"],
-        "correctAnswer": "Fahre nicht zu nah an die Mittelinsel"
-      },
-      "30": {
-        "id": "30",
-        "question": "Keep the speed steady",
-        "options": ["Halte die Geschwindigkeit bei", "Reduziere deine Geschwindigkeit", "Deine Geschwindigkeit ist zu hoch", "Halte das Gaspedal"],
-        "correctAnswer": "Halte die Geschwindigkeit bei"
-      },
-      "31": {
-        "id": "31",
-        "question": "Please take the next left turn",
-        "options": ["Bitte fahre etwas weiter links", "Bitte halte dich an der linken Seite fest", "Bitte fahre die nächste Straße nach links", "Bitte fahre etwas weiter rechts"],
-        "correctAnswer": "Bitte fahre die nächste Straße nach links"
-      },
-      "32": {
-        "id": "32",
-        "question": "Do a shoulder check",
-        "options": ["Schau dir meine Schulter an", "Mache einen Schulterblick", "Überprüfe deine Schulter", "Schau in die Spiegel"],
-        "correctAnswer": "Mache einen Schulterblick"
-      },
-      "33": {
-        "id": "33",
-        "question": "Look at the bike lane",
-        "options": ["Hier ist ein Radfahrer", "Schau auf den Radweg um", "Fahr besser mit dem Rad", "Der Radfahrer hat Vorfahrt"],
-        "correctAnswer": "Schau auf den Radweg um"
-      },
-      "34": {
-        "id": "34",
-        "question": "Check the blind spot",
-        "options": ["Kontrolliere den toten Winkel", "Der Winkel ist tot", "Du hast einen Blinden Punkt im Auge", "Der Fußgänger ist blind"],
-        "correctAnswer": "Kontrolliere den toten Winkel"
-      },
-      "35": {
-        "id": "35",
-        "question": "Don't brake, you have the right of way",
-        "options": ["Bremse bitte, der andere hat Vorfahrt", "Bremse, auch wenn du Vorfahrt hast", "Wer bremst verliert", "Nicht bremsen, du hast Vorfahrt"],
-        "correctAnswer": "Nicht bremsen, du hast Vorfahrt"
-      },
-      "36": {
-        "id": "36",
-        "question": "Pay attention to the lines on the road",
-        "options": ["Achte auf die Fahrbahn", "Die Linien auf der Fahrbahn sind egal", "Achte auf die Linien auf der Fahrbahn", "Ziehe eine Linie auf der Straße"],
-        "correctAnswer": "Achte auf die Linien auf der Fahrbahn"
-      },
-      "37": {
-        "id": "37",
-        "question": "Edge forward into the intersection",
-        "options": ["Teste die vordere Kreuzung", "Taste dich in die Kreuzung vor", "Teste das Kreuz", "Teste dich in die Kreuzung vor"],
-        "correctAnswer": "Taste dich in die Kreuzung vor"
-      },
-      "38": {
-        "id": "38",
-        "question": "Drive carefully to the center of the intersection",
-        "options": ["Fahre schnell in die Mitte der Kreuzung", "Fahre vorsichtig in die Kreuzungsmitte", "Fahre in die Mitte der Kreuzung", "Fahre schnell in die Kreuzungsmitte"],
-        "correctAnswer": "Fahre vorsichtig in die Kreuzungsmitte"
-      },
-      "39": {
-        "id": "39",
-        "question": "Don't forget to signal",
-        "options": ["Vergiss nicht zu blinken", "Das Blinken musst du vergessen", "Vergiss das Blinken", "Den Blinker kann man essen"],
-        "correctAnswer": "Vergiss nicht zu blinken"
-      },
+      }, "21": {
+    "id": "21",
+    "question": "تحتاج إلى التسريع قليلاً أكثر",
+    "options": [
+      "Du beschleunigst zu schnell",
+      "Du musst etwas mehr beschleunigen",
+      "Dein Gas ist zu viel",
+      "Nimm das Gas weg"
+    ],
+    "correctAnswer": "Du musst etwas mehr beschleunigen"
+  },
+  "22": {
+    "id": "22",
+    "question": "هنا يُسمح فقط بسرعة 30 كم/س",
+    "options": [
+      "Hier sind nur 30 km/h erlaubt",
+      "Fahre mindestens 30 km/h",
+      "Fahre genau 30 km/h",
+      "Hier ist eine 30er Zone"
+    ],
+    "correctAnswer": "Hier sind nur 30 km/h erlaubt"
+  },
+  "23": {
+    "id": "23",
+    "question": "يرجى التوجيه بلطف أكثر",
+    "options": [
+      "Bitte lenke etwas mehr",
+      "Bitte lenke nicht zu viel",
+      "Bitte lenke nach rechts",
+      "Bitte lenke etwas sanfter"
+    ],
+    "correctAnswer": "Bitte lenke etwas sanfter"
+  },
+  "24": {
+    "id": "24",
+    "question": "تحتاج إلى الكبح بقوة هنا",
+    "options": [
+      "Deine Bremse ist sehr stark",
+      "Hier musst du leichter Bremsen",
+      "Hier musst du stark bremsen",
+      "Hier musst du stärker bremsen"
+    ],
+    "correctAnswer": "Hier musst du stark bremsen"
+  },
+  "25": {
+    "id": "25",
+    "question": "ابقَ أقرب إلى اليمين في المنعطف",
+    "options": [
+      "Biege nach rechts ab",
+      "Bleib in der Kurve weiter rechts",
+      "Blinke vor der Kurve rechts",
+      "Wir wollen nach rechts abbiegen"
+    ],
+    "correctAnswer": "Bleib in der Kurve weiter rechts"
+  },
+  "26": {
+    "id": "26",
+    "question": "قم بتحريك رأسك",
+    "options": [
+      "Stelle die Kopfstütze ein",
+      "Kopf nach unten",
+      "Drehe deinen Kopf",
+      "Dein Kopf ist zu weit vorne"
+    ],
+    "correctAnswer": "Drehe deinen Kopf"
+  },
+  "27": {
+    "id": "27",
+    "question": "انظر للأمام أكثر",
+    "options": [
+      "Drehe deinen Kopf",
+      "Schau mehr nach hinten",
+      "Schau mehr nach vorne",
+      "Schau in den Spiegel"
+    ],
+    "correctAnswer": "Schau mehr nach vorne"
+  },
+  "28": {
+    "id": "28",
+    "question": "نحن ندخل الدوار",
+    "options": [
+      "Wir verlassen den Kreisverkehr",
+      "Beim Einfahren in den Kreisverkehr nicht blinken",
+      "Wir blinken beim Verlassen des Kreisverkehrs",
+      "Wir fahren in den Kreisverkehr ein"
+    ],
+    "correctAnswer": "Wir fahren in den Kreisverkehr ein"
+  },
+  "29": {
+    "id": "29",
+    "question": "لا تقرب من جزيرة المنتصف",
+    "options": [
+      "Fahre auf die Mittelinsel",
+      "Fahre nicht zu nah an die Mittelinsel",
+      "Die Mittelinsel darf nicht überfahren werden",
+      "Bleibe an der Mittelinsel"
+    ],
+    "correctAnswer": "Fahre nicht zu nah an die Mittelinsel"
+  },
+  "30": {
+    "id": "30",
+    "question": "حافظ على السرعة ثابتة",
+    "options": [
+      "Halte die Geschwindigkeit bei",
+      "Reduziere deine Geschwindigkeit",
+      "Deine Geschwindigkeit ist zu hoch",
+      "Halte das Gaspedal"
+    ],
+    "correctAnswer": "Halte die Geschwindigkeit bei"
+  },
+  "31": {
+    "id": "31",
+    "question": "يرجى أخذ أول منعطف يسارًا",
+    "options": [
+      "Bitte fahre etwas weiter links",
+      "Bitte halte dich an der linken Seite fest",
+      "Bitte fahre die nächste Straße nach links",
+      "Bitte fahre etwas weiter rechts"
+    ],
+    "correctAnswer": "Bitte fahre die nächste Straße nach links"
+  },
+  "32": {
+    "id": "32",
+    "question": "قم بعمل فحص للكتف",
+    "options": [
+      "Schau dir meine Schulter an",
+      "Mache einen Schulterblick",
+      "Überprüfe deine Schulter",
+      "Schau in die Spiegel"
+    ],
+    "correctAnswer": "Mache einen Schulterblick"
+  },
+  "33": {
+    "id": "33",
+    "question": "انظر إلى ممر الدراجات",
+    "options": [
+      "Hier ist ein Radfahrer",
+      "Schau auf den Radweg um",
+      "Fahr besser mit dem Rad",
+      "Der Radfahrer hat Vorfahrt"
+    ],
+    "correctAnswer": "Schau auf den Radweg um"
+  },
+  "34": {
+    "id": "34",
+    "question": "افحص الزاوية العمياء",
+    "options": [
+      "Kontrolliere den toten Winkel",
+      "Der Winkel ist tot",
+      "Du hast einen Blinden Punkt im Auge",
+      "Der Fußgänger ist blind"
+    ],
+    "correctAnswer": "Kontrolliere den toten Winkel"
+  },
+  "35": {
+    "id": "35",
+    "question": "لا تكبح، لديك الأفضلية",
+    "options": [
+      "Bremse bitte, der andere hat Vorfahrt",
+      "Bremse, auch wenn du Vorfahrt hast",
+      "Wer bremst verliert",
+      "Nicht bremsen, du hast Vorfahrt"
+    ],
+    "correctAnswer": "Nicht bremsen, du hast Vorfahrt"
+  },
+  "36": {
+    "id": "36",
+    "question": "انتبه لخطوط الطريق",
+    "options": [
+      "Achte auf die Fahrbahn",
+      "Die Linien auf der Fahrbahn sind egal",
+      "Achte auf die Linien auf der Fahrbahn",
+      "Ziehe eine Linie auf der Straße"
+    ],
+    "correctAnswer": "Achte auf die Linien auf der Fahrbahn"
+  },
+  "37": {
+    "id": "37",
+    "question": "تقدم تدريجيًا إلى تقاطع الطريق",
+    "options": [
+      "Teste die vordere Kreuzung",
+      "Taste dich in die Kreuzung vor",
+      "Teste das Kreuz",
+      "Teste dich in die Kreuzung vor"
+    ],
+    "correctAnswer": "Taste dich in die Kreuzung vor"
+  },
+  "38": {
+    "id": "38",
+    "question": "قُد بعناية إلى مركز التقاطع",
+    "options": [
+      "Fahre schnell in die Mitte der Kreuzung",
+      "Fahre vorsichtig in die Kreuzungsmitte",
+      "Fahre in die Mitte der Kreuzung",
+      "Fahre schnell in die Kreuzungsmitte"
+    ],
+    "correctAnswer": "Fahre vorsichtig in die Kreuzungsmitte"
+  },
+  "39": {
+    "id": "39",
+    "question": "لا تنسى الإشارة",
+    "options": [
+      "Vergiss nicht zu blinken",
+      "Das Blinken musst du vergessen",
+      "Vergiss das Blinken",
+      "Den Blinker kann man essen"
+    ],
+    "correctAnswer": "Vergiss nicht zu blinken"
+  },
       "40": {
         "id": "40",
         "question": "Get into position early",
