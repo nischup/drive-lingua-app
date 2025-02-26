@@ -41,7 +41,11 @@ export class Tab3Page {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
-    // this.getAllQuestions();
+    
+    this.translate.onLangChange.subscribe(() => {
+      this.getAllQuestions(); // Reload questions when language changes
+    });
+
   }
 
   ngOnInit(): void {
@@ -85,7 +89,7 @@ export class Tab3Page {
 getAllQuestions() {
   this.translate.get('questions').subscribe((translatedQuestions: any) => {
     const allQuestions = Object.values(translatedQuestions);
-    this.qList = this.shuffleArray(allQuestions).slice(0, 20); // Take only 20 random questions
+    this.qList = this.shuffleArray(allQuestions).slice(0, 20); 
     this.currentQuestionIndex = 0; 
   });
 }

@@ -1,9 +1,10 @@
 <ion-toolbar class="black-toolbar">
   <ion-buttons slot="start">
-    <ion-back-button class="white-icons" defaultHref="/tabs/tab2"  mode="ios"></ion-back-button>
+    <ion-back-button class="white-icons" defaultHref="/tabs/tab2" [attr.mode]="platform.is('ios') ? 'ios' : 'md'"></ion-back-button>
   </ion-buttons>
   {{ 'Chapter' | translate }} 1
 </ion-toolbar>
+
 
 <ion-content [fullscreen]="true">
   <ion-grid>

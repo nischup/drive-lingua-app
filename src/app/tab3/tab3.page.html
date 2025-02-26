@@ -21,63 +21,63 @@
     </ion-row>
   </ion-grid>
 
+  <div class="question-header">
+
+  <ion-grid>
+      <ion-row>
+          <ion-title>{{ 'Question' | translate }} {{ currentQuestionIndex + 1 }}/{{ totalQuestions }}  
+          <ion-icon slot="end" name="close-circle-outline" ></ion-icon> </ion-title>
+     </ion-row>
+  </ion-grid>
+
+</div>
+
+<div class="question-option">
+
+  <h4 *ngIf="currentQuestion">{{ currentQuestion.question | translate }}</h4>
+  <ion-list *ngIf="currentQuestion">
+    <ion-radio-group [(ngModel)]="selectedOption">
+      <ion-item *ngFor="let option of currentQuestion.options"
+                [ngClass]="{
+                  'success': answerChecked && option === currentQuestion.correctAnswer,
+                  'danger': answerChecked && option === selectedOption && option !== currentQuestion.correctAnswer
+                }">
+        <ion-radio slot="start" [value]="option" [disabled]="answerChecked"></ion-radio>
+        <ion-label>{{ option }}</ion-label>
+        <ion-icon *ngIf="answerChecked && option === currentQuestion.correctAnswer" 
+                  slot="end" 
+                  name="checkmark-circle-outline" 
+                  color="success">
+        </ion-icon>
+        <ion-icon *ngIf="answerChecked && option === selectedOption && option !== currentQuestion.correctAnswer" 
+                  slot="end" 
+                  name="close-circle-outline" 
+                  color="danger">
+        </ion-icon>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
 
 
-  <!-- <ion-button>
-    <audio controls class="audio-player">
-      <source src="assets/audio/sample.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-  </ion-button> -->
-  
-<ion-title>{{ 'Question' | translate }} {{ currentQuestionIndex + 1 }}/{{ totalQuestions }}  <ion-icon slot="end" name="close-circle-outline" ></ion-icon> </ion-title>
+  <ion-button 
+    class="ansbtncheck" 
+    expand="full" 
+    shape="round" 
+    (click)="checkAns()"
+    [disabled]="!selectedOption || answerChecked">
+    {{ 'Check Answer' | translate }}
+  </ion-button>
 
 
+  <ion-button 
+    *ngIf="answerChecked"
+    class="ansbtn" 
+    expand="full" 
+    shape="round" 
+    (click)="nextQ()">
+    {{ 'Next Question' | translate }}
+  </ion-button>
 
-<h4 *ngIf="currentQuestion">{{ currentQuestion.question | translate }}</h4>
-<ion-list *ngIf="currentQuestion">
-  <ion-radio-group [(ngModel)]="selectedOption">
-    <ion-item *ngFor="let option of currentQuestion.options"
-              [ngClass]="{
-                'success': answerChecked && option === currentQuestion.correctAnswer,
-                'danger': answerChecked && option === selectedOption && option !== currentQuestion.correctAnswer
-              }">
-      <ion-radio slot="start" [value]="option" [disabled]="answerChecked"></ion-radio>
-      <ion-label>{{ option }}</ion-label>
-      <ion-icon *ngIf="answerChecked && option === currentQuestion.correctAnswer" 
-                slot="end" 
-                name="checkmark-circle-outline" 
-                color="success">
-      </ion-icon>
-      <ion-icon *ngIf="answerChecked && option === selectedOption && option !== currentQuestion.correctAnswer" 
-                slot="end" 
-                name="close-circle-outline" 
-                color="danger">
-      </ion-icon>
-    </ion-item>
-  </ion-radio-group>
-</ion-list>
-
-
-<ion-button 
-  class="ansbtncheck" 
-  expand="full" 
-  shape="round" 
-  (click)="checkAns()"
-  [disabled]="!selectedOption || answerChecked">
-  {{ 'Check Answer' | translate }}
-</ion-button>
-
-
-<ion-button 
-  *ngIf="answerChecked"
-  class="ansbtn" 
-  expand="full" 
-  shape="round" 
-  (click)="nextQ()">
-  {{ 'Next Question' | translate }}
-</ion-button>
-
-
+</div>
 
 </ion-content>

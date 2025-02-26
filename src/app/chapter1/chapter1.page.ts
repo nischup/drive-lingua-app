@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-chapter1',
@@ -30,7 +31,7 @@ export class Chapter1Page implements OnInit {
   filteredLanguages: { name: string; flag: string }[] = [];
   selectedLanguage: string = 'English'; // Default language
 
-  constructor(private translate: TranslateService, private router:Router) {
+  constructor(private translate: TranslateService, private router:Router, public platform: Platform) {
     translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
     translate.setDefaultLang('English');
   
@@ -48,6 +49,8 @@ export class Chapter1Page implements OnInit {
        } else {
          this.translate.setDefaultLang(this.selectedLanguage);
        }
+
+      console.log(this.platform.is('ios') ? 'iOS device' : 'Android device');
   }
 
   switchLanguage(lang: string) {
