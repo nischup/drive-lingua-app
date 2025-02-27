@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Share } from '@capacitor/share';
 
 @Component({
   selector: 'app-tab1',
@@ -71,6 +72,19 @@ export class Tab1Page {
       this.switchLanguage(storedLanguage);
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
+    }
+  }
+
+   async shareContent() {
+    try {
+      await Share.share({
+        title: 'Drive Lingua',
+        text: 'Install this App, For your Drive Learning!',
+        url: 'https://drive.google.com/file/d/1iqsEm0O_7kIcJgi9rmc4-OOCbSjq5xNp/view?usp=sharing',
+        dialogTitle: 'Share with friends'
+      });
+    } catch (error) {
+      console.error('Error sharing:', error);
     }
   }
 
