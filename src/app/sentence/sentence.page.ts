@@ -69,18 +69,18 @@ export class SentencePage implements OnInit {
     this.translate.get(`SentenceList.${this.chapterno}`)
       .subscribe((translatedTitle: string[]) => {
         this.sentList = translatedTitle;
-        console.log(this.sentList);
+        // console.log(this.sentList);
       });
 
       this.translate.use('French');
       this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
       this.sentListGerman = germanList;
-      console.log(this.sentListGerman);
+      // console.log(this.sentListGerman);
 
          // Fetch the audio list in the user's selected language
          this.translate.get(`senAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
           this.senAudioList = audioList;
-          console.log('Audio List:', this.senAudioList);
+          // console.log('Audio List:', this.senAudioList);
         if (this.senAudioList.length > 0) {
           this.currentIndex = 0;  // Ensure we start at index 0
           this.currentAudio = this.senAudioList[0]; // Set the first audio but don't auto-play yet
@@ -190,5 +190,8 @@ export class SentencePage implements OnInit {
     this.location.back(); // Navigate to the previous page in history
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
 
 }

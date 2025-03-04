@@ -2,8 +2,16 @@
   <ion-buttons slot="start">
     <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (ionBack)="goBack()"></ion-back-button>
   </ion-buttons>
- {{ 'Vocabulary' | translate }} 
+
+  <ion-title>{{ 'Vocabulary' | translate }}</ion-title>
+
+  <ion-buttons slot="end">
+    <ion-button (click)="refreshPage()">
+      <ion-icon class="white-icons" name="refresh-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
 </ion-toolbar>
+
 
 <ion-content [fullscreen]="true" class="ion-padding">
 

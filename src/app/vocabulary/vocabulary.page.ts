@@ -57,14 +57,6 @@ export class VocabularyPage implements OnInit {
      this.selectedLanguage = this.languageService.getLanguage();
   }
 
-  // getVocabularyList() {
-  //   this.translate
-  //     .get(`VocabularyList.${this.chapterno}`)
-  //     .subscribe((translatedTitle: string[]) => {
-  //       this.vocList = translatedTitle;
-  //       console.log(this.vocList);
-  //     });
-  // }
 
   getVocabularyList() {
 
@@ -72,20 +64,20 @@ export class VocabularyPage implements OnInit {
       this.translate.use(this.selectedLanguage); // Switch to the selected language
       this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((userLanguageList: string[]) => {
         this.vocListUserSelection = userLanguageList;
-        console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
+        // console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
       });
 
     // Fetch the German list (always in German)
     this.translate.use('French'); // Set to German
     this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
       this.vocListGerman = germanList;
-      console.log('German List:', this.vocListGerman);
+      // console.log('German List:', this.vocListGerman);
   
   
       // Fetch the audio list in the user's selected language
       this.translate.get(`vocAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
         this.vocAudioList = audioList;
-        console.log(this.vocAudioList);
+        // console.log(this.vocAudioList);
         if (this.vocAudioList.length > 0) {
           this.currentIndex = 0;  // Ensure we start at index 0
           this.currentAudio = this.vocAudioList[0]; // Set the first audio but don't auto-play yet
@@ -182,6 +174,10 @@ export class VocabularyPage implements OnInit {
 
   goBack() {
     this.location.back(); // Navigate to the previous page in history
+  }
+
+  refreshPage() {
+    window.location.reload();
   }
 
 
