@@ -21,16 +21,28 @@
   </ion-grid>
 
   <div class="profile-container">
-    <!-- Profile Image -->
-    <div class="profile-image">
-      <img src="assets/flags/profile.jpg" />
-    </div>
-    <h4>John Doe</h4>
-    <h5>jhon.doe&#64;example.scom</h5>
-    <ion-button fill="clear" class="edit-profile-button">
-      <ion-icon slot="start" name="create-outline"></ion-icon>
-      {{ 'Edit Profile' | translate }}
-    </ion-button>
+<!-- Profile Image -->
+<div class="profile-image">
+  <img [src]="profile.image" />
+</div>
+
+<input type="file" (change)="onImageUpload($event)" accept="image/*" />
+
+<ion-item>
+  <ion-label position="stacked">Name</ion-label>
+  <ion-input [(ngModel)]="profile.name"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Email</ion-label>
+  <ion-input [(ngModel)]="profile.email"></ion-input>
+</ion-item>
+
+<ion-button expand="full" (click)="updateProfile()">
+  <ion-icon slot="start" name="save-outline"></ion-icon>
+  Save Profile
+</ion-button>
+
     
   </div>
 

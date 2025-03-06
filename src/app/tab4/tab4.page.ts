@@ -29,6 +29,12 @@ export class Tab4Page implements OnInit {
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
   selectedLanguage: string = 'English'; // Default language
 
+  profile = {
+    name: '',
+    email: '',
+    image: 'assets/flags/profile.jpg', // Default profile image
+  };
+
   constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
@@ -46,6 +52,34 @@ export class Tab4Page implements OnInit {
       this.switchLanguage(storedLanguage);
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
+    }
+
+    this.loadProfile();
+
+  }
+
+
+  loadProfile() {
+    const storedProfile = localStorage.getItem('userProfile');
+    if (storedProfile) {
+      this.profile = JSON.parse(storedProfile);
+    }
+  }
+
+  updateProfile() {
+    localStorage.setItem('userProfile', JSON.stringify(this.profile));
+    alert('Profile updated successfully!');
+  }
+
+  onImageUpload(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.profile.image = e.target.result; // Convert image to base64
+        localStorage.setItem('userProfile', JSON.stringify(this.profile)); // Save updated profile
+      };
+      reader.readAsDataURL(file);
     }
   }
 
