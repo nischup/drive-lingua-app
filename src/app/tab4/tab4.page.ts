@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,8 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
 })
-export class Tab4Page implements OnInit {
+export class Tab4Page implements OnInit, AfterViewInit  {
 
+  @ViewChild('fileInput') fileInput!: ElementRef;
   // List of languages with their flags
   languages = [
     { name: 'English', origin_name: 'English', flag: 'assets/flags/english.png' },
@@ -32,32 +33,31 @@ export class Tab4Page implements OnInit {
   profile = {
     name: '',
     email: '',
-    image: 'assets/flags/profile.jpg', // Default profile image
+    image: 'assets/flags/profile.jpg', 
   };
 
   constructor(private translate: TranslateService, private router: Router) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
-
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
   }
 
   ngOnInit(): void {
-    // Initialize the filtered list with all languages
     this.filteredLanguages = [...this.languages];
-    // Retrieve the persisted language
     const storedLanguage = localStorage.getItem('selectedLanguage');
     if (storedLanguage) {
       this.switchLanguage(storedLanguage);
     } else {
       this.translate.setDefaultLang(this.selectedLanguage);
     }
-
     this.loadProfile();
-
   }
-
+  ngAfterViewInit() {
+    if (!this.fileInput) {
+      console.error("fileInput not found");
+    }
+  }
 
   loadProfile() {
     const storedProfile = localStorage.getItem('userProfile');
@@ -65,10 +65,17 @@ export class Tab4Page implements OnInit {
       this.profile = JSON.parse(storedProfile);
     }
   }
-
   updateProfile() {
     localStorage.setItem('userProfile', JSON.stringify(this.profile));
     alert('Profile updated successfully!');
+  }
+
+  triggerFileInput() {
+    if (this.fileInput) {
+      this.fileInput.nativeElement.click();
+    } else {
+      console.error("fileInput is not initialized yet.");
+    }
   }
 
   onImageUpload(event: any) {
@@ -76,8 +83,8 @@ export class Tab4Page implements OnInit {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e: any) => {
-        this.profile.image = e.target.result; // Convert image to base64
-        localStorage.setItem('userProfile', JSON.stringify(this.profile)); // Save updated profile
+        this.profile.image = e.target.result; 
+        localStorage.setItem('userProfile', JSON.stringify(this.profile)); 
       };
       reader.readAsDataURL(file);
     }
@@ -109,6 +116,7 @@ export class Tab4Page implements OnInit {
   }
 
   signOut() {
+    this.router.navigate(['/language']);
     console.log('Sign Out button clicked');
     // Add your sign-out logic here
   }

@@ -21,20 +21,24 @@
   </ion-grid>
 
   <div class="profile-container">
+
 <!-- Profile Image -->
-<div class="profile-image">
+<div class="profile-image" (click)="triggerFileInput()">
   <img [src]="profile.image" />
 </div>
 
-<input type="file" (change)="onImageUpload($event)" accept="image/*" />
+<div class="imgup">
+  <input type="file" (change)="onImageUpload($event)" accept="image/*" />
+</div>
+
 
 <ion-item>
-  <ion-label position="stacked">Name</ion-label>
+  <!-- <ion-label position="stacked">Name</ion-label> -->
   <ion-input [(ngModel)]="profile.name"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position="stacked">Email</ion-label>
+  <!-- <ion-label position="stacked">Email</ion-label> -->
   <ion-input [(ngModel)]="profile.email"></ion-input>
 </ion-item>
 
