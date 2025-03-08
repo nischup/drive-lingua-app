@@ -96,6 +96,14 @@ const routes: Routes = [
         loadChildren: () => import('../registration-info/registration-info.module').then( m => m.RegistrationInfoPageModule)
       },
       {
+        path: 'notification',
+        loadChildren: () => import('../notification/notification.module').then( m => m.NotificationPageModule)
+      },
+      {
+        path: 'support',
+        loadChildren: () => import('../support/support.module').then( m => m.SupportPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

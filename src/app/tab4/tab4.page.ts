@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { ToastController } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-tab4',
@@ -36,7 +39,7 @@ export class Tab4Page implements OnInit, AfterViewInit  {
     image: 'assets/flags/profile.jpg', 
   };
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private translate: TranslateService, private router: Router, private toastController: ToastController) {
     translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
     translate.setDefaultLang('English');
     const browserLang = translate.getBrowserLang();
@@ -53,6 +56,7 @@ export class Tab4Page implements OnInit, AfterViewInit  {
     }
     this.loadProfile();
   }
+
   ngAfterViewInit() {
     if (!this.fileInput) {
       console.error("fileInput not found");
@@ -65,18 +69,21 @@ export class Tab4Page implements OnInit, AfterViewInit  {
       this.profile = JSON.parse(storedProfile);
     }
   }
+
   updateProfile() {
     localStorage.setItem('userProfile', JSON.stringify(this.profile));
-    alert('Profile updated successfully!');
+    this.presentToast('Profile updated successfully!', 'success');
   }
 
-  triggerFileInput() {
-    if (this.fileInput) {
-      this.fileInput.nativeElement.click();
-    } else {
-      console.error("fileInput is not initialized yet.");
-    }
+
+ triggerFileInput(event?: Event) { 
+  event?.stopPropagation(); 
+  if (this.fileInput) {
+    this.fileInput.nativeElement.click();
+  } else {
+    console.error("fileInput is not initialized yet.");
   }
+}
 
   onImageUpload(event: any) {
     const file = event.target.files[0];
@@ -106,19 +113,25 @@ export class Tab4Page implements OnInit, AfterViewInit  {
   }
 
   openNotification() {
-    console.log('Notification button clicked');
-    // Add your logic here
+    this.router.navigate(['/tabs/notification']);
   }
 
   openHelpAndSupport() {
-    console.log('Help & Support button clicked');
-    // Add your logic here
+   this.router.navigate(['/tabs/support']);
   }
 
   signOut() {
     this.router.navigate(['/language']);
-    console.log('Sign Out button clicked');
-    // Add your sign-out logic here
+  }
+
+  async presentToast(message: string, color: string = 'primary') {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000, 
+      position: 'bottom',
+      color, 
+    });
+    toast.present();
   }
 
 }

@@ -24,11 +24,14 @@
 
 <!-- Profile Image -->
 <div class="profile-image" (click)="triggerFileInput()">
-  <img [src]="profile.image" />
+  <img [src]="profile.image" alt="Profile Image" />
+  <div class="edit-icon" (click)="triggerFileInput($event)">
+    <ion-icon name="create-outline"></ion-icon>
+  </div>
 </div>
 
 <div class="imgup">
-  <input type="file" (change)="onImageUpload($event)" accept="image/*" />
+  <input #fileInput type="file" (change)="onImageUpload($event)" accept="image/*" hidden />
 </div>
 
 
@@ -44,7 +47,7 @@
 
 <ion-button expand="full" (click)="updateProfile()">
   <ion-icon slot="start" name="save-outline"></ion-icon>
-  Save Profile
+  Save
 </ion-button>
 
     

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+    <ion-back-button class="white-icons" defaultHref="/tabs/tab4"></ion-back-button>
+  </ion-buttons>
+  Notifications 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="no-notifications">
+    <ion-icon name="notifications-off-outline"></ion-icon>
+    <h2>No Pending Notifications</h2>
+    <p>You're all caught up! Check back later for updates.</p>
+    <ion-button fill="outline" (click)="refreshNotifications()">
+      Refresh or back
+    </ion-button>
+  </div>
+</ion-content>

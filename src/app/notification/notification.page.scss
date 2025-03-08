@@ -1,0 +1,32 @@
+.no-notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.no-notifications ion-icon {
+  font-size: 60px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.no-notifications h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.no-notifications p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.no-notifications ion-button {
+  --border-radius: 10px;
+  --color: var(--ion-color-primary);
+  --border-color: var(--ion-color-primary);
+}
