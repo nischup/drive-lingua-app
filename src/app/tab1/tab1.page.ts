@@ -78,9 +78,9 @@ export class Tab1Page {
    async shareContent() {
     try {
       await Share.share({
-        title: 'Drive Lingua',
-        text: 'Install this App, For your Drive Learning!',
-        url: 'https://drive.google.com/file/d/1dC1rh5Kkj_qXwUpqaIrmMNbEjsGQ_7hA/view?usp=sharing',
+        title: 'Drive Lingua App',
+        text: 'Install this App For your Drive Learning!',
+        url: 'https://drive.google.com/file/d/1l2VetjxQB404INJGPS6plgu5YUAqGPZ6/view?usp=sharing',
         dialogTitle: 'Share with friends'
       });
     } catch (error) {
