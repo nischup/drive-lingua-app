@@ -23,6 +23,7 @@ export class VocabularyPage implements OnInit {
   textToDetails: string = '';
   selectedLanguage: string = 'English'; // Default language
   isTurning: boolean = false;
+  pageType: string = 'vocabulary';
   
 
   languages = [
@@ -48,15 +49,26 @@ export class VocabularyPage implements OnInit {
   }
 
   ngOnInit() {
-    // Access the 'chapterno' query parameter
+     this.pageType = this.route.snapshot.routeConfig?.path || 'vocabulary'; 
+    const currentChapter = sessionStorage.getItem('chapterno');
+    const currentPageType = sessionStorage.getItem('pageType');
+    
     this.route.queryParams.subscribe((params) => {
-      this.chapterno = params['chapterno'] || '1'; // Default to '1' if not found
-      this.getVocabularyList();
-      this.setBackHref(); // Set dynamic back link
-    });
-     this.selectedLanguage = this.languageService.getLanguage();
-  }
+      const newChapterno = params['chapterno'] || '1'; 
 
+      if (currentChapter !== newChapterno || currentPageType !== this.pageType) {
+        sessionStorage.setItem('chapterno', newChapterno);
+        sessionStorage.setItem('pageType', this.pageType);
+        
+        location.reload();
+      } else {
+        this.chapterno = newChapterno;
+        this.getVocabularyList();
+        this.setBackHref();
+      }
+    });
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+  }
 
   getVocabularyList() {
 

@@ -24,6 +24,7 @@ export class SentencePage implements OnInit {
   isTurning: boolean = false;
   senAudioList: string[] = [];
   currentAudio: string | null = null; // Current audio file
+  pageType: string = '';
 
   languages = [
     { name: 'English', flag: 'assets/flags/english.png' },
@@ -47,22 +48,32 @@ export class SentencePage implements OnInit {
     translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
   }
 
-  ngOnInit() {
-     // Access the 'chapterno' query parameter
-     this.route.queryParams.subscribe(params => {
-      this.chapterno = params['chapterno'] || '1'; // Default to '1' if not found
-      // this.setTextBasedOnChapter();
-      this.getSentenceList();
-      this.setBackHref(); // Set dynamic back link
-    });
+ ngOnInit() {
+    this.pageType = this.route.snapshot.routeConfig?.path || 'sentence'; 
+    const currentChapter = sessionStorage.getItem('chapterno');
+    const currentPageType = sessionStorage.getItem('pageType');
+    
+    this.route.queryParams.subscribe((params) => {
+      const newChapterno = params['chapterno'] || '1';
 
-       // Retrieve the persisted language
-       const storedLanguage = localStorage.getItem('selectedLanguage');
-       if (storedLanguage) {
-         this.switchLanguage(storedLanguage);
-       } else {
-         this.translate.setDefaultLang(this.selectedLanguage);
-       }
+      if (currentChapter !== newChapterno || currentPageType !== this.pageType) {
+        sessionStorage.setItem('chapterno', newChapterno);
+        sessionStorage.setItem('pageType', this.pageType);
+        location.reload();
+      } else {
+        this.chapterno = newChapterno;
+        if (this.pageType === 'sentence') {
+          this.getSentenceList();
+        }
+        this.setBackHref();
+      }
+    });
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.switchLanguage(storedLanguage);
+    } else {
+      this.translate.setDefaultLang(this.selectedLanguage);
+    }
   }
 
   getSentenceList() {
