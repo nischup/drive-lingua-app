@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin } from 'rxjs';
 
@@ -40,7 +40,7 @@ export class SentencePage implements OnInit {
     { name: 'Tuerk', flag: 'assets/flags/tuerk.png' },
   ];
   
-  constructor(private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
     translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
     translate.setDefaultLang('English');
   
@@ -197,8 +197,11 @@ export class SentencePage implements OnInit {
     this.defaultBackHref = `/tabs/chapter${this.chapterno}`;
   }
 
-  goBack() {
-    this.location.back(); // Navigate to the previous page in history
+  handleBackClick() {
+    sessionStorage.setItem('lastPageType', 'vocabulary'); // Track last visited page
+    this.router.navigate([`/tabs/chapter${this.chapterno}`]).then(() => {
+      location.reload(); // Reload after navigating back
+    });
   }
 
   refreshPage() {

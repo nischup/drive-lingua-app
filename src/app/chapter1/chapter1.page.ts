@@ -9,7 +9,7 @@ import { Platform } from '@ionic/angular';
   templateUrl: './chapter1.page.html',
   styleUrls: ['./chapter1.page.scss'],
 })
-export class Chapter1Page implements OnInit {
+export class Chapter1Page {
 
   // List of languages with their flags
   languages = [
@@ -39,18 +39,13 @@ export class Chapter1Page implements OnInit {
     translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
   }
 
-  ngOnInit(): void {
-    // Initialize the filtered list with all languages
-    this.filteredLanguages = [...this.languages];
-       // Retrieve the persisted language
-       const storedLanguage = localStorage.getItem('selectedLanguage');
-       if (storedLanguage) {
-         this.switchLanguage(storedLanguage);
-       } else {
-         this.translate.setDefaultLang(this.selectedLanguage);
-       }
-
-      console.log(this.platform.is('ios') ? 'iOS device' : 'Android device');
+  ionViewWillEnter() {
+    const lastPageType = sessionStorage.getItem('lastPageType');
+  
+    if (lastPageType === 'vocabulary') {
+      sessionStorage.removeItem('lastPageType'); // Clear flag to prevent infinite reloads
+      location.reload(); // Reload the page when coming from Vocabulary
+    }
   }
 
   switchLanguage(lang: string) {
@@ -78,10 +73,12 @@ export class Chapter1Page implements OnInit {
     this.router.navigate(['/tabs/sentence'], { queryParams: { chapterno } });
   }
 
-  clickToVocabulary() {
+  clickToVocabulary() { 
+    sessionStorage.setItem('lastPageType', 'chapter'); // Store that we are coming from 'chapter'
     const chapterno = '1';
     this.router.navigate(['/tabs/vocabulary'], { queryParams: { chapterno } });
   }
+  
 
   clickToVideo() {
     const chapterno = '1';

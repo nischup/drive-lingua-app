@@ -1,8 +1,8 @@
 <ion-toolbar class="black-toolbar">
   <ion-buttons slot="start">
-    <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (ionBack)="goBack()"></ion-back-button>
+    <ion-back-button class="white-icons" defaultHref="/tabs/chapter" (click)="handleBackClick()"></ion-back-button>
   </ion-buttons>
-
+  
   <ion-title>{{ 'Vocabulary' | translate }}</ion-title>
 
   <ion-buttons slot="end">
