@@ -16,6 +16,8 @@ export class Tab3Page {
   isCorrect: boolean = false;  
   takenTest = 0;
   takenTestCount = 0;
+  testCompleted: boolean = false; 
+  testResult: string = ''; 
 
   searchTerm: string = '';
   filteredLanguages: { name: string; origin_name: string; flag: string }[] = [];
@@ -89,7 +91,7 @@ export class Tab3Page {
 getAllQuestions() {
   this.translate.get('questions').subscribe((translatedQuestions: any) => {
     const allQuestions = Object.values(translatedQuestions);
-    this.qList = this.shuffleArray(allQuestions).slice(0, 20); 
+    this.qList = this.shuffleArray(allQuestions).slice(0, 5); 
     this.currentQuestionIndex = 0; 
   });
 }
@@ -113,12 +115,28 @@ private shuffleArray(array: any[]): any[] {
       const passed = this.qList.filter(q => q.isCorrect).length;
       const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
       const notFinished = this.qList.length - (passed + failed);
-      this.saveTestResults(passed, failed, notFinished);
+      const isPassed = passed >= 3;
+           // ✅ Fetch previous results from localStorage
+        const previousResults = JSON.parse(localStorage.getItem('testSummary') || '{}');
+
+        // ✅ Initialize if not exists
+        const passCount = previousResults.passCount || 0;
+        const failCount = previousResults.failCount || 0;
+
+        // ✅ Increment counts
+        if (isPassed) {
+            previousResults.passCount = passCount + 1;
+        } else {
+            previousResults.failCount = failCount + 1;
+        }
+
+        // ✅ Save updated results to localStorage
+        localStorage.setItem('testSummary', JSON.stringify(previousResults));
+      this.saveTestResults(passed, failed, notFinished, isPassed);
+      this.showTestResult(isPassed);
     }
   }
 
-  
-  
 
   nextQ() {
     if (this.currentQuestionIndex < this.totalQuestions - 1) {
@@ -140,15 +158,14 @@ private shuffleArray(array: any[]): any[] {
     }
   }
   
-  
-  
-  saveTestResults(passed: number, failed: number, notFinished: number) {
+  saveTestResults(passed: number, failed: number, notFinished: number, isPassed: boolean) {
     const testResults = {
       date: new Date().toLocaleDateString(),
       total: this.totalQuestions,
       passed,
       failed,
-      notFinished
+      notFinished,
+      result: isPassed ? 'Passed' : 'Failed'
     };
 
     localStorage.setItem('latestTestResults', JSON.stringify(testResults));
@@ -187,5 +204,32 @@ private shuffleArray(array: any[]): any[] {
       language.origin_name.toLowerCase().includes(term)
     );
   }
+
+    showTestResult(isPassed: boolean) {
+      this.testCompleted = true;
+      this.testResult = isPassed ? '✅ Your Are Passed' : '❌ You Are Failed';
+
+      setTimeout(() => {
+          this.resetTest();
+      }, 3000); // Show result for 3 seconds, then restart
+  }
+
+
+  resetTest() {
+      this.currentQuestionIndex = Math.floor(Math.random() * this.totalQuestions); 
+      this.selectedOption = null;
+      this.answerChecked = false;
+      this.isCorrect = false;
+      this.testCompleted = false;
+      this.testResult = '';
+
+      // Reset all questions
+      this.qList.forEach(q => {
+          q.selectedOption = null;
+          q.isCorrect = false;
+      });
+  }
+
+
 
 }

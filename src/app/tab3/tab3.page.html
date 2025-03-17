@@ -24,15 +24,21 @@
   <div class="question-header">
 
   <ion-grid>
+
       <ion-row>
-          <span class="iontitle"> {{ 'Question' | translate }} {{ currentQuestionIndex + 1 }}/{{ totalQuestions }}   </span>
+          <span class="iontitle"> {{ 'Question' | translate }} {{ currentQuestionIndex + 1 }}/{{ totalQuestions }} </span>
           <ion-icon slot="end" name="close-circle-outline" ></ion-icon> 
      </ion-row>
   </ion-grid>
 
 </div>
 
-<div class="question-option">
+
+  <div *ngIf="testCompleted" class="test-result">
+      <h2>{{ testResult }}</h2>
+  </div>
+
+<div class="question-option" *ngIf="!testCompleted">
 
   <h4 *ngIf="currentQuestion">{{ currentQuestion.question | translate }}</h4>
   <ion-list *ngIf="currentQuestion">
