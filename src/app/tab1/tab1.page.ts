@@ -15,6 +15,7 @@ export class Tab1Page {
   completedChapters = 0;
   progressPercentage = 0;
   testResults: any = null;
+  testSummary: any = { passCount: 0, failCount: 0 };
   totalTest = 10;
   takenTests: any[] = [];  
   takenTestCount: number = 0;
@@ -48,6 +49,7 @@ export class Tab1Page {
     this.loadTestResults();
     this.loadTakenTests();
     this.loadTakenTestCount();
+    this.loadTestSummary();
 
     window.addEventListener('testResultsUpdated', this.updateTestResults.bind(this));
 
@@ -62,6 +64,10 @@ export class Tab1Page {
     });
 
     window.addEventListener('takenTestCountUpdated', this.updateTakenTestCount);
+
+    window.addEventListener('testSummaryUpdated', (event: any) => {
+        this.testSummary = event.detail;
+    });
 
   }
   
@@ -92,6 +98,14 @@ export class Tab1Page {
     window.removeEventListener('testResultsUpdated', this.updateTestResults.bind(this));
     window.removeEventListener('takenTestsUpdated', this.loadTakenTests);
   }
+
+   loadTestSummary() {
+        const savedSummary = JSON.parse(localStorage.getItem('testSummary') || '{}');
+        this.testSummary = {
+            passCount: savedSummary.passCount || 0,
+            failCount: savedSummary.failCount || 0
+        };
+    }
 
   loadTestResults() {
     const results = localStorage.getItem('latestTestResults');

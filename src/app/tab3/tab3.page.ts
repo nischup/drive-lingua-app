@@ -91,7 +91,7 @@ export class Tab3Page {
 getAllQuestions() {
   this.translate.get('questions').subscribe((translatedQuestions: any) => {
     const allQuestions = Object.values(translatedQuestions);
-    this.qList = this.shuffleArray(allQuestions).slice(0, 5); 
+    this.qList = this.shuffleArray(allQuestions).slice(0, 20); 
     this.currentQuestionIndex = 0; 
   });
 }
@@ -115,23 +115,18 @@ private shuffleArray(array: any[]): any[] {
       const passed = this.qList.filter(q => q.isCorrect).length;
       const failed = this.qList.filter(q => !q.isCorrect && q.selectedOption).length;
       const notFinished = this.qList.length - (passed + failed);
-      const isPassed = passed >= 3;
-           // ✅ Fetch previous results from localStorage
+      const isPassed = passed >= 17;
         const previousResults = JSON.parse(localStorage.getItem('testSummary') || '{}');
-
-        // ✅ Initialize if not exists
         const passCount = previousResults.passCount || 0;
         const failCount = previousResults.failCount || 0;
-
-        // ✅ Increment counts
         if (isPassed) {
             previousResults.passCount = passCount + 1;
         } else {
             previousResults.failCount = failCount + 1;
         }
-
-        // ✅ Save updated results to localStorage
         localStorage.setItem('testSummary', JSON.stringify(previousResults));
+        const testSummaryEvent = new CustomEvent('testSummaryUpdated', { detail: previousResults });
+        window.dispatchEvent(testSummaryEvent);
       this.saveTestResults(passed, failed, notFinished, isPassed);
       this.showTestResult(isPassed);
     }
@@ -216,14 +211,13 @@ private shuffleArray(array: any[]): any[] {
 
 
   resetTest() {
-      this.currentQuestionIndex = Math.floor(Math.random() * this.totalQuestions); 
+      this.qList = this.shuffleArray([...this.qList]);
+      this.currentQuestionIndex = 0;  
       this.selectedOption = null;
       this.answerChecked = false;
       this.isCorrect = false;
       this.testCompleted = false;
       this.testResult = '';
-
-      // Reset all questions
       this.qList.forEach(q => {
           q.selectedOption = null;
           q.isCorrect = false;

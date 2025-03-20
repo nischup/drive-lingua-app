@@ -50,11 +50,11 @@
       <div class="bar-section">
         <div class="bar-item">
           <div class="bar success"></div>
-          <p>{{ 'Passed' | translate }} ({{ testResults.passed }})</p>
+          <p>{{ 'Passed' | translate }} ({{ testSummary.passCount }})</p>
         </div>
         <div class="bar-item">
           <div class="bar danger"></div>
-          <p>{{ 'Failed' | translate }} ({{ testResults.failed }})</p>
+          <p>{{ 'Failed' | translate }} ({{ testSummary.failCount }})</p>
         </div>
         <div class="bar-item">
           <div class="bar primary"></div>
@@ -62,9 +62,10 @@
         </div>
       </div>
 
-      <div class="chevron-container" (click)="openModal()">
-        <ion-icon name="chevron-down-outline"></ion-icon>
-      </div>
+     <div class="chevron-container" (click)="openModal()">
+  <span class="chevron-text">View Summary</span>
+  <ion-icon name="chevron-down-outline"></ion-icon>
+</div>
 
     </ion-card-content>
   </ion-card>

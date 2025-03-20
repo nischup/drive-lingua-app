@@ -1258,12 +1258,5 @@
           "Was sagt dir die Kontrollleuchte mit dem “P”- Symbol?"
 
         ]
-    },
-    "vocAudioList": {
-      "1": [
-        "assets/audio/chapter-1/Sitz.wav",
-        "assets/audio/chapter-1/einstellen.wav",
-        "assets/audio/chapter-1/vor.wav"
-      ]
     }
 }

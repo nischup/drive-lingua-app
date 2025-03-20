@@ -179,4 +179,14 @@ ion-modal {
 // }
 
   
-  
+  .chevron-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adds spacing between text and icon */
+  cursor: pointer;
+}
+
+.chevron-text {
+  font-size: 14px;
+  color: var(--ion-text-color, #000); /* Uses Ionic theme color */
+}
