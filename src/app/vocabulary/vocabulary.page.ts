@@ -45,6 +45,7 @@ export class VocabularyPage implements OnInit {
     translate.setDefaultLang('English');
   
     const browserLang = translate.getBrowserLang();
+    console.log(browserLang);
     translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
   }
 

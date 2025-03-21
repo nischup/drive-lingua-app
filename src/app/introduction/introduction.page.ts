@@ -31,12 +31,22 @@ export class IntroductionPage implements OnInit {
   ];
 
     constructor(private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
-      translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
-      translate.setDefaultLang('English');
-    
-      const browserLang = translate.getBrowserLang();
-      translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
-    }
+        translate.addLangs([
+          'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+          'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+        ]);
+        const storedLang = localStorage.getItem('selectedLanguage');
+        if (storedLang) {
+          this.selectedLanguage = storedLang;
+        } else {
+          const browserLang = translate.getBrowserLang();
+          if (browserLang && translate.getLangs().includes(browserLang)) {
+            this.selectedLanguage = browserLang;
+          }
+        }
+        translate.setDefaultLang(this.selectedLanguage);
+        translate.use(this.selectedLanguage);
+      }
 
   ngOnInit() {
     // Access the 'chapterno' query parameter

@@ -22,39 +22,36 @@
 
   <div class="profile-container">
 
-<!-- Profile Image -->
-<div class="profile-image" (click)="triggerFileInput()">
-  <img [src]="profile.image" alt="Profile Image" />
-  <div class="edit-icon" (click)="triggerFileInput($event)">
-    <ion-icon name="create-outline"></ion-icon>
-  </div>
-</div>
+  <!-- Profile Image -->
+    <!-- <div class="profile-image" (click)="triggerFileInput()">
+      <img [src]="profile.image" alt="Profile Image" />
+      <div class="edit-icon" (click)="triggerFileInput($event)">
+        <ion-icon name="create-outline"></ion-icon>
+      </div>
+    </div>
 
-<div class="imgup">
-  <input #fileInput type="file" (change)="onImageUpload($event)" accept="image/*" hidden />
-</div>
+    <div class="imgup">
+      <input #fileInput type="file" (change)="onImageUpload($event)" accept="image/*" hidden />
+    </div>
 
 
-<ion-item>
-  <!-- <ion-label position="stacked">Name</ion-label> -->
-  <ion-input [(ngModel)]="profile.name"></ion-input>
-</ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="profile.name"></ion-input>
+    </ion-item>
 
-<ion-item>
-  <!-- <ion-label position="stacked">Email</ion-label> -->
-  <ion-input [(ngModel)]="profile.email"></ion-input>
-</ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="profile.email"></ion-input>
+    </ion-item>
 
-<ion-button expand="full" (click)="updateProfile()">
-  <ion-icon slot="start" name="save-outline"></ion-icon>
-  Save
-</ion-button>
+    <ion-button expand="full" (click)="updateProfile()">
+      <ion-icon slot="start" name="save-outline"></ion-icon>
+      Save
+    </ion-button> -->
 
     
   </div>
 
-      <!-- Buttons -->
-    <div class="button-container">
+    <!-- <div class="button-container">
       <ion-button expand="full" (click)="openNotification()">
         <ion-icon slot="start" name="notifications-outline"></ion-icon>
         {{ 'Notification' | translate }}
@@ -70,6 +67,6 @@
         {{ 'Sign Out' | translate }}
         <ion-icon class="arrow" slot="end" name="chevron-forward-outline"></ion-icon>
       </ion-button>
-    </div>
+    </div> -->
 
 </ion-content>

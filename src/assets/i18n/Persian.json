@@ -425,7 +425,7 @@
     "options": ["Fahre gegen das Auto", "Das Auto parkt zu weit rechts", "Fahre nach dem parkenden Auto auf die Rechte Seite zurück", "Fahre rechts an das Auto ran"],
     "correctAnswer": "Fahre nach dem parkenden Auto auf die Rechte Seite zurück"
   },
-      ""61": {
+  "61": {
     "id": "61",
     "question": "اول آینه‌ها را بررسی کنید، سپس راهنما را بزنید",
     "options": ["Zuerst in die Spiegel schauen, dann blinken", "Blinke zuerst, dann schau in die Spiegel", "Vor dem Blinken mache einen Schulterblick", "Der Spiegel blinkt zuerst"],

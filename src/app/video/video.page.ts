@@ -154,16 +154,24 @@ export class VideoPage {
     { name: 'Tuerk', flag: 'assets/flags/tuerk.png' },
   ];
 
-  constructor( private languageService: LanguageService, private location: Location, private sanitizer: DomSanitizer, private translate: TranslateService, private route: ActivatedRoute) {
-
+  constructor(private router: Router, private languageService: LanguageService, private location: Location, private sanitizer: DomSanitizer, private translate: TranslateService, private route: ActivatedRoute) {
     this.sanitizedVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
-
-    translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
-    translate.setDefaultLang('English');
-  
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
-
+      translate.addLangs([
+        'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+        'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+      ]);
+      const storedLang = localStorage.getItem('selectedLanguage');
+      if (storedLang) {
+        this.selectedLanguage = storedLang;
+      } else {
+        const browserLang = translate.getBrowserLang();
+        if (browserLang && translate.getLangs().includes(browserLang)) {
+          this.selectedLanguage = browserLang;
+        }
+      }
+      translate.setDefaultLang(this.selectedLanguage);
+      translate.use(this.selectedLanguage);
+    
     this.sanitizedVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrl);
     this.sanitizedVideoUrlChap3_1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrlchap31);
     this.sanitizedVideoUrlChap3_2 = this.sanitizer.bypassSecurityTrustResourceUrl(this.videoUrlchap32);
@@ -245,6 +253,13 @@ export class VideoPage {
 
   setBackHref() {
     this.defaultBackHref = `/tabs/chapter${this.chapterno}`;
+  }
+
+  handleBackClick() {
+    sessionStorage.setItem('lastPageType', 'vocabulary'); // Track last visited page
+    this.router.navigate([`/tabs/chapter${this.chapterno}`]).then(() => {
+      location.reload(); // Reload after navigating back
+    });
   }
 
   goBack() {

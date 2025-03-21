@@ -30,12 +30,22 @@ export class Chapter9Page implements OnInit {
   filteredLanguages: { name: string; flag: string }[] = [];
   selectedLanguage: string = 'English'; // Default language
 
-  constructor(private translate: TranslateService, private router:Router) {
-    translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
-    translate.setDefaultLang('English');
-  
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
+  constructor(private translate: TranslateService, private router: Router) {
+    translate.addLangs([
+      'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+      'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+    ]);
+    const storedLang = localStorage.getItem('selectedLanguage');
+    if (storedLang) {
+      this.selectedLanguage = storedLang;
+    } else {
+      const browserLang = translate.getBrowserLang();
+      if (browserLang && translate.getLangs().includes(browserLang)) {
+        this.selectedLanguage = browserLang;
+      }
+    }
+    translate.setDefaultLang(this.selectedLanguage);
+    translate.use(this.selectedLanguage);
   }
 
   ngOnInit(): void {
