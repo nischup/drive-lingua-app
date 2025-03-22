@@ -41,12 +41,24 @@ export class SentencePage implements OnInit {
   ];
   
   constructor(private router: Router, private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
-    translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
-    translate.setDefaultLang('English');
-  
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
+    translate.addLangs([
+      'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+      'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+    ]);
+    const storedLang = localStorage.getItem('selectedLanguage');
+    console.log(storedLang);
+    if (storedLang) {
+      this.selectedLanguage = storedLang;
+    } else {
+      const browserLang = translate.getBrowserLang();
+      if (browserLang && translate.getLangs().includes(browserLang)) {
+        this.selectedLanguage = browserLang;
+      }
+    }
+    translate.setDefaultLang(this.selectedLanguage);
+    translate.use(this.selectedLanguage);
   }
+
 
  ngOnInit() {
     this.pageType = this.route.snapshot.routeConfig?.path || 'sentence'; 
@@ -87,8 +99,6 @@ export class SentencePage implements OnInit {
       this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
       this.sentListGerman = germanList;
       // console.log(this.sentListGerman);
-
-         // Fetch the audio list in the user's selected language
          this.translate.get(`senAudioList.${this.chapterno}`).subscribe((audioList: string[]) => {
           this.senAudioList = audioList;
           // console.log('Audio List:', this.senAudioList);
@@ -98,25 +108,8 @@ export class SentencePage implements OnInit {
         }
 
         });
-
-
     });
   }
-
-// getSentenceList() {
-
-//   this.translate.use('English'); 
-//   this.translate.get(`SentenceList.${this.chapterno}`).subscribe((englishList: string[]) => {
-//     this.sentListEnglish = englishList;
-
-//     this.translate.use('French');
-//     this.translate.get(`SentenceList.${this.chapterno}`).subscribe((germanList: string[]) => {
-//       this.sentListGerman = germanList;
-
-//       this.translate.use(this.selectedLanguage);
-//     });
-//   });
-// }
 
 
    navigate(direction: number): void {

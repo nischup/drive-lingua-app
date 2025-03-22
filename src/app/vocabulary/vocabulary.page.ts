@@ -40,13 +40,23 @@ export class VocabularyPage implements OnInit {
     { name: 'Tuerk', flag: 'assets/flags/tuerk.png' },
   ];
   
-  constructor(private router: Router, private languageService: LanguageService, private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
-    translate.addLangs(['English', 'Arabic','Persian','Ukrain','Vietnam','Albanian','French','Spanish','Russian','Chinese','Tuerk']);
-    translate.setDefaultLang('English');
-  
-    const browserLang = translate.getBrowserLang();
-    console.log(browserLang);
-    translate.use(browserLang && browserLang.match(/English|Arabic|Iran|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private translate: TranslateService) {
+    translate.addLangs([
+      'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+      'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+    ]);
+    const storedLang = localStorage.getItem('selectedLanguage');
+    console.log(storedLang);
+    if (storedLang) {
+      this.selectedLanguage = storedLang;
+    } else {
+      const browserLang = translate.getBrowserLang();
+      if (browserLang && translate.getLangs().includes(browserLang)) {
+        this.selectedLanguage = browserLang;
+      }
+    }
+    translate.setDefaultLang(this.selectedLanguage);
+    translate.use(this.selectedLanguage);
   }
 
   ngOnInit() {
@@ -66,7 +76,14 @@ export class VocabularyPage implements OnInit {
         this.setBackHref();
       }
     });
-    const storedLanguage = localStorage.getItem('selectedLanguage');
+
+      const storedLang = localStorage.getItem('selectedLanguage');
+      if (storedLang) {
+        this.selectedLanguage = storedLang;
+        this.translate.use(this.selectedLanguage); // Set the stored language
+      }
+    
+
   }
 
   getVocabularyList() {

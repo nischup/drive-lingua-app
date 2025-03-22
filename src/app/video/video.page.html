@@ -2,7 +2,7 @@
   <ion-buttons slot="start">
     <ion-back-button class="white-icons" [defaultHref]="defaultBackHref" (click)="handleBackClick()"></ion-back-button>
   </ion-buttons>
-  Videos of Chapter {{ chapterno }}
+  {{ 'Videos of Chapter' | translate }}  {{ chapterno }}
 </ion-toolbar>
 
 
@@ -16,7 +16,7 @@
 
 <div class="chapterwisevideo" *ngIf="chapterno === '1'">
 
-  <h3> {{ 'Would you know how it works' | translate }} </h3>
+  <h3> {{ 'Would you know how it works' | translate }} ?</h3>
 
   <div class="video-container">
     <iframe
@@ -33,7 +33,7 @@
 
 <div class="chapterwisevideo" *ngIf="chapterno === '2'">
 
-   <p>{{ 'No video available for this chapter.' | translate }}</p>
+   <p>{{ 'No video available for this chapter' | translate }}</p>
 
 </div>
 
