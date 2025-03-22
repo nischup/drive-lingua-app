@@ -38,12 +38,22 @@ export class Tab3Page {
   ];
 
   constructor(private translate: TranslateService, private router: Router) {
-    translate.addLangs(['English', 'Arabic', 'Persian', 'Ukrain', 'Vietnam', 'Albanian', 'French', 'Spanish', 'Russian', 'Chinese', 'Tuerk']);
-    translate.setDefaultLang('English');
+    translate.addLangs([
+      'English', 'Arabic', 'Persian', 'Ukrainian', 'Vietnamese', 'Albanian',
+      'French', 'Spanish', 'Russian', 'Chinese', 'Turkish'
+    ]);
+    const storedLang = localStorage.getItem('selectedLanguage');
+    if (storedLang) {
+      this.selectedLanguage = storedLang;
+    } else {
+      const browserLang = translate.getBrowserLang();
+      if (browserLang && translate.getLangs().includes(browserLang)) {
+        this.selectedLanguage = browserLang;
+      }
+    }
+    translate.setDefaultLang(this.selectedLanguage);
+    translate.use(this.selectedLanguage);
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang && browserLang.match(/English|Arabic|Persian|Ukrain|Vietnam|Albanian|French|Spanish|Russian|Chinese|Tuerk/) ? browserLang : 'English');
-    
     this.translate.onLangChange.subscribe(() => {
       this.getAllQuestions(); // Reload questions when language changes
     });
@@ -71,22 +81,6 @@ export class Tab3Page {
   get totalQuestions() {
     return this.qList.length;
   }
-
-// getAllQuestions() {
-//   this.translate.get('questions').subscribe((translatedQuestions: any) => {
-//     this.qList = this.shuffleArray(Object.values(translatedQuestions));
-//     this.currentQuestionIndex = 0; 
-//   });
-// }
-
-
-// private shuffleArray(array: any[]): any[] {
-//     for (let i = array.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-// }
 
 getAllQuestions() {
   this.translate.get('questions').subscribe((translatedQuestions: any) => {

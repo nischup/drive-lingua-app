@@ -81,6 +81,7 @@ export class VocabularyPage implements OnInit {
       if (storedLang) {
         this.selectedLanguage = storedLang;
         this.translate.use(this.selectedLanguage); // Set the stored language
+        console.log('Loaded language from storage:', this.selectedLanguage);
       }
     
 
@@ -90,7 +91,7 @@ export class VocabularyPage implements OnInit {
       this.translate.use(this.selectedLanguage); 
       this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((userLanguageList: string[]) => {
         this.vocListUserSelection = userLanguageList;
-        // console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
+        console.log(`Vocabulary List in ${this.selectedLanguage}:`, this.vocListUserSelection);
       });
     this.translate.use('French'); 
     this.translate.get(`VocabularyList.${this.chapterno}`).subscribe((germanList: string[]) => {
@@ -165,9 +166,7 @@ export class VocabularyPage implements OnInit {
 
   switchLanguage(language: string) {
     this.selectedLanguage = language;
-    // Persist the selected language in localStorage
     localStorage.setItem('selectedLanguage', language);
-    // Update the translation service and re-fetch the vocabulary list
     this.translate.use(language).subscribe(() => {
       this.getVocabularyList();
     });
