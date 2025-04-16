@@ -139,8 +139,11 @@ export class Tab1Page {
   }
 
   calculateProgress() {
-    this.progressPercentage = (this.completedChapters / (this.totalChapters * 10)) * 100;
+    const totalParts = this.totalChapters * 2;
+    const maxProgress = totalParts * 5; // 5% per part
+    this.progressPercentage = (this.completedChapters / maxProgress) * 100;
   }
+
 
   switchLanguage(lang: string) {
     this.translate.use(lang);

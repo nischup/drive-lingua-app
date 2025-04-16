@@ -112,26 +112,26 @@ export class SentencePage implements OnInit {
   }
 
 
-   navigate(direction: number): void {
-    if ((direction === -1 && this.currentIndex === 0) || 
-        (direction === 1 && this.currentIndex === this.sentListGerman.length - 1)) {
-      return;
-    }
-  
-    // this.isTurning = true;
-  
-    setTimeout(() => {
-      this.currentIndex += direction;
-      this.updateAudioSource(true); // Now it plays only when navigating
-      this.isTurning = false;
-
-      // Check if this is the last word in the list (user finished vocabulary)
-      if (this.currentIndex === this.sentListGerman.length - 1) {
-        this.completeVocabularyForChapter(Number(this.chapterno));
+     navigate(direction: number): void {
+      if ((direction === -1 && this.currentIndex === 0) || 
+          (direction === 1 && this.currentIndex === this.sentListGerman.length - 1)) {
+        return;
       }
+    
+      // this.isTurning = true;
+    
+      setTimeout(() => {
+        this.currentIndex += direction;
+        this.updateAudioSource(true); // Now it plays only when navigating
+        this.isTurning = false;
 
-    }, 300);
-  }
+        // Check if this is the last word in the list (user finished vocabulary)
+        if (this.currentIndex === this.sentListGerman.length - 1) {
+          this.completeSentenceForChapter(Number(this.chapterno));
+        }
+
+      }, 300);
+    }
 
     updateAudioSource(autoPlay = true): void {
     if (this.senAudioList.length > this.currentIndex) {
@@ -151,25 +151,20 @@ export class SentencePage implements OnInit {
     }
   }
 
-  completeVocabularyForChapter(chapterIndex: number) {
+  completeSentenceForChapter(chapterIndex: number) {
     let chapterProgress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
-  
     if (!chapterProgress[chapterIndex]) {
       chapterProgress[chapterIndex] = { vocab: false, sentence: false };
     }
-  
-    if (!chapterProgress[chapterIndex].vocab) {
-      chapterProgress[chapterIndex].vocab = true;
-  
-      // Increase progress by 5% for vocabulary completion
+
+    if (!chapterProgress[chapterIndex].sentence) {
+      chapterProgress[chapterIndex].sentence = true;
+
       let completedChapters = Number(localStorage.getItem('completedChapters')) || 0;
-      completedChapters += 5;
-  
-      // Save updated progress
-      localStorage.setItem('chapterProgress', JSON.stringify(chapterProgress));
+      completedChapters += 5; // Add 5% only if not already completed
       localStorage.setItem('completedChapters', completedChapters.toString());
-  
-      // Notify other pages about the update
+
+      localStorage.setItem('chapterProgress', JSON.stringify(chapterProgress));
       window.dispatchEvent(new Event('storage'));
     }
   }

@@ -114,7 +114,7 @@ export class VocabularyPage implements OnInit {
         (direction === 1 && this.currentIndex === this.vocListGerman.length - 1)) {
       return;
     }
-    this.isTurning = true;
+    // this.isTurning = true;
     setTimeout(() => {
       this.currentIndex += direction;
       this.updateAudioSource(true); // Now it plays only when navigating
@@ -150,18 +150,21 @@ export class VocabularyPage implements OnInit {
     if (!chapterProgress[chapterIndex]) {
       chapterProgress[chapterIndex] = { vocab: false, sentence: false };
     }
+
     if (!chapterProgress[chapterIndex].vocab) {
       chapterProgress[chapterIndex].vocab = true;
-      // Increase progress by 5% for vocabulary completion
+
       let completedChapters = Number(localStorage.getItem('completedChapters')) || 0;
-      completedChapters += 5;
-      // Save updated progress
-      localStorage.setItem('chapterProgress', JSON.stringify(chapterProgress));
+      completedChapters += 5; // Add 5% only if not already completed
       localStorage.setItem('completedChapters', completedChapters.toString());
-      // Notify other pages about the update
+      
+      localStorage.setItem('chapterProgress', JSON.stringify(chapterProgress));
       window.dispatchEvent(new Event('storage'));
     }
   }
+
+
+
   
 
   switchLanguage(language: string) {
