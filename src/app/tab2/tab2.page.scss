@@ -3,8 +3,7 @@ ion-content {
   display: flex; /* Enable flexbox layout */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-}
-.road-content {
+}.road-content {
   --background: #FDEDEE;
 }
 
@@ -23,113 +22,108 @@ ion-content {
   height: auto;
 }
 
-.registration{
+.registration {
   position: absolute;
-  top: 150px !important; 
+  top: 150px !important;
   left: 50px;
 }
-.first-step{
+.first-step {
   position: absolute;
-  top: 150px; 
+  top: 150px;
   left: 145px;
 }
-.start-driving{
+.start-driving {
   position: absolute;
-  top: 150px; 
+  top: 150px;
   left: 240px;
 }
-.we-use-street{
+.we-use-street {
   position: absolute;
-  top: 240px; 
+  top: 240px;
   left: 240px;
 }
-.we-turn{
+.we-turn {
   position: absolute;
-  top: 340px; 
+  top: 340px;
   left: 250px;
 }
-.piority1{
+.piority1 {
   position: absolute;
-  top: 360px; 
+  top: 360px;
   left: 130px;
 }
-.piority2{
+.piority2 {
   position: absolute;
-  top: 340px; 
+  top: 340px;
   left: 30px;
 }
-.rules{
+.rules {
   position: absolute;
-  top: 440px; 
+  top: 440px;
   left: 5px;
 }
-.highway{
+.highway {
   position: absolute;
-  top: 580px; 
+  top: 580px;
   left: 10px;
 }
-.driving{
+.driving {
   position: absolute;
-  top: 580px; 
+  top: 580px;
   left: 115px;
 }
-.departure{
+.departure {
   position: absolute;
-  top: 580px; 
+  top: 580px;
   left: 250px;
 }
-.exam{
+.exam {
   position: absolute;
-  top: 475px; 
+  top: 475px;
   left: 260px;
 }
 
 .tree {
   position: absolute;
 }
-
 .tree-1 {
-  top: 120px; /* Adjust position */
+  top: 120px;
   left: 70px;
 }
-
 .tree-2 {
-  top: 110px; /* Adjust position */
+  top: 110px;
   right: 155px;
 }
-
 .tree-3 {
-  top: 120px; /* Adjust position */
+  top: 120px;
   right: 30px;
 }
-
 .tree-4 {
-  top: 250px; /* Adjust position */
+  top: 250px;
   right: 190px;
 }
-
 .tree-5 {
-  top: 290px; /* Adjust position */
+  top: 290px;
   right: 290px;
 }
 .tree-6 {
-  top: 300px; /* Adjust position */
+  top: 300px;
   right: 220px;
 }
 .tree-7 {
-  top: 480px; /* Adjust position */
-  right:140px;
+  top: 480px;
+  right: 140px;
 }
 .tree-8 {
-  top: 560px; /* Adjust position */
+  top: 560px;
   right: 120px;
 }
 .tree-9 {
-  top: 450px; /* Adjust position */
+  top: 450px;
   right: 230px;
 }
 .tree-10 {
-  top: 530px; /* Adjust position */
+  top: 530px;
   right: 230px;
 }
 
@@ -146,3 +140,119 @@ ion-content {
   vertical-align: middle;
 }
 
+/* Tablet styles (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .road-svg {
+    width: 70%;
+  }
+
+  .registration {
+    top: 100px !important;
+    left: 140px;
+  }
+
+  .first-step {
+    top: 100px;
+    left: 330px;
+  }
+
+  .start-driving {
+    top: 100px; 
+    left: 530px;
+  }
+
+  .we-use-street {
+    top: 300px;
+    left: 530px;
+  }
+
+  .we-turn {
+    top: 450px;
+    left: 530px;
+  }
+
+  .piority1 {
+    top: 450px;
+    left: 300px;
+  }
+
+  .piority2 {
+    top: 450px;
+    left: 100px;
+  }
+
+  .rules {
+    top: 630px;
+    left: 100px;
+  }
+
+  .highway {
+    top: 820px;
+    left: 100px;
+  }
+
+  .driving {
+    top: 820px;
+    left: 320px;
+  }
+
+  .departure {
+    top: 820px;
+    left: 520px;
+  }
+
+  .exam {
+    top: 655px;
+    left: 540px;
+  }
+
+  .tree-1 {
+    top: 60px;
+    left: 170px;
+  }
+
+  .tree-2 {
+    top: 60px;
+    right: 200px;
+  }
+
+  .tree-3 {
+    top: 160px;
+    right: 80px;
+  }
+
+  .tree-4 {
+    top: 230px;
+    right: 260px;
+  }
+
+  .tree-5 {
+    top: 320px;
+    right: 530px;
+  }
+
+  .tree-6 {
+    top: 330px;
+    right: 360px;
+  }
+
+  .tree-7 {
+    top: 770px;
+    right: 320px;
+  }
+
+  .tree-8 {
+    top: 600px;
+    right: 280px;
+  }
+
+  .tree-9 {
+    top: 590px;
+    right: 490px;
+  }
+
+  .tree-10 {
+    top: 770px;
+    right: 490px;
+  }
+}

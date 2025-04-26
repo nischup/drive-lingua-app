@@ -301,9 +301,4 @@ export class Tab2Page {
     this.router.navigate(['/tabs/beforeexam/']);
   }
 
-
-  
-
-  
-
 }
