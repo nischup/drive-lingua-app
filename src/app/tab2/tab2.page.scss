@@ -1,14 +1,16 @@
 ion-content {
   --background: #FDEDEE;
-  display: flex; /* Enable flexbox layout */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}.road-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.road-content {
   --background: #FDEDEE;
 }
 
 .road-container {
-  margin-top: 50px;
+  margin-top: 2.08%; /* 50 / 2400 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,107 +26,108 @@ ion-content {
 
 .registration {
   position: absolute;
-  top: 150px !important;
-  left: 50px;
+  top: 6.25%;
+  left: 4.63%;
 }
 .first-step {
   position: absolute;
-  top: 150px;
-  left: 145px;
+  top: 6.25%;
+  left: 13.43%;
 }
 .start-driving {
   position: absolute;
-  top: 150px;
-  left: 240px;
+  top: 6.25%;
+  left: 22.22%;
 }
 .we-use-street {
   position: absolute;
-  top: 240px;
-  left: 240px;
+  top: 10%;
+  left: 22.22%;
 }
 .we-turn {
   position: absolute;
-  top: 340px;
-  left: 250px;
+  top: 14.17%;
+  left: 23.15%;
 }
 .piority1 {
   position: absolute;
-  top: 360px;
-  left: 130px;
+  top: 15%;
+  left: 12.04%;
 }
 .piority2 {
   position: absolute;
-  top: 340px;
-  left: 30px;
+  top: 14.17%;
+  left: 2.78%;
 }
 .rules {
   position: absolute;
-  top: 440px;
-  left: 5px;
+  top: 18.33%;
+  left: 0.46%;
 }
 .highway {
   position: absolute;
-  top: 580px;
-  left: 10px;
+  top: 24.17%;
+  left: 0.93%;
 }
 .driving {
   position: absolute;
-  top: 580px;
-  left: 115px;
+  top: 24.17%;
+  left: 10.65%;
 }
 .departure {
   position: absolute;
-  top: 580px;
-  left: 250px;
+  top: 24.17%;
+  left: 23.15%;
 }
 .exam {
   position: absolute;
-  top: 475px;
-  left: 260px;
+  top: 19.79%;
+  left: 24.07%;
 }
 
 .tree {
   position: absolute;
 }
+
 .tree-1 {
-  top: 120px;
-  left: 70px;
+  top: 5%;
+  left: 6.48%;
 }
 .tree-2 {
-  top: 110px;
-  right: 155px;
+  top: 4.58%;
+  right: 14.35%;
 }
 .tree-3 {
-  top: 120px;
-  right: 30px;
+  top: 5%;
+  right: 2.78%;
 }
 .tree-4 {
-  top: 250px;
-  right: 190px;
+  top: 10.42%;
+  right: 17.59%;
 }
 .tree-5 {
-  top: 290px;
-  right: 290px;
+  top: 12.08%;
+  right: 26.85%;
 }
 .tree-6 {
-  top: 300px;
-  right: 220px;
+  top: 12.5%;
+  right: 20.37%;
 }
 .tree-7 {
-  top: 480px;
-  right: 140px;
+  top: 20%;
+  right: 12.96%;
 }
 .tree-8 {
-  top: 560px;
-  right: 120px;
+  top: 23.33%;
+  right: 11.11%;
 }
 .tree-9 {
-  top: 450px;
-  right: 230px;
+  top: 18.75%;
+  right: 21.3%;
 }
 .tree-10 {
-  top: 530px;
-  right: 230px;
+  top: 22.08%;
+  right: 21.3%;
 }
 
 .ionlang {
@@ -138,121 +141,4 @@ ion-content {
   height: 14px;
   margin-right: 8px;
   vertical-align: middle;
-}
-
-/* Tablet styles (768px to 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .road-svg {
-    width: 70%;
-  }
-
-  .registration {
-    top: 100px !important;
-    left: 140px;
-  }
-
-  .first-step {
-    top: 100px;
-    left: 330px;
-  }
-
-  .start-driving {
-    top: 100px; 
-    left: 530px;
-  }
-
-  .we-use-street {
-    top: 300px;
-    left: 530px;
-  }
-
-  .we-turn {
-    top: 450px;
-    left: 530px;
-  }
-
-  .piority1 {
-    top: 450px;
-    left: 300px;
-  }
-
-  .piority2 {
-    top: 450px;
-    left: 100px;
-  }
-
-  .rules {
-    top: 630px;
-    left: 100px;
-  }
-
-  .highway {
-    top: 820px;
-    left: 100px;
-  }
-
-  .driving {
-    top: 820px;
-    left: 320px;
-  }
-
-  .departure {
-    top: 820px;
-    left: 520px;
-  }
-
-  .exam {
-    top: 655px;
-    left: 540px;
-  }
-
-  .tree-1 {
-    top: 60px;
-    left: 170px;
-  }
-
-  .tree-2 {
-    top: 60px;
-    right: 200px;
-  }
-
-  .tree-3 {
-    top: 160px;
-    right: 80px;
-  }
-
-  .tree-4 {
-    top: 230px;
-    right: 260px;
-  }
-
-  .tree-5 {
-    top: 320px;
-    right: 530px;
-  }
-
-  .tree-6 {
-    top: 330px;
-    right: 360px;
-  }
-
-  .tree-7 {
-    top: 770px;
-    right: 320px;
-  }
-
-  .tree-8 {
-    top: 600px;
-    right: 280px;
-  }
-
-  .tree-9 {
-    top: 590px;
-    right: 490px;
-  }
-
-  .tree-10 {
-    top: 770px;
-    right: 490px;
-  }
 }
